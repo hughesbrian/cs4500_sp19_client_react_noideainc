@@ -9,12 +9,12 @@ import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
 import FAQs from './FAQs'
 import FAQDetails from './FAQDetails'
-import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import Users from './Users'
 import UserDetails from './UserDetails'
 import ServiceCategories from './ServiceCategories'
 import ServiceCategoryDetails from './ServiceCategoryDetails'
+import FAQAnswers from './FAQAnswers'
 
 const Admin = () =>
     <div>
@@ -29,6 +29,8 @@ const Admin = () =>
                     <Link to="/admin/service-categories">Service Categories</Link>
                     <br/>
                     <Link to="/admin/service-categories/1">Service Category Details</Link>
+                    <br/>
+                    <Link to="/admin/faq-answers">FAQ Answers</Link>
                     <br/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
@@ -60,6 +62,7 @@ const Admin = () =>
                     <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetails}/>
                     <Route path="/admin/users" exact component={Users}/>
                     <Route path="/admin/users/:id" exact component={UserDetails}/>
+                    <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
