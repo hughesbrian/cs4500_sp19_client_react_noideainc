@@ -70,6 +70,8 @@ const Admin = () =>
                     <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
                     <Route path="/admin/service" exact component={Services}/>
                 	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
+                    <Route path="/admin/faqs" exact component={FAQs}/>
+                    <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -93,14 +95,6 @@ const Admin = () =>
                     path="/admin/service-answers/:id"
                     exact
                     component={ServiceAnswerDetails}/>
-                <Route
-                    path="/admin/faqs"
-                    exact
-                    component={FAQs}/>
-                <Route
-                    path="/admin/faqs/:id"
-                    exact
-                    component={FAQDetails}/>
                 <Route
                     path="/admin/faq-answers"
                     exact
