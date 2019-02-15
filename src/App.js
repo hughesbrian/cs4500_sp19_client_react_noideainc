@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
+import Services from './components/Services'
+import ServiceDetails from './components/ServiceDetails'
 
 class App extends Component {
   render() {
