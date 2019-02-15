@@ -12,6 +12,18 @@ class FAQDetails extends React.Component {
             }
         }
     }
+    componentDidMount() {
+        this.faqService
+            .findAllFAQs()
+            .then(faqs => {
+                    this.props.history.push("/admin/faqs/" + faqs[0].id)
+                    this.setState({
+                        faqs: faqs,
+                        faq: faqs[0]
+                    })
+                }
+            )
+    }
 }
 
 export default FAQDetails
