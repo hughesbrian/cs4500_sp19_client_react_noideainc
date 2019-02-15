@@ -24,6 +24,43 @@ class FAQDetails extends React.Component {
                 }
             )
     }
+    selectFAQ = id =>
+        this.faqService
+            .findFAQById(id)
+            .then(faq => {
+                    this.props.history.push("/admin/faqs/" + id)
+                    this.setState({
+                        faq: faq
+                    })
+                }
+            )
+    render() {
+        return(
+            <div>
+                <h3>Service Answer Details</h3>
+                <select
+                    value={this.state.faq.id}
+                    onChange={(e) => this.selectFAQ(e.target.value)}
+                    className="form-control">
+                    {
+                        this.state.faqs
+                            .map(faq =>
+                                <option
+                                    value={faq.id}
+                                    key={faq.id}>
+                                    {faq.id}
+                                </option>
+                            )
+                    }
+                </select>
+                <label>Service Answer Answer</label><br/>
+                <input
+                    onChange={() => {}}
+                    className="form-control"
+                    value={this.state.faq.title}/>
+            </div>
+        )
+    }
 }
 
 export default FAQDetails
