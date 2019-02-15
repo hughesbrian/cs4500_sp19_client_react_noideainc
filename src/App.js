@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
+import ServiceCategories from './components/ServiceCategories'
+import ServiceCategoryDetails from './components/ServiceCategoryDetails'
 
 class App extends Component {
   render() {
@@ -12,10 +14,7 @@ class App extends Component {
         <Router>
           <div>
             <Link to="/admin">Admin</Link>
-            <Route
-                path="/admin"
-                exact
-                component={Admin}/>
+            <Route path="/admin" exact component={Admin}/>
           </div>
         </Router>
       </div>
