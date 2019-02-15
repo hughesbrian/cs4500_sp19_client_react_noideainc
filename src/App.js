@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
 import ServiceCategories from './components/ServiceCategories'
 import ServiceCategoryDetails from './components/ServiceCategoryDetails'
+import Services from './components/Services'
+import ServiceDetails from './components/ServiceDetails'
 
 class App extends Component {
   render() {

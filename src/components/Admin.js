@@ -14,6 +14,8 @@ import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import ServiceCategories from './ServiceCategories'
 import ServiceCategoryDetails from './ServiceCategoryDetails'
+import Services from './Services'
+import ServiceDetails from './ServiceDetails'
 
 const Admin = () =>
 <div>
@@ -24,6 +26,10 @@ const Admin = () =>
                 <Link to="/admin/service-categories">Service Categories</Link>
                 <br/>
                 <Link to="/admin/service-categories/1">Service Category Details</Link>
+                <br/>
+                <Link to="/admin/service">Services</Link>
+                <br/>
+                <Link to="/admin/service/1">Service Details</Link>
                 <br/>
                 {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
@@ -57,6 +63,8 @@ const Admin = () =>
             <div className="col-9">
                 <Route path="/admin/service-categories" exact component={ServiceCategories}/>
                 <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetails}/>
+                <Route path="/admin/service" exact component={Services}/>
+                <Route path="/admin/service/:id" exact component={ServiceDetails}/>
                 {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
