@@ -6,7 +6,6 @@ import ServiceDetails from './ServiceDetails'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
-import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import Users from './Users'
 import UserDetails from './UserDetails'
@@ -15,6 +14,7 @@ import ServiceCategoryDetails from './ServiceCategoryDetails'
 import ServiceQuestions from './ServiceQuestions'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
+import FAQAnswers from './FAQAnswers'
 import FAQs from './FAQs'
 import FAQDetails from './FAQDetails'
 
@@ -36,6 +36,10 @@ const Admin = () =>
                     <br/>
                     <Link to="/admin/service">Services</Link>
                 	<br/>
+                	<Link to="/admin/service/1">Service Details</Link>
+                	<br/>
+                    <Link to="/admin/faq-answers">FAQ Answers</Link>
+                    <br/>
                 	<Link to="/admin/service/1">Service Details</Link>
                 	<br/>
                     <Link to="/admin/faqs">FAQs</Link>
@@ -68,6 +72,7 @@ const Admin = () =>
                     <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
                     <Route path="/admin/service" exact component={Services}/>
                 	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
+                    <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     <Route path="/admin/faqs" exact component={FAQs}/>
                     <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
