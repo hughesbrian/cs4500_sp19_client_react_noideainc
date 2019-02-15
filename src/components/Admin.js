@@ -4,8 +4,6 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import UserDetails from './UserDetails'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
-import ServiceCategories from './ServiceCategories'
-import ServiceCategoryDetails from './ServiceCategoryDetails'
 import ServiceQuestions from './ServiceQuestions'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswers from './ServiceAnswers'
@@ -14,6 +12,8 @@ import FAQs from './FAQs'
 import FAQDetails from './FAQDetails'
 import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
+import ServiceCategories from './ServiceCategories'
+import ServiceCategoryDetails from './ServiceCategoryDetails'
 
 const Admin = () =>
 <div>
@@ -21,8 +21,13 @@ const Admin = () =>
     <Router>
         <div className="row">
             <div className="col-3">
-                {/* 
-
+                <Link to="/admin/service-categories">Service Categories</Link>
+                <br/>
+                <Link to="/admin/service-categories/1">Service Category Details</Link>
+                <br/>
+                {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
+                    THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
+                    JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
                 <Link to="/admin/users">Users</Link>
                 <br/>
                 <Link to="/admin/users/1">User Details</Link>
@@ -30,10 +35,6 @@ const Admin = () =>
                 <Link to="/admin/services">Services</Link>
                 <br/>
                 <Link to="/admin/services/1">Service Details</Link>
-                <br/>
-                <Link to="/admin/service-categories">Service Categories</Link>
-                <br/>
-                <Link to="/admin/service-categories/1">Service Category Details</Link>
                 <br/>
                 <Link to="/admin/service-questions">Service Questions</Link>
                 <br/>
@@ -49,12 +50,16 @@ const Admin = () =>
                 <br/>
                 <Link to="/admin/faq-answers">FAQ Answers</Link>
                 <br/>
-                <Link to="/admin/faq-answers/1">FAQ Answer Details</Link> 
+                <Link to="/admin/faq-answers/1">FAQ Answer Details</Link>
 
                 */}
             </div>
             <div className="col-9">
-                {/*
+                <Route path="/admin/service-categories" exact component={ServiceCategories}/>
+                <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetails}/>
+                {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
+                    THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
+                    JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
                 <Route
                     path="/admin/users"
                     exact
@@ -71,14 +76,6 @@ const Admin = () =>
                     path="/admin/services/:id"
                     exact
                     component={ServiceDetails}/>
-                <Route
-                    path="/admin/service-categories"
-                    exact
-                    component={ServiceCategories}/>
-                <Route
-                    path="/admin/service-categories/:id"
-                    exact
-                    component={ServiceCategoryDetails}/>
                 <Route
                     path="/admin/service-questions"
                     exact
