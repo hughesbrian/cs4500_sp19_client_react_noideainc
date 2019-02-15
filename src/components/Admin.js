@@ -6,8 +6,6 @@ import ServiceDetails from './ServiceDetails'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
-import FAQs from './FAQs'
-import FAQDetails from './FAQDetails'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import Users from './Users'
 import UserDetails from './UserDetails'
@@ -17,6 +15,8 @@ import ServiceQuestions from './ServiceQuestions'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
 import FAQAnswers from './FAQAnswers'
+import FAQs from './FAQs'
+import FAQDetails from './FAQDetails'
 
 const Admin = () =>
     <div>
@@ -35,11 +35,16 @@ const Admin = () =>
                     <Link to="/admin/service-questions">Service Questions</Link>
                     <br/>
                     <Link to="/admin/service">Services</Link>
-                	  <br/>
-                	  <Link to="/admin/service/1">Service Details</Link>
-                	  <br/>
+                	<br/>
+                	<Link to="/admin/service/1">Service Details</Link>
+                	<br/>
                     <Link to="/admin/faq-answers">FAQ Answers</Link>
                     <br/>
+                	<Link to="/admin/service/1">Service Details</Link>
+                	<br/>
+                    <Link to="/admin/faqs">FAQs</Link>
+                    <br/>
+                    <Link to="/admin/faqs/1">FAQ Details</Link>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -52,10 +57,6 @@ const Admin = () =>
                 <Link to="/admin/service-answers">Service Answers</Link>
                 <br/>
                 <Link to="/admin/service-answers/1">Service Answers Details</Link>
-                <br/>
-                <Link to="/admin/faqs">FAQs</Link>
-                <br/>
-                <Link to="/admin/faqs/1">FAQ Details</Link>
                 <br/>
                 <Link to="/admin/faq-answers">FAQ Answers</Link>
                 <br/>
@@ -70,8 +71,10 @@ const Admin = () =>
                     <Route path="/admin/users/:id" exact component={UserDetails}/>
                     <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
                     <Route path="/admin/service" exact component={Services}/>
-                	  <Route path="/admin/service/:id" exact component={ServiceDetails}/>
+                	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
+                    <Route path="/admin/faqs" exact component={FAQs}/>
+                    <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -95,14 +98,6 @@ const Admin = () =>
                     path="/admin/service-answers/:id"
                     exact
                     component={ServiceAnswerDetails}/>
-                <Route
-                    path="/admin/faqs"
-                    exact
-                    component={FAQs}/>
-                <Route
-                    path="/admin/faqs/:id"
-                    exact
-                    component={FAQDetails}/>
                 <Route
                     path="/admin/faq-answers"
                     exact
