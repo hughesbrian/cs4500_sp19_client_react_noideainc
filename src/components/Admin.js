@@ -38,6 +38,7 @@ const Admin = () =>
                 	<br/>
                 	<Link to="/admin/service/1">Service Details</Link>
                 	<br/>
+                    <Link to="/admin/faqs">FAQs</Link>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
