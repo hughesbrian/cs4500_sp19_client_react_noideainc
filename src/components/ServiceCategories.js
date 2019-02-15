@@ -4,12 +4,13 @@ import ServiceCategoryService from '../services/ServiceCategoryService'
 
 class ServiceCategories extends React.Component {
     constructor(props) {
-        super(props)
-        this.serviceCategoryService = ServiceCategoryService.getInstance()
+        super(props);
+        this.serviceCategoryService = ServiceCategoryService.getInstance();
         this.state = {
             serviceCategories: []
         }
     }
+
     componentDidMount() {
         this.serviceCategoryService
             .findAllServiceCategories()
@@ -19,8 +20,9 @@ class ServiceCategories extends React.Component {
                 })
             )
     }
+
     render() {
-        return(
+        return (
             <div>
                 <h3>Service Categories</h3>
                 <table className="table">
@@ -30,7 +32,7 @@ class ServiceCategories extends React.Component {
                             .map(serviceCategory =>
                                 <tr key={serviceCategory.id}>
                                     <td><Link to={"/admin/service-categories/" + serviceCategory.id}>
-                                      {serviceCategory.title}
+                                        {serviceCategory.title}
                                     </Link></td>
                                 </tr>
                             )

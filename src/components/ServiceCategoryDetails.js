@@ -3,8 +3,8 @@ import ServiceCategoryService from '../services/ServiceCategoryService'
 
 class ServiceCategoryDetails extends React.Component {
     constructor(props) {
-        super(props)
-        this.serviceCategoryService = ServiceCategoryService.getInstance()
+        super(props);
+        this.serviceCategoryService = ServiceCategoryService.getInstance();
         this.state = {
             serviceCategories: [],
             serviceCategory: {
@@ -13,30 +13,33 @@ class ServiceCategoryDetails extends React.Component {
             }
         }
     }
+
     componentDidMount() {
         this.serviceCategoryService
             .findAllServiceCategories()
             .then(serviceCategories => {
-                    this.props.history.push("/admin/service-categories/" + this.state.serviceCategory.id)
+                    this.props.history.push("/admin/service-categories/" + this.state.serviceCategory.id);
                     this.setState({
                         serviceCategories: serviceCategories,
-                        serviceCategory: serviceCategories.find((sc) => sc.id == this.state.serviceCategory.id)
+                        serviceCategory: serviceCategories.find((sc) => sc.id === this.state.serviceCategory.id)
                     })
                 }
             )
     }
+
     selectServiceCategory = id =>
         this.serviceCategoryService
             .findServiceCategoryById(id)
             .then(serviceCategory => {
-                    this.props.history.push("/admin/service-categories/" + id)
+                    this.props.history.push("/admin/service-categories/" + id);
                     this.setState({
                         serviceCategory: serviceCategory
                     })
                 }
-            )
+            );
+
     render() {
-        return(
+        return (
             <div>
                 <h3>Service Category Details</h3>
                 <select
@@ -56,7 +59,8 @@ class ServiceCategoryDetails extends React.Component {
                 </select>
                 <label>Service Category Title</label><br/>
                 <input
-                    onChange={() => {}}
+                    onChange={() => {
+                    }}
                     className="form-control"
                     value={this.state.serviceCategory.title}/>
             </div>
