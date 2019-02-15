@@ -20,7 +20,7 @@ class FAQAnswers extends React.Component {
     render() {
         return(
             <div>
-                <h3>Service Answers</h3>
+                <h3>FAQ Answers</h3>
                 <table className="table">
                     <tbody>
                     {
