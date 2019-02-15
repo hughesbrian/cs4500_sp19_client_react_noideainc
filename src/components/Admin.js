@@ -6,8 +6,6 @@ import ServiceDetails from './ServiceDetails'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
-import FAQs from './FAQs'
-import FAQDetails from './FAQDetails'
 import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import Users from './Users'
@@ -17,6 +15,8 @@ import ServiceCategoryDetails from './ServiceCategoryDetails'
 import ServiceQuestions from './ServiceQuestions'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
+import FAQs from './FAQs'
+import FAQDetails from './FAQDetails'
 
 const Admin = () =>
     <div>
