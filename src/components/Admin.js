@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
-import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
 import FAQAnswerDetails from './FAQAnswerDetails'*/
 import Users from './Users'
@@ -17,6 +16,7 @@ import ServiceDetails from './ServiceDetails'
 import FAQAnswers from './FAQAnswers'
 import FAQs from './FAQs'
 import FAQDetails from './FAQDetails'
+import ServiceAnswers from './ServiceAnswers'
 
 const Admin = () =>
     <div>
@@ -45,6 +45,9 @@ const Admin = () =>
                     <Link to="/admin/faqs">FAQs</Link>
                     <br/>
                     <Link to="/admin/faqs/1">FAQ Details</Link>
+                    <br/>
+                    <Link to="/admin/service-answers">Service Answers</Link>
+                    <br/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -53,8 +56,6 @@ const Admin = () =>
                 <Link to="/admin/services/1">Service Details</Link>
                 <br/>
                 <Link to="/admin/service-questions/1">Service Question Details</Link>
-                <br/>
-                <Link to="/admin/service-answers">Service Answers</Link>
                 <br/>
                 <Link to="/admin/service-answers/1">Service Answers Details</Link>
                 <br/>
@@ -75,6 +76,7 @@ const Admin = () =>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     <Route path="/admin/faqs" exact component={FAQs}/>
                     <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
+                    <Route path="/admin/service-answers" exact component={ServiceAnswers}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -90,10 +92,6 @@ const Admin = () =>
                     path="/admin/service-questions/:id"
                     exact
                     component={ServiceQuestionDetails}/>
-                <Route
-                    path="/admin/service-answers"
-                    exact
-                    component={ServiceAnswers}/>
                 <Route
                     path="/admin/service-answers/:id"
                     exact
