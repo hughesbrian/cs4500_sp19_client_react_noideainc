@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 /*
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
-import ServiceQuestions from './ServiceQuestions'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
@@ -14,6 +13,9 @@ import Users from './Users'
 import UserDetails from './UserDetails'
 import ServiceCategories from './ServiceCategories'
 import ServiceCategoryDetails from './ServiceCategoryDetails'
+import ServiceQuestions from './ServiceQuestions'
+import Services from './Services'
+import ServiceDetails from './ServiceDetails'
 import FAQAnswers from './FAQAnswers'
 
 const Admin = () =>
@@ -30,6 +32,12 @@ const Admin = () =>
                     <br/>
                     <Link to="/admin/service-categories/1">Service Category Details</Link>
                     <br/>
+                    <Link to="/admin/service-questions">Service Questions</Link>
+                    <br/>
+                    <Link to="/admin/service">Services</Link>
+                	  <br/>
+                	  <Link to="/admin/service/1">Service Details</Link>
+                	  <br/>
                     <Link to="/admin/faq-answers">FAQ Answers</Link>
                     <br/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
@@ -38,8 +46,6 @@ const Admin = () =>
                 <Link to="/admin/services">Services</Link>
                 <br/>
                 <Link to="/admin/services/1">Service Details</Link>
-                <br/>
-                <Link to="/admin/service-questions">Service Questions</Link>
                 <br/>
                 <Link to="/admin/service-questions/1">Service Question Details</Link>
                 <br/>
@@ -62,6 +68,9 @@ const Admin = () =>
                     <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetails}/>
                     <Route path="/admin/users" exact component={Users}/>
                     <Route path="/admin/users/:id" exact component={UserDetails}/>
+                    <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
+                    <Route path="/admin/service" exact component={Services}/>
+                	  <Route path="/admin/service/:id" exact component={ServiceDetails}/>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
@@ -74,10 +83,6 @@ const Admin = () =>
                     path="/admin/services/:id"
                     exact
                     component={ServiceDetails}/>
-                <Route
-                    path="/admin/service-questions"
-                    exact
-                    component={ServiceQuestions}/>
                 <Route
                     path="/admin/service-questions/:id"
                     exact
