@@ -17,6 +17,27 @@ class FAQs extends React.Component {
                 })
             )
     }
+
+    render() {
+        return(
+            <div>
+                <h3>Service Answers</h3>
+                <table className="table">
+                    <tbody>
+                    {
+                        this.state.faqs
+                            .map(faq =>
+                                <tr key={faq.id}>
+                                    <td>{faq.title}</td>
+                                    <td>{faq.question}</td>
+                                </tr>
+                            )
+                    }
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
 }
 
 export default FAQs
