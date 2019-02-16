@@ -37,6 +37,10 @@ const Admin = () =>
                     <br/>
                     <Link to="/admin/service-questions/1">Service Question Details</Link>
                     <br/>
+                    <Link to="/admin/service-answers">Service Answers</Link>
+                    <br/>
+                    <Link to="/admin/service-answers/1">Service Answers Details</Link>
+                    <br/>
                     <Link to="/admin/service">Services</Link>
                 	<br/>
                 	<Link to="/admin/service/1">Service Details</Link>
@@ -50,7 +54,6 @@ const Admin = () =>
                     <Link to="/admin/faq-answers">FAQ Answers</Link>
                     <br/>
                     <Link to="/admin/faq-answers/1">FAQ Answer Details</Link>
-                    <Link to="/admin/service-answers">Service Answers</Link>
                     <br/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
