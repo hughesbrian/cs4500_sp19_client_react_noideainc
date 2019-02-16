@@ -9,9 +9,9 @@ export default class UserService {
     }
 
     findUserById = userId =>
-        fetch(`cs4500-sp19-noideainc.herokuapp.com/api/users/${userId}`)
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/users/${userId}")
             .then(response => response.json())
     findAllUsers = () =>
-        fetch("cs4500-sp19-noideainc.herokuapp.com/api/users")
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/users")
             .then(response => response.json())
 }

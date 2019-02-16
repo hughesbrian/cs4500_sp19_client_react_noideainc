@@ -9,9 +9,9 @@ export default class ServiceCategoryService {
     }
 
     findServiceCategoryById = categoryId =>
-        fetch(`cs4500-sp19-noideainc.herokuapp.com/api/categories/${categoryId}`)
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/categories/${categoryId}")
             .then(response => response.json())
     findAllServiceCategories = () =>
-        fetch("cs4500-sp19-noideainc.herokuapp.com/api/categories")
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/categories")
             .then(response => response.json())
 }

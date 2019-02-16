@@ -7,9 +7,9 @@ export default class ServiceQuestionService {
         return this.instance
     }
     findServiceQuestionById = id =>
-        fetch(`cs4500-sp19-noideainc.herokuapp.com/api/questions/${id}`)
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/service-questions/${id}")
             .then(response => response.json())
     findAllServiceQuestions = () =>
-        fetch("cs4500-sp19-noideainc.herokuapp.com/api/questions")
+        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/service-questions")
             .then(response => response.json())
 }
