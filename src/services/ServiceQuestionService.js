@@ -7,9 +7,9 @@ export default class ServiceQuestionService {
         return this.instance
     }
     findServiceQuestionById = id =>
-        fetch(`http://localhost:8080/api/service-questions/${id}`)
+        fetch(`http://localhost:8080/api/questions/${id}`)
             .then(response => response.json())
     findAllServiceQuestions = () =>
-        fetch("http://localhost:8080/api/service-questions")
+        fetch("http://localhost:8080/api/questions")
             .then(response => response.json())
 }
