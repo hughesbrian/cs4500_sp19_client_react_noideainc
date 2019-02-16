@@ -7,9 +7,9 @@ export default class ServiceAnswerService {
         return this.instance
     }
     findServiceAnswerById = id =>
-        fetch("http://localhost:8080/api/service-answers/${id}")
+        fetch("cs4500-sp19-noideainc.herokuapp.com/api/service-answers/${id}")
             .then(response => response.json())
     findAllServiceAnswers = () =>
-        fetch("http://localhost:8080/api/service-answers/")
+        fetch("cs4500-sp19-noideainc.herokuapp.com/api/service-answers/")
             .then(response => response.json())
 }
