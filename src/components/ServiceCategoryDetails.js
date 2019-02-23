@@ -21,7 +21,7 @@ class ServiceCategoryDetails extends React.Component {
                     this.props.history.push("/admin/service-categories/" + this.state.serviceCategory.id);
                     this.setState({
                         serviceCategories: serviceCategories,
-                        serviceCategory: serviceCategories.find((sc) => sc.id === this.state.serviceCategory.id)
+                        serviceCategory: serviceCategories.find((sc) => sc.id == this.state.serviceCategory.id)
                     })
                 }
             )
