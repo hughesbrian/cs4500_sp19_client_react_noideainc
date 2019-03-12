@@ -19,7 +19,7 @@ import FAQAnswerDetails from './FAQAnswerDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 
-const Admin = () =>
+const Admin = ({match}) =>
     <div>
         <h2>Admin</h2>
         <Router>
@@ -74,7 +74,7 @@ const Admin = () =>
                     <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
                     <Route path="/admin/service-questions/:id" exact component={ServiceQuestionDetails}/>
                     <Route path="/admin/service" exact component={Services}/>
-                	  <Route path="/admin/service/:id" exact component={ServiceDetails}/>
+                	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
                     <Route path="/admin/faqs" exact component={FAQs}/>
                     <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>

@@ -93,6 +93,8 @@ class ServiceCategories extends React.Component {
                             <input
                                 onChange={e => this.updateForm(e)}
                                 value={this.state.serviceCategory.title}></input>
+                        </td>
+                        <td>
                             <button className="btn btn-primary" onClick={this.createServiceCategory}>Add</button>
                             <button className="btn btn-success" onClick={this.updateServiceCategory}>Update</button>
                         </td>
