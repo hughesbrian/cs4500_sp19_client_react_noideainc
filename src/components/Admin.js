@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 /*
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
-import ServiceAnswerDetails from './ServiceAnswerDetails'
 */
 import Users from './Users'
 import UserDetails from './UserDetails'
@@ -18,6 +17,7 @@ import FAQAnswers from './FAQAnswers'
 import FAQAnswerDetails from './FAQAnswerDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
+import ServiceAnswerDetails from './ServiceAnswerDetails'
 
 const Admin = () =>
     <div>
@@ -80,6 +80,7 @@ const Admin = () =>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     <Route path="/admin/faq-answers/:id" exact component={FAQAnswerDetails}/>
                     <Route path="/admin/service-answers" exact component={ServiceAnswers}/>
+                    <Route path="/admin/service-answers/:id" exact component={ServiceAnswerDetails}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -92,10 +93,7 @@ const Admin = () =>
                     exact
                     component={ServiceDetails}/>
                 <Route
-                <Route
-                    path="/admin/service-answers/:id"
-                    exact
-                    component={ServiceAnswerDetails}/>
+
 
                 */}
                 </div>
