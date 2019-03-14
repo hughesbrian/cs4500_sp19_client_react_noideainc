@@ -48,7 +48,7 @@ class ServiceAnswerDetails extends React.Component {
                                 <option
                                     value={serviceAnswer.id}
                                     key={serviceAnswer.id}>
-                                    {serviceAnswer.choiceAnswer}
+                                    {serviceAnswer.id}
                                 </option>
                             )
                     }

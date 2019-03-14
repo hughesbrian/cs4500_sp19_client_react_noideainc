@@ -17,7 +17,9 @@ class ServiceAnswers extends React.Component {
                 })
             )
     }
+
     render() {
+        console.log(this.state.serviceAnswers)
         return(
             <div>
                 <h3>Service Answers</h3>
@@ -25,9 +27,13 @@ class ServiceAnswers extends React.Component {
                     <tbody>
                     {
                         this.state.serviceAnswers
-                            .map(serviceAnswer =>
-                                <tr key={serviceAnswer.id}>
-                                    <td>{serviceAnswer.id}</td>
+                            .map(serviceAnswers =>
+                                <tr key={serviceAnswers.id}>
+                                    <td>{serviceAnswers.id}</td>
+                                    <td>{serviceAnswers.choiceAnswer}</td>
+                                    <td>{serviceAnswers.trueFalseAnswer +' '}</td>
+                                    <td>{serviceAnswers.maxRangeAnswer}</td>
+                                    <td>{serviceAnswers.minRangeAnswer}</td>
                                 </tr>
                             )
                     }
