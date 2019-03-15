@@ -1,0 +1,23 @@
+.searchButton {
+    float: right;
+    margin-right: 125px;
+}
+
+.buttons {
+    padding: 1px 8px;
+    font-size: 30px;
+    margin-left: 5px;
+}
+.table {
+    border-bottom: 1px solid #ddd;
+}
+
+.editForm {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.field {
+    height: 40px;
+    border-radius: 6px;
+}
