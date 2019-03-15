@@ -7,9 +7,14 @@ export default class FAQService {
         return this.instance
     }
     findFAQById = id =>
-        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/faqs/${id}")
+        fetch("http://localhost:8080/api/faqs/${id}")
             .then(response => response.json())
+
     findAllFAQs = () =>
-        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/faqs")
+        fetch("http://localhost:8080/api/faqs")
+            .then(response => response.json())
+
+    findFiltered = (title, question) =>
+        fetch("http://localhost:8080/api/faqs/filtered?title=" + title + "&question=" + question)
             .then(response => response.json())
 }
