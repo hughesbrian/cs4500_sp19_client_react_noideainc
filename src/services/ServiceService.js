@@ -12,4 +12,25 @@ export default class ServiceService {
     findAllServices = () =>
         fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/services")
             .then(response => response.json())
+    createService = service =>
+        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services`,
+            {
+                method: 'POST',
+                body: JSON.stringify(service),
+                headers: {'content-type': 'application/json'}
+            })
+            .then(response => response.json())
+    updateService = service =>
+        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/${service.id}`,
+            {
+                method: 'PUT',
+                body: JSON.stringify(service),
+                headers: {'content-type': 'application/json'}
+            })
+            .then(response => response.json())
+    deleteService = service =>
+        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/${service.id}`,
+            {
+                method: 'DELETE',
+            })
 }

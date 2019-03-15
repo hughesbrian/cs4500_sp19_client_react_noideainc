@@ -44,8 +44,6 @@ const Admin = () =>
                     <Link to="/admin/service">Services</Link>
                 	<br/>
                 	<Link to="/admin/service/1">Service Details</Link>
-                    <br/>
-                	<Link to="/admin/service/1">Service Details</Link>
                 	<br/>
                     <Link to="/admin/faqs">FAQs</Link>
                     <br/>
