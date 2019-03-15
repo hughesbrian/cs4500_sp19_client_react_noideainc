@@ -8,7 +8,7 @@ class ServiceAnswerDetails extends React.Component {
             serviceAnswers: [],
             answer: {
                 choiceAnswer: '',
-                id: 1,
+                id: this.props.match.params.id,
                 trueFalseAnswer: null,
                 minAnswer: 0,
                 maxAnswer: 0
@@ -66,7 +66,7 @@ class ServiceAnswerDetails extends React.Component {
             <div>
                 <h3>Service Answer Details</h3>
                 <select
-                    value={this.state.answer.choiceAnswer}
+                    value={this.state.answer.id}
                     onChange={(e) => this.selectServiceAnswer(e.target.value)}
                     className="form-control">
                     {
