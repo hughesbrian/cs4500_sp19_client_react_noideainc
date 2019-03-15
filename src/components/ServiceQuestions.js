@@ -11,6 +11,7 @@ class ServiceQuestions extends React.Component {
                 type: '',
                 choices: ''
             },
+            editingQuestion: -1,
             serviceQuestions: []
         }
     }
@@ -32,9 +33,9 @@ class ServiceQuestions extends React.Component {
         this.serviceQuestionService
             .createQuestion(question);
 
-    updateServiceQuestion = (id, question) =>
+    updateServiceQuestion = (question) =>
         this.serviceQuestionService
-            .updateQuestion(id, question);
+            .updateQuestion(this.state.editingQuestion, question);
 
     handleTitleChange = (event) =>
         this.setState({
@@ -75,6 +76,20 @@ class ServiceQuestions extends React.Component {
                 choices: event.target.value
             }
         });
+    
+    handleEditClick = function (id, question) {
+        this.updateEditForm(question);
+        this.setState({
+                editingQuestion: id
+            });
+        console.log(id);
+        console.log(this.state.editingQuestion);
+        };
+
+    updateEditForm = (question) =>
+        this.setState({
+            questionForm: question
+        });
 
     updateQuestions = () => this.serviceQuestionService
                                 .findAllServiceQuestions()
@@ -107,6 +122,12 @@ class ServiceQuestions extends React.Component {
                                 }>
                             CREATE NEW QUESTION
                         </button>
+                        <button type="button" onClick={() =>
+                                this.updateServiceQuestion(this.state.questionForm)
+                                    .then(this.updateQuestions)
+                                }>
+                            CONFIRM EDIT
+                        </button>
                 </form>
                 <table className="table">
                     <tbody>
@@ -130,10 +151,9 @@ class ServiceQuestions extends React.Component {
                                     {/* UPDATE button, calls update function then updates state*/}
                                     <td>
                                         <button onClick={() =>
-                                            this.updateServiceQuestion(serviceQuestion.id, this.state.questionForm)
-                                                .then(this.updateQuestions)
+                                            this.handleEditClick(serviceQuestion.id, serviceQuestion)
                                         }>
-                                            UPDATE
+                                            EDIT
                                         </button>
                                     </td>
                                 </tr>
