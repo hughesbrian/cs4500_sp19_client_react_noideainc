@@ -19,7 +19,7 @@ import FAQAnswerDetails from './FAQAnswerDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 
-const Admin = ({match}) =>
+const Admin = () =>
     <div>
         <h2>Admin</h2>
         <Router>
