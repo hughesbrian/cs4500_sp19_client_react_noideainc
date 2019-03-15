@@ -13,7 +13,6 @@ class ServiceCategories extends React.Component {
             serviceCategories: [],
             serviceCategory: {
                 title: '',
-                // might have to include a list of services.
             }
         }
     }
@@ -37,10 +36,12 @@ class ServiceCategories extends React.Component {
                 title: e.target.value
             }
         })
-    createServiceCategory = () =>
+    createServiceCategory = () => {
+        console.log(this.state.serviceCategory)
         this.serviceCategoryService
             .createServiceCategory(this.state.serviceCategory)
             .then(this.findAllServiceCategories)
+    }
     deleteServiceCategory = id =>
         this.serviceCategoryService
             .deleteServiceCategory(id)
@@ -115,49 +116,52 @@ class ServiceCategories extends React.Component {
                     }
                     <tr>
                         <td>
-                            <select
-                                id="select-page"
-                                value={this.state.page}
-                                onChange={this.setPageSelect}
-                                className="form-control">
-                                {
-                                    [...Array(this.state.totalPages).keys()].map(x =>
-                                        <option key={x} value={x}>{x + 1}</option>
-                                    )
-                                }
-                            </select>
-                            <nav aria-label="Page navigation example">
-                                <ul className="pagination">
-                                    <li className="page-item">
-                                        <button className="page-link"
-                                                onClick={() => this.setPagePagination(this.state.page - 1)}>
-                                            Previous
-                                        </button>
-                                    </li>
-                                    {
-                                        [...Array(this.state.totalPages).keys()].map(x =>
-                                            <li key={x} className="page-item">
+                            <div className="row">
+                                <div className="col-3">
+                                    <select
+                                        id="select-page"
+                                        value={this.state.page}
+                                        onChange={this.setPageSelect}
+                                        className="form-control">
+                                        {
+                                            [...Array(this.state.totalPages).keys()].map(x =>
+                                                <option key={x} value={x}>{x + 1}</option>
+                                            )
+                                        }
+                                    </select>
+                                </div>
+                                <div className="col-9">
+                                    <nav aria-label="Page navigation example">
+                                        <ul className="pagination">
+                                            <li className="page-item">
                                                 <button className="page-link"
-                                                        onClick={() => this.setPagePagination(x)}>
-                                                    {x + 1}
-                                                 </button>
+                                                        onClick={() => this.setPagePagination(this.state.page - 1)}>
+                                                    Previous
+                                                </button>
                                             </li>
-                                        )
-                                    }
-                                    <li className="page-item">
-                                        <button className="page-link"
-                                                onClick={() => this.setPagePagination(this.state.page + 1)}>
-                                            Next
-                                        </button>
-                                    </li>
-                                </ul>
-                            </nav>
+                                            {
+                                                [...Array(this.state.totalPages).keys()].map(x =>
+                                                    <li key={x} className="page-item">
+                                                        <button className="page-link"
+                                                                onClick={() => this.setPagePagination(x)}>
+                                                            {x + 1}
+                                                         </button>
+                                                    </li>
+                                                )
+                                            }
+                                            <li className="page-item">
+                                                <button className="page-link"
+                                                        onClick={() => this.setPagePagination(this.state.page + 1)}>
+                                                    Next
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </td>
                         <td>
-
-                        </td>
-                        <td>
-
+                            {/* just for alignment */}
                         </td>
                     </tr>
                     </tbody>
@@ -168,40 +172,3 @@ class ServiceCategories extends React.Component {
 }
 
 export default ServiceCategories
-
-
-
-/*
-
-componentDidMount() {
-    this.serviceCategoryService
-        .findAllServiceCategories()
-        .then(serviceCategories =>
-            this.setState({
-                serviceCategories: serviceCategories
-            })
-        )
-}
-
-render() {
-    return (
-        <div>
-            <h3>Service Categories</h3>
-            <table className="table">
-                <tbody>
-                {
-                    this.state.serviceCategories
-                        .map(serviceCategory =>
-                            <tr key={serviceCategory.id}>
-                                <td><Link to={"/admin/service-categories/" + serviceCategory.id}>
-                                    {serviceCategory.title}
-                                </Link></td>
-                            </tr>
-                        )
-                }
-                </tbody>
-            </table>
-        </div>
-    )
-}
-*/

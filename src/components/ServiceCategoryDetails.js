@@ -4,7 +4,7 @@ import ServiceCategoryService from '../services/ServiceCategoryService'
 class ServiceCategoryDetails extends React.Component {
     constructor(props) {
         super(props);
-        this.serviceCategoryService = ServiceCategoryService.getInstance();
+        this.serviceCategoryService = ServiceCategoryService.getInstance()
         this.state = {
             serviceCategories: [],
             serviceCategory: {
@@ -21,7 +21,8 @@ class ServiceCategoryDetails extends React.Component {
         this.serviceCategoryService
             .findAllServiceCategories()
             .then(serviceCategories => {
-                    this.props.history.push("/admin/service-categories/" + this.state.serviceCategory.id);
+                    console.log(serviceCategories)
+                    this.props.history.push("/admin/service-categories/" + this.state.serviceCategory.id)
                     this.setState({
                         serviceCategories: serviceCategories,
                         serviceCategory: serviceCategories.find((sc) => sc.id == this.state.serviceCategory.id)
@@ -31,7 +32,7 @@ class ServiceCategoryDetails extends React.Component {
         this.serviceCategoryService
             .findServiceCategoryById(id)
             .then(serviceCategory => {
-                    this.props.history.push("/admin/service-categories/" + id);
+                    this.props.history.push("/admin/service-categories/" + id)
                     this.setState({
                         serviceCategory: serviceCategory
                     })
@@ -56,30 +57,14 @@ class ServiceCategoryDetails extends React.Component {
     deleteServiceCategory = id => {
         this.serviceCategoryService
             .deleteServiceCategory(id)
-            .then(this.findAllServiceCategories)
+            .then(this.props.history.push("/admin/service-categories/"))
     }
     updateServiceCategory = () =>
         this.serviceCategoryService
             .updateServiceCategory(this.state.serviceCategory)
-            .then(this.findAllServiceCategories)
-    searchServiceCategory = () =>
-        this.serviceCategoryService
-            .filteredServiceCategories(document.getElementById("title-input").value)
-            .then(scs => {
-                console.log(scs)
-                if(scs != undefined && scs.length != 0) {
-                    console.log(scs[0])
-                    this.setState({
-                        serviceCategory: scs[0]
-                    })
-                }
-                else {
-                    // maybe do nothing
-                    console.log("huh?")
-                }
-            })
+            .then(this.props.history.push("/admin/service-categories/"))
     goBack = () => {
-        // you know
+        this.props.history.push("/admin/service-categories/")
     }
     render() {
         return(
@@ -120,45 +105,9 @@ class ServiceCategoryDetails extends React.Component {
                 <button className="btn btn-success" onClick={this.updateServiceCategory}>
                     Update
                 </button>
-                <button className="btn btn-warning" onClick={this.searchServiceCategory}>
-                    Search
-                </button>
             </div>
         )
     }
 }
 
 export default ServiceCategoryDetails
-
-
-
-/*
-render() {
-    return (
-        <div>
-            <h3>Service Category Details</h3>
-            <select
-                value={this.state.serviceCategory.id}
-                onChange={(e) => this.selectServiceCategory(e.target.value)}
-                className="form-control">
-                {
-                    this.state.serviceCategories
-                        .map(serviceCategory =>
-                            <option
-                                value={serviceCategory.id}
-                                key={serviceCategory.id}>
-                                {serviceCategory.title}
-                            </option>
-                        )
-                }
-            </select>
-            <label>Service Category Title</label><br/>
-            <input
-                onChange={() => {
-                }}
-                className="form-control"
-                value={this.state.serviceCategory.title}/>
-        </div>
-    )
-}
-*/
