@@ -74,8 +74,6 @@ class FAQs extends React.Component {
         return(
             <div>
                 <h3>Frequently Asked Questions</h3>
-                <div className="editForm">
-                </div>
                 <table className="table">
                     <tbody>
                     <tr>
