@@ -12,4 +12,8 @@ export default class FAQAnswerService {
     findAllFAQAnswers = () =>
         fetch("http://localhost:8080/api/faq-answers")
             .then(response => response.json())
+
+    findFiltered = (answer) =>
+        fetch("http://localhost:8080/api/faq-answers/filtered?answer=" + answer)
+            .then(response => response.json())
 }
