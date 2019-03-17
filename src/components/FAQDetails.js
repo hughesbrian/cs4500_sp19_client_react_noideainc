@@ -7,8 +7,8 @@ class FAQDetails extends React.Component {
         this.state = {
             faqs: [],
             faq: {
-                choiceAnswer: '',
-                id: 1
+                title: '',
+                id:  this.props.match.params.id
             }
         }
     }
@@ -16,15 +16,16 @@ class FAQDetails extends React.Component {
         this.faqService
             .findAllFAQs()
             .then(faqs => {
-                    this.props.history.push("/admin/faqs/" + faqs[0].id)
+                    this.props.history.push("/admin/faqs/" + this.state.faq.id)
                     this.setState({
                         faqs: faqs,
-                        faq: faqs[0]
+                        faq: faqs.find( (item) => 
+                            item.id == this.state.faq.id )
                     })
                 }
             )
     }
-    selectFAQ = id =>
+    selectFAQ = id => {
         this.faqService
             .findFAQById(id)
             .then(faq => {
@@ -34,6 +35,7 @@ class FAQDetails extends React.Component {
                     })
                 }
             )
+        }
     render() {
         return(
             <div>
