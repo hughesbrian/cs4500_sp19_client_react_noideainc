@@ -14,9 +14,12 @@
             margin-left: 5px;
         }
         .field {
-            width: 300px;
+            width: 240px;
             height: 40px;
             border-radius: 6px;
+        }
+        .show-question {
+            float: left;
         }
         ::placeholder {
             padding-left: 15px;
@@ -26,7 +29,7 @@
             font-weight: bold;
         }
         .operation {
-            width: 50px;
+            width: 80px;
         }
     }
     .table-bottom {

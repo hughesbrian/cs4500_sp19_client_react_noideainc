@@ -8,7 +8,7 @@ class FAQAnswerDetails extends React.Component {
             faqAnswers: [],
             faqAnswer: {
                 choiceAnswer: '',
-                id: 1
+                id: this.props.match.params.id
             }
         }
     }
@@ -16,10 +16,11 @@ class FAQAnswerDetails extends React.Component {
         this.faqAnswerService
             .findAllFAQAnswers()
             .then(faqAnswers => {
-                    this.props.history.push("/admin/faq-answers/" + faqAnswers[0].id)
+                    this.props.history.push("/admin/faq-answers/" + this.state.faqAnswer.id)
                     this.setState({
                         faqAnswers: faqAnswers,
-                        faqAnswer: faqAnswers[0]
+                        faqAnswer: faqAnswers.find( (item) => 
+                        item.id == this.state.faqAnswer.id )
                     })
                 }
             )

@@ -15,7 +15,7 @@ class FAQs extends React.Component {
         this.faqService = FAQService.getInstance()
         this.state = {
             faqs: [],
-            faqID: 0,
+            faqId: 0,
             title: "",
             question: "",
             filtered: false
@@ -77,7 +77,7 @@ class FAQs extends React.Component {
 
     moveToEdit = (faq) => {
         this.setState({
-            faqID: faq.id,
+            faqId: faq.id,
             title: faq.title,
             question: faq.question,
         })
@@ -88,13 +88,12 @@ class FAQs extends React.Component {
         console.log("create FAQ")
         if (this.state.question && this.state.title) {
             this.faqService
-            .createNewFAQ({
+            .createFAQ({
                 question: this.state.question,
                 title: this.state.title
             }).then(
                 (response) => {
-                    window.location.reload();
-                    this.props.history.push("/admin/faqs/")
+                    this.componentDidMount()
                 }
             ).catch(function (error) {
                 console.log(error)
@@ -108,23 +107,22 @@ class FAQs extends React.Component {
     editFAQ = () => {
         // alert("edit FAQ")
         console.log("edit FAQ")
-        if (this.state.question && this.state.title) {
+        if (this.state.question && this.state.title && this.state.faqId) {
             this.faqService
             .editFAQ({
-                id: this.state.faqID,
+                id: this.state.faqId,
                 question: this.state.question,
                 title: this.state.title
             }).then(
                 (response) => {
-                    window.location.reload();
-                    this.props.history.push("/admin/faqs/")
+                    this.componentDidMount()
                 }
             ).catch(function (error) {
                 console.log(error)
                 alert("Failed to edit this FAQ");
             });
         } else {
-            alert("please input title or question");
+            alert("please input title or question or select FAQ");
         }
     }
 
@@ -133,8 +131,7 @@ class FAQs extends React.Component {
         this.faqService
         .deleteFAQ(id).then(
             (response) => {
-                window.location.reload();
-                this.props.history.push("/admin/faqs/")
+                this.componentDidMount()
             }
         ).catch(function (error) {
             console.log(error)
