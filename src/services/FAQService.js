@@ -1,3 +1,6 @@
+
+const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://cs4500-sp19-noideainc.herokuapp.com'
+
 export default class FAQService {
     static instance = null;
     static getInstance() {
@@ -8,15 +11,15 @@ export default class FAQService {
     }
 
     findFAQById = id =>
-        fetch(`http://localhost:8080/api/faqs/${id}`)
+        fetch(baseURL + `/faqs/${id}`)
             .then(response => response.json())
 
     findAllFAQs = () =>
-        fetch("http://localhost:8080/api/faqs")
+        fetch(baseURL + "/api/faqs")
             .then(response => response.json())
 
     createFAQ = newFAQ =>
-        fetch("http://localhost:8080/api/faqs", 
+        fetch(baseURL + "/api/faqs", 
         {
             method: 'POST',
             body: JSON.stringify(newFAQ),
@@ -24,13 +27,13 @@ export default class FAQService {
         }).then(response => response.json())
 
     deleteFAQ = id =>
-        fetch(`http://localhost:8080/api/faqs/${id}`, 
+        fetch(baseURL + `/api/faqs/${id}`, 
         {
             method: 'DELETE'
         })
 
     editFAQ = question =>
-        fetch(`http://localhost:8080/api/faqs/${question.id}`,
+        fetch(baseURL + `/api/faqs/${question.id}`,
         {
             method: 'PUT',
             body: JSON.stringify({
@@ -41,6 +44,6 @@ export default class FAQService {
         }).then(response => response.json())
 
     findFiltered = (title, question) =>
-        fetch("http://localhost:8080/api/faqs/filtered?title=" + title + "&question=" + question)
+        fetch(baseURL + "/api/faqs/filtered?title=" + title + "&question=" + question)
             .then(response => response.json())
 }

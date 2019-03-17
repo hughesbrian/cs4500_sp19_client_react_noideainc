@@ -107,7 +107,7 @@ class FAQs extends React.Component {
     editFAQ = () => {
         // alert("edit FAQ")
         console.log("edit FAQ")
-        if (this.state.question && this.state.title) {
+        if (this.state.question && this.state.title && this.state.faqId) {
             this.faqService
             .editFAQ({
                 id: this.state.faqId,
@@ -122,7 +122,7 @@ class FAQs extends React.Component {
                 alert("Failed to edit this FAQ");
             });
         } else {
-            alert("please input title or question");
+            alert("please input title or question or select FAQ");
         }
     }
 
