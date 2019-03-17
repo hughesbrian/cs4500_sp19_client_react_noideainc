@@ -6,6 +6,7 @@ export default class FAQService {
         }
         return this.instance
     }
+
     findFAQById = id =>
         fetch(`http://localhost:8080/api/faqs/${id}`)
             .then(response => response.json())
@@ -14,7 +15,7 @@ export default class FAQService {
         fetch("http://localhost:8080/api/faqs")
             .then(response => response.json())
 
-    createNewFAQ = newFAQ =>
+    createFAQ = newFAQ =>
         fetch("http://localhost:8080/api/faqs", 
         {
             method: 'POST',

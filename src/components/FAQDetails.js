@@ -7,7 +7,7 @@ class FAQDetails extends React.Component {
         this.state = {
             faqs: [],
             faq: {
-                title: '',
+                choiceAnswer: '',
                 id:  this.props.match.params.id
             }
         }
