@@ -1,4 +1,4 @@
-const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://cs4500-sp19-noideainc.herokuapp.com'
+const baseURL = process.env.NODE_ENV !== 'development' ? 'http://localhost:8080' : 'https://cs4500-sp19-noideainc.herokuapp.com'
 
 export default class FAQAnswerService {
     static instance = null;
