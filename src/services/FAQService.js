@@ -11,7 +11,7 @@ export default class FAQService {
     }
 
     findFAQById = id =>
-        fetch(baseURL + `/faqs/${id}`)
+        fetch(baseURL + `/api/faqs/${id}`)
             .then(response => response.json())
 
     findAllFAQs = () =>
