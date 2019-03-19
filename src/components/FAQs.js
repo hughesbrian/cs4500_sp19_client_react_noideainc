@@ -220,6 +220,16 @@ class FAQs extends React.Component {
                     </tbody>
                 </table>
                 <div className="table-bottom">
+                    <nav className="page-nav" aria-label="Page navigation example">
+                        <select id="inputState" className="form-control" value={this.state.value} onChange={this.changeCountPerPage}>
+                            {renderCountOptions}
+                        </select>
+                        <ul className="pagination">
+                        {renderPrev()}
+                        {renderPageNumbers}
+                        {renderNext()}
+                        </ul>
+                    </nav>
                     {this.searchButton()}
                 </div>
             </div>
