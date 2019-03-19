@@ -25,6 +25,7 @@ class FAQs extends React.Component {
             totalPages: 0,
             totalFaqs: 0
         }
+        this.handlePageClick = this.handlePageClick.bind(this);
     }
     componentDidMount() {
         this.faqService
@@ -146,6 +147,27 @@ class FAQs extends React.Component {
             console.log(error)
             alert("Failed to delete this FAQ");
         });
+    }
+
+    // The follwoing functions deal with pagination
+    handlePageClick(event) {
+        const pageId = event.target.id
+        let newPageNum = pageId
+        if (pageId == "previous") {
+            newPageNum = this.state.currentPage - 1
+        } else if (pageId == "next") {
+            newPageNum = this.state.currentPage + 1
+        }
+        this.faqService
+            .findPagedFAQs(newPageNum, this.state.countPerPage)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + this.state.countPerPage)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: data.pageable.pageNumber
+                })
+            })
     }
 
     render() {
