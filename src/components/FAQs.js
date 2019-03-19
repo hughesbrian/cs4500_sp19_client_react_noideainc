@@ -18,18 +18,27 @@ class FAQs extends React.Component {
             faqId: 0,
             title: "",
             question: "",
-            filtered: false
+            filtered: false,
+            // variables for pagination
+            currentPage: 0,
+            countPerPage: 10,
+            totalPages: 0,
+            totalFaqs: 0
         }
     }
     componentDidMount() {
         this.faqService
-            .findAllFAQs()
-            .then(faqs => {
+            .findPagedFAQs(this.state.currentPage, this.state.countPerPage)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + this.state.currentPage + "/count/" + this.state.countPerPage)
                 this.setState({
-                    faqs: faqs
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: data.pageable.pageNumber,
+                    totalPages: data.totalPages,
+                    totalFaqs: data.totalElements
                 })
-            }
-        )
+            })
     }
 
     filterFAQs = async () => {
