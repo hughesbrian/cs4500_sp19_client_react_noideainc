@@ -199,12 +199,12 @@ class FAQs extends React.Component {
             if (number == this.state.currentPage) {
                 return(
                     <li className="page-item active">
-                        <a className="page-link" key={number} id={number} onClick={this.handleClick}>{number+1}</a>
+                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
                     </li>)
             } else {
                 return (
                     <li className="page-item">
-                        <a className="page-link" key={number} id={number} onClick={this.handleClick}>{number+1}</a>
+                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
                     </li>
                 )
             }
@@ -220,7 +220,7 @@ class FAQs extends React.Component {
             } else if (this.state.currentPage < this.state.totalPages - 1) {
                 return (
                     <li className="page-item">
-                        <a className="page-link" id="next" onClick={this.handleClick}>Next</a>
+                        <a className="page-link" id="next" onClick={this.handlePageClick}>Next</a>
                     </li>
                 )
             }
@@ -235,7 +235,7 @@ class FAQs extends React.Component {
             } else if (this.state.currentPage > 0) {
                 return (
                 <li className="page-item">
-                    <a className="page-link" id="previous" onClick={this.handleClick}>Previous</a>
+                    <a className="page-link" id="previous" onClick={this.handlePageClick}>Previous</a>
                 </li>)
             }
         }
