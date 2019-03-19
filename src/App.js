@@ -14,7 +14,7 @@ class App extends Component {
         <Router>
           <div>
             <Link to="/admin">Admin</Link>
-            <Route path="/admin" exact component={Admin}/>
+            <Route path="/admin" component={Admin}/>
           </div>
         </Router>
       </div>
