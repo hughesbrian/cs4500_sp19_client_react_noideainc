@@ -240,6 +240,29 @@ class FAQs extends React.Component {
             }
         }
 
+        const countOptions = [];
+        countOptions.push(10);
+        if (this.state.totalFaqs > 10) {
+            countOptions.push(25);
+        } else if (this.state.totalFaqs > 25) {
+            countOptions.push(50);
+        } else if (this.state.totalFaqs > 50) {
+            countOptions.push(100);
+        }
+        countOptions.push(this.state.totalFaqs);
+
+        const renderCountOptions = countOptions.map(countVal => {
+            if (countVal == this.state.totalFaqs) {
+                return (
+                    <option value={countVal}>All</option>
+                )
+            } else {
+                return (
+                    <option value={countVal}>{countVal}</option>
+                )
+            }
+        })
+
         return(
             <div className="faq-component">
                 <h3>Frequently Asked Questions</h3>
