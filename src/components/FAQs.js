@@ -26,6 +26,7 @@ class FAQs extends React.Component {
             totalFaqs: 0
         }
         this.handlePageClick = this.handlePageClick.bind(this);
+        this.changeCountPerPage = this.changeCountPerPage.bind(this);
     }
     componentDidMount() {
         this.faqService
@@ -166,6 +167,23 @@ class FAQs extends React.Component {
                     faqs: data.content,
                     countPerPage: data.pageable.pageSize,
                     currentPage: data.pageable.pageNumber
+                })
+            })
+    }
+
+    changeCountPerPage(event) {
+        const newCount = event.target.value
+        let newPageNum = Math.ceil(this.state.totalPages / this.state.totalFaqs) - 1
+
+        this.faqService
+            .findPagedFAQs(newPageNum, newCount)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + newCount)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: newPageNum,
+                    totalPages: data.totalPages
                 })
             })
     }
