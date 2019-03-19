@@ -189,6 +189,27 @@ class FAQs extends React.Component {
     }
 
     render() {
+        // Logic for displaying page numbers
+        const pageNumbers = [];
+        for (let i = 0; i < this.state.totalPages; i++) {
+            pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+            if (number == this.state.currentPage) {
+                return(
+                    <li className="page-item active">
+                        <a className="page-link" key={number} id={number} onClick={this.handleClick}>{number+1}</a>
+                    </li>)
+            } else {
+                return (
+                    <li className="page-item">
+                        <a className="page-link" key={number} id={number} onClick={this.handleClick}>{number+1}</a>
+                    </li>
+                )
+            }
+        })
+
         return(
             <div className="faq-component">
                 <h3>Frequently Asked Questions</h3>
