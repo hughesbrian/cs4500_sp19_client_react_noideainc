@@ -210,6 +210,22 @@ class FAQs extends React.Component {
             }
         })
 
+        const renderNext = () => {
+            if (this.state.currentPage >= this.state.totalPages - 1) {
+                return (
+                    <li className="page-item disabled">
+                        <a className="page-link" id="next">Next</a>
+                    </li>
+                )
+            } else if (this.state.currentPage < this.state.totalPages - 1) {
+                return (
+                    <li className="page-item">
+                        <a className="page-link" id="next" onClick={this.handleClick}>Next</a>
+                    </li>
+                )
+            }
+        }
+
         return(
             <div className="faq-component">
                 <h3>Frequently Asked Questions</h3>
