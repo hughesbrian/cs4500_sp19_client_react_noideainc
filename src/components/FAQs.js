@@ -241,12 +241,16 @@ class FAQs extends React.Component {
         }
 
         const countOptions = [];
-        countOptions.push(10);
         if (this.state.totalFaqs > 10) {
+            countOptions.push(10);
+        }
+        if (this.state.totalFaqs > 25) {
             countOptions.push(25);
-        } else if (this.state.totalFaqs > 25) {
+        }
+        if (this.state.totalFaqs > 50) {
             countOptions.push(50);
-        } else if (this.state.totalFaqs > 50) {
+        }
+        if (this.state.totalFaqs > 100) {
             countOptions.push(100);
         }
         countOptions.push(this.state.totalFaqs);
