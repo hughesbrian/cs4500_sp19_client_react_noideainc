@@ -46,4 +46,8 @@ export default class FAQService {
     findFiltered = (title, question) =>
         fetch(baseURL + "/api/faqs/filtered?title=" + title + "&question=" + question)
             .then(response => response.json())
+
+    findPagedFAQs = (page, count) =>
+        fetch(baseURL + "/api/faqs/paged?page=" + page + "&count=" + count)
+            .then(response => response.json())
 }

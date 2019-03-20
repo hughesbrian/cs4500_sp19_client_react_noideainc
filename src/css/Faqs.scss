@@ -43,5 +43,17 @@
             height: 50px;
             width: 50px;
         }
+        .page-nav {
+            width: 70%;
+            display: inline-flex;
+            padding-right: 1.5%;
+            padding-top: 1.5%;
+            cursor: pointer;
+        }
+        #inputState {
+            min-width: 50px;
+            width: 20%;
+            margin-right: 10px;
+        }
     }
 } 
