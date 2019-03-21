@@ -1,8 +1,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-import Users from './Users'
-import UserDetails from './UserDetails'
+import UsersContainer from './UsersContainer'
+import UserDetailsContainer from './UserDetailsContainer'
 import ServiceCategoriesContainer from './ServiceCategoriesContainer'
 import ServiceCategoryDetailsContainer from './ServiceCategoryDetailsContainer'
 import ServiceQuestions from './ServiceQuestions'
@@ -64,8 +64,8 @@ const Admin = () =>
                 <div className="col-9">
                     <Route path="/admin/service-categories" exact component={ServiceCategoriesContainer}/>
                     <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetailsContainer}/>
-                    <Route path="/admin/users" exact component={Users}/>
-                    <Route path="/admin/users/:id" exact component={UserDetails}/>
+                    <Route path="/admin/users" exact component={UsersContainer}/>
+                    <Route path="/admin/users/:id" exact component={UserDetailsContainer}/>
                     <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
                     <Route path="/admin/service-questions/:id" exact component={ServiceQuestionDetails}/>
                     <Route path="/admin/service" exact component={Services}/>
