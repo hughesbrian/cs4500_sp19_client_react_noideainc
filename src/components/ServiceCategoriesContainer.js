@@ -23,7 +23,6 @@ class ServiceCategoriesContainer extends React.Component {
         this.serviceCategoryService
             .pagedServiceCategories(this.state.page, this.state.count)
             .then(response => {
-                console.log(response)
                 this.setState({
                     serviceCategories: response.content,
                     totalPages: response.totalPages
@@ -37,7 +36,6 @@ class ServiceCategoriesContainer extends React.Component {
             }
         })
     createServiceCategory = () => {
-        console.log(this.state.serviceCategory)
         this.serviceCategoryService
             .createServiceCategory(this.state.serviceCategory)
             .then(this.findAllServiceCategories)

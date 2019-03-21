@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 const ServiceCategories = ({page, count, totalPages, serviceCategories,
                             serviceCategory, updateForm, createServiceCategory,
