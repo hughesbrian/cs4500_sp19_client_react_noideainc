@@ -92,49 +92,6 @@ const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ, ed
 //             })
 //     }
 
-//     filterFAQs = async () => {
-//         const { title, question, filtered } = this.state;
-//         if (title === '' || question === '') {
-//             alert('Please enter both title and question')
-//         } else {
-//             this.setState({filtered : true})
-//             try {
-//                 let res = await this.faqService.findFiltered(title, question);
-//                 this.setState({
-//                     faqs : res
-//                 })
-//             } catch (error) {
-//                 console.log(error)
-//             }
-//         }
-//     }
-
-//     searchButton = () => {
-//         if(this.state.filtered) {
-//             return <Button className="buttons searchButton" variant="warning" onClick={this.clearSearch}><TiTimesOutline /></Button>
-//         } else {
-//             return <Button className="buttons searchButton" variant="warning"
-//             onClick={this.filterFAQs}><IoIosSearch /></Button>
-//         }
-//     }
-
-//     clearSearch = () => {
-//         this.setState({
-//             filtered : false,
-//             title: "",
-//             question: ""
-//         })
-//         this.componentDidMount()
-//     }
-
-//     updateTitle = (e) => {
-//         this.setState({title : e.target.value})
-//     }
-
-//     updateQuestion = (e) => {
-//         this.setState({question : e.target.value})
-//     }
-
 //     moveToEdit = (faq) => {
 //         this.setState({
 //             faqId: faq.id,
