@@ -1,6 +1,12 @@
 import React from 'react'
 import FAQService from '../services/FAQService'
 import FAQs from '../components/FAQs'
+import { Button } from 'react-bootstrap';
+import { TiPlusOutline } from "react-icons/ti";
+import { TiTickOutline } from "react-icons/ti";
+import { TiTimesOutline } from "react-icons/ti";
+import { TiEdit } from "react-icons/ti";
+import { IoIosSearch } from "react-icons/io";
 
 class FAQContainer extends React.Component {
     constructor(props) {
@@ -11,7 +17,7 @@ class FAQContainer extends React.Component {
             faqId: 0,
             title: "",
             question: "",
-            // filtered: false,
+            filtered: false
             // variables for pagination
             // currentPage: 0,
             // countPerPage: 10,
@@ -35,13 +41,56 @@ class FAQContainer extends React.Component {
             })
         })
     }
-    
+
     moveToEdit = (faq) => {
         this.setState({
             faqId: faq.id,
             title: faq.title,
-            question: faq.question,
+            question: faq.question
         })
+    }
+
+    updateTitle = (e) => {
+          this.setState({title : e.target.value})
+    }
+
+    updateQuestion = (e) => {
+          this.setState({question : e.target.value})
+    }
+
+    filterFAQs = async () => {
+            const { title, question, filtered } = this.state;
+            if (title === '' || question === '') {
+                alert('Please enter both title and question')
+            } else {
+                this.setState({filtered : true})
+                try {
+                    let res = await this.faqService.findFiltered(title, question);
+                    this.setState({
+                        faqs : res
+                    })
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+    }
+
+    searchButton = () => {
+            if(this.state.filtered) {
+                return <Button className="buttons searchButton" variant="warning" onClick={this.clearSearch}><TiTimesOutline /></Button>
+            } else {
+                return <Button className="buttons searchButton" variant="warning"
+                onClick={this.filterFAQs}><IoIosSearch /></Button>
+            }
+    }
+
+    clearSearch = () => {
+            this.setState({
+                filtered : false,
+                title: "",
+                question: ""
+            })
+            this.componentDidMount()
     }
 
     createFAQ = () => {
@@ -105,12 +154,18 @@ class FAQContainer extends React.Component {
         });
     }
 
-    render = () => 
-        <FAQs faqs={this.state.faqs} 
+    render = () =>
+        <FAQs
+              title={this.state.title}
+              question={this.state.question}
+              faqs={this.state.faqs}
+              updateTitle={this.updateTitle}
+              updateQuestion={this.updateQuestion}
               createFAQ={this.createFAQ}
               editFAQ={this.editFAQ}
               deleteFAQ={this.deleteFAQ}
               moveToEdit={this.moveToEdit}
+              searchButton={this.searchButton}
         />
 }
 
