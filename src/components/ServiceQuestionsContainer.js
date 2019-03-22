@@ -16,6 +16,8 @@ class ServiceQuestionsContainer extends React.Component {
             editingQuestion: -1,
             serviceQuestions: []
         }
+
+        this.handleEditClick = this.handleEditClick.bind(this);
     }
     componentDidMount() {
         this.serviceQuestionService
