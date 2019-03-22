@@ -9,7 +9,7 @@ import { TiEdit } from "react-icons/ti";
 import { IoIosSearch } from "react-icons/io";
 
 // Refactor Stateful Components as Stateless
-const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) => 
+const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ, editFAQ, deleteFAQ, moveToEdit, searchButton}) =>
     <div className="faq-component">
         <h3>Frequently Asked Questions</h3>
         <table className="faq-table">
@@ -19,10 +19,10 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
                     <td className="field title"> FAQ Question </td>
                 </tr>
                 <tr className="table-row">
-                    <td><input placeholder="please input title" className="field"></input></td>
-                    <td><input placeholder="please input question" className="field"></input></td>
+                <td><input value={title} placeholder="please input title" onChange={updateTitle} className="field"></input></td>
+                <td><input value={question} placeholder="please input question" onChange={updateQuestion} className="field"></input></td>
                     <td className="operation">
-                        <Button onClick={createFAQ} className="buttons" variant="primary"><TiPlusOutline /></Button> 
+                        <Button onClick={createFAQ} className="buttons" variant="primary"><TiPlusOutline /></Button>
                         <Button onClick={editFAQ} className="buttons" variant="info"><TiTickOutline /></Button>
                     </td>
                 </tr>
@@ -33,7 +33,7 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
                                 {faq.title}</Link></td>
                             <td>{faq.question}</td>
                             <td>
-                                <Button onClick={() => deleteFAQ(faq.id)} className="buttons" variant="danger"> <TiTimesOutline/> </Button> 
+                                <Button onClick={() => deleteFAQ(faq.id)} className="buttons" variant="danger"> <TiTimesOutline/> </Button>
                                 <Button onClick={() => moveToEdit(faq)} className="buttons" variant="primary"><TiEdit /></Button>
                             </td>
                         </tr>
@@ -41,6 +41,7 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
                 }
             </tbody>
         </table>
+        {searchButton()}
         {/* <div className="table-bottom">
             <nav className="page-nav" aria-label="Page navigation example">
                 <select id="inputState" className="form-control" value={this.state.value} onChange={this.changeCountPerPage}>
@@ -52,7 +53,6 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
                 {renderNext()}
                 </ul>
             </nav>
-            {this.searchButton()}
         </div> */}
     </div>
 
@@ -90,49 +90,6 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
 //                     totalFaqs: data.totalElements
 //                 })
 //             })
-//     }
-
-//     filterFAQs = async () => {
-//         const { title, question, filtered } = this.state;
-//         if (title === '' || question === '') {
-//             alert('Please enter both title and question')
-//         } else {
-//             this.setState({filtered : true})
-//             try {
-//                 let res = await this.faqService.findFiltered(title, question);
-//                 this.setState({
-//                     faqs : res
-//                 })
-//             } catch (error) {
-//                 console.log(error)
-//             }
-//         }
-//     }
-
-//     searchButton = () => {
-//         if(this.state.filtered) {
-//             return <Button className="buttons searchButton" variant="warning" onClick={this.clearSearch}><TiTimesOutline /></Button>
-//         } else {
-//             return <Button className="buttons searchButton" variant="warning" 
-//             onClick={this.filterFAQs}><IoIosSearch /></Button>
-//         }
-//     }
-
-//     clearSearch = () => {
-//         this.setState({
-//             filtered : false,
-//             title: "",
-//             question: ""
-//         })
-//         this.componentDidMount()
-//     }
-
-//     updateTitle = (e) => {
-//         this.setState({title : e.target.value})
-//     }
-
-//     updateQuestion = (e) => {
-//         this.setState({question : e.target.value})
 //     }
 
 //     moveToEdit = (faq) => {
@@ -328,7 +285,7 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
 //                     <tr className="table-row">
 //                         <td><input value={this.state.title} placeholder="please input title" onChange={this.updateTitle} className="field"></input></td>
 //                         <td><input  value={this.state.question} placeholder="please input question" onChange={this.updateQuestion} className="field"></input></td>
-//                         <td className="operation"><Button onClick={this.createFAQ} className="buttons" variant="primary"><TiPlusOutline /></Button> 
+//                         <td className="operation"><Button onClick={this.createFAQ} className="buttons" variant="primary"><TiPlusOutline /></Button>
 //                           <Button onClick={this.editFAQ} className="buttons" variant="info"><TiTickOutline /></Button></td>
 //                     </tr>
 //                     {
@@ -338,7 +295,7 @@ const FAQs = ({faqs, createFAQ, editFAQ, deleteFAQ, moveToEdit}) =>
 //                                     {faq.title}</Link></td>
 //                                 <td>{faq.question}</td>
 //                                 <td>
-//                                     <Button onClick={() => this.deleteFAQ(faq.id)} className="buttons" variant="danger"> <TiTimesOutline/> </Button> 
+//                                     <Button onClick={() => this.deleteFAQ(faq.id)} className="buttons" variant="danger"> <TiTimesOutline/> </Button>
 //                                     <Button onClick={() => this.moveToEdit(faq)} className="buttons" variant="primary"><TiEdit /></Button>
 //                                 </td>
 //                             </tr>
