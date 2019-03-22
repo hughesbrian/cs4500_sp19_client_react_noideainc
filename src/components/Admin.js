@@ -5,7 +5,7 @@ import UsersContainer from './UsersContainer'
 import UserDetailsContainer from './UserDetailsContainer'
 import ServiceCategoriesContainer from './ServiceCategoriesContainer'
 import ServiceCategoryDetailsContainer from './ServiceCategoryDetailsContainer'
-import ServiceQuestions from './ServiceQuestions'
+import ServiceQuestionsContainer from './ServiceQuestionsContainer'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
 import FAQs from './FAQs'
@@ -66,7 +66,7 @@ const Admin = () =>
                     <Route path="/admin/service-categories/:id" exact component={ServiceCategoryDetailsContainer}/>
                     <Route path="/admin/users" exact component={UsersContainer}/>
                     <Route path="/admin/users/:id" exact component={UserDetailsContainer}/>
-                    <Route path="/admin/service-questions" exact component={ServiceQuestions}/>
+                    <Route path="/admin/service-questions" exact component={ServiceQuestionsContainer}/>
                     <Route path="/admin/service-questions/:id" exact component={ServiceQuestionDetails}/>
                     <Route path="/admin/service" exact component={Services}/>
                 	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
