@@ -5,6 +5,7 @@ import UsersContainer from './UsersContainer'
 import UserDetailsContainer from './UserDetailsContainer'
 import ServiceCategoriesContainer from './ServiceCategoriesContainer'
 import ServiceCategoryDetailsContainer from './ServiceCategoryDetailsContainer'
+import ServiceAnswerDetailsContainer from './ServiceAnswerDetailsContainer'
 import ServiceQuestionsContainer from './ServiceQuestionsContainer'
 import Services from './Services'
 import ServiceDetails from './ServiceDetails'
@@ -75,7 +76,7 @@ const Admin = () =>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
                     <Route path="/admin/faq-answers/:id" exact component={FAQAnswerDetails}/>
                     <Route path="/admin/service-answers" exact component={ServiceAnswers}/>
-                    <Route path="/admin/service-answers/:id" exact component={ServiceAnswerDetails}/>
+                    <Route path="/admin/service-answers/:id" exact component={ServiceAnswerDetailsContainer}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
