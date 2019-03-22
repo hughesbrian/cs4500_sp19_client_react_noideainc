@@ -2,10 +2,7 @@ import React from 'react'
 import FAQService from '../services/FAQService'
 import FAQs from '../components/FAQs'
 import { Button } from 'react-bootstrap';
-import { TiPlusOutline } from "react-icons/ti";
-import { TiTickOutline } from "react-icons/ti";
 import { TiTimesOutline } from "react-icons/ti";
-import { TiEdit } from "react-icons/ti";
 import { IoIosSearch } from "react-icons/io";
 
 class FAQContainer extends React.Component {
@@ -17,19 +14,31 @@ class FAQContainer extends React.Component {
             faqId: 0,
             title: "",
             question: "",
-            filtered: false
+            filtered: false,
             // variables for pagination
-            // currentPage: 0,
-            // countPerPage: 10,
-            // totalPages: 0,
-            // totalFaqs: 0
+            currentPage: 0,
+            countPerPage: 10,
+            totalPages: 0,
+            totalFaqs: 0
         }
-        // this.handlePageClick = this.handlePageClick.bind(this);
-        // this.changeCountPerPage = this.changeCountPerPage.bind(this);
+        this.handlePageClick = this.handlePageClick.bind(this)
+        this.changeCountPerPage = this.changeCountPerPage.bind(this)
     }
 
     componentDidMount() {
-        this.findAllFAQs()
+        // this.findAllFAQs()
+        this.faqService
+            .findPagedFAQs(this.state.currentPage, this.state.countPerPage)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + this.state.currentPage + "/count/" + this.state.countPerPage)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: data.pageable.pageNumber,
+                    totalPages: data.totalPages,
+                    totalFaqs: data.totalElements
+                })
+            })
     }
 
     findAllFAQs = () => {
@@ -154,6 +163,44 @@ class FAQContainer extends React.Component {
         });
     }
 
+    // The following functions deal with pagination
+    handlePageClick(event) {
+        const pageId = event.target.id
+        let newPageNum = pageId
+        if (pageId == "previous") {
+            newPageNum = this.state.currentPage - 1
+        } else if (pageId == "next") {
+            newPageNum = this.state.currentPage + 1
+        }
+        this.faqService
+            .findPagedFAQs(newPageNum, this.state.countPerPage)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + this.state.countPerPage)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: data.pageable.pageNumber
+                })
+            })
+    }
+
+    changeCountPerPage(event) {
+        const newCount = event.target.value
+        let newPageNum = Math.ceil(this.state.totalPages / this.state.totalFaqs) - 1
+
+        this.faqService
+            .findPagedFAQs(newPageNum, newCount)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + newCount)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: newPageNum,
+                    totalPages: data.totalPages
+                })
+            })
+    }
+
     render = () =>
         <FAQs
               title={this.state.title}
@@ -166,8 +213,12 @@ class FAQContainer extends React.Component {
               deleteFAQ={this.deleteFAQ}
               moveToEdit={this.moveToEdit}
               searchButton={this.searchButton}
+              currentPage={this.state.currentPage}
+              totalPages={this.state.totalPages}
+              totalFaqs={this.state.totalFaqs}
+              handlePageClick={this.handlePageClick}
+              changeCountPerPage={this.changeCountPerPage}
         />
 }
-
 
 export default FAQContainer
