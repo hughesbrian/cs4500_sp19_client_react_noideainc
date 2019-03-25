@@ -1,0 +1,23 @@
+[
+  {
+    "id": 123,
+    "username": "nate",
+    "password": "p4ssw0rd",
+    "firstName": "Nathan",
+    "lastName": "Jones",
+    "services": [
+      {
+        "id": 1,
+        "title": "Nate's Landscaping",
+        "description": "You want a good-looking yard? Let Nate fix it up for you!"
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "username": "sam",
+    "password": "pa55word",
+    "firstName": "Sam",
+    "lastName": "Atkins"
+  }
+]
