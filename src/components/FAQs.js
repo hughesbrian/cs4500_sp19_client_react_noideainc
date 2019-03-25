@@ -6,7 +6,6 @@ import { TiPlusOutline } from "react-icons/ti";
 import { TiTickOutline } from "react-icons/ti";
 import { TiTimesOutline } from "react-icons/ti";
 import { TiEdit } from "react-icons/ti";
-import { IoIosSearch } from "react-icons/io";
 
 // Refactor Stateful Components as Stateless
 const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ, editFAQ, deleteFAQ, moveToEdit, searchButton}) =>
@@ -90,70 +89,6 @@ const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ, ed
 //                     totalFaqs: data.totalElements
 //                 })
 //             })
-//     }
-
-//     moveToEdit = (faq) => {
-//         this.setState({
-//             faqId: faq.id,
-//             title: faq.title,
-//             question: faq.question,
-//         })
-//     }
-
-//     createFAQ = () => {
-//         // alert("create FAQ")
-//         console.log("create FAQ")
-//         if (this.state.question && this.state.title) {
-//             this.faqService
-//             .createFAQ({
-//                 question: this.state.question,
-//                 title: this.state.title
-//             }).then(
-//                 (response) => {
-//                     this.componentDidMount()
-//                 }
-//             ).catch(function (error) {
-//                 console.log(error)
-//                 alert("Failed to create a new FAQ");
-//             });
-//         } else {
-//             alert("please input title or question");
-//         }
-//     }
-
-//     editFAQ = () => {
-//         // alert("edit FAQ")
-//         console.log("edit FAQ")
-//         if (this.state.question && this.state.title && this.state.faqId) {
-//             this.faqService
-//             .editFAQ({
-//                 id: this.state.faqId,
-//                 question: this.state.question,
-//                 title: this.state.title
-//             }).then(
-//                 (response) => {
-//                     this.componentDidMount()
-//                 }
-//             ).catch(function (error) {
-//                 console.log(error)
-//                 alert("Failed to edit this FAQ");
-//             });
-//         } else {
-//             alert("please input title or question or select FAQ");
-//         }
-//     }
-
-//     deleteFAQ = id => {
-//         console.log("delte FAQ: " + id)
-//         this.faqService
-//         .deleteFAQ(id).then(
-//             (response) => {
-//                 this.componentDidMount()
-//             }
-//         ).catch(function (error) {
-//             console.log(error)
-//             alert("Failed to delete this FAQ");
-//         });
 //     }
 
 //     // The follwoing functions deal with pagination

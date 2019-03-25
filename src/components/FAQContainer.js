@@ -2,10 +2,7 @@ import React from 'react'
 import FAQService from '../services/FAQService'
 import FAQs from '../components/FAQs'
 import { Button } from 'react-bootstrap';
-import { TiPlusOutline } from "react-icons/ti";
-import { TiTickOutline } from "react-icons/ti";
 import { TiTimesOutline } from "react-icons/ti";
-import { TiEdit } from "react-icons/ti";
 import { IoIosSearch } from "react-icons/io";
 
 class FAQContainer extends React.Component {
