@@ -14,19 +14,31 @@ class FAQContainer extends React.Component {
             faqId: 0,
             title: "",
             question: "",
-            filtered: false
+            filtered: false,
             // variables for pagination
-            // currentPage: 0,
-            // countPerPage: 10,
-            // totalPages: 0,
-            // totalFaqs: 0
+            currentPage: 0,
+            countPerPage: 10,
+            totalPages: 0,
+            totalFaqs: 0
         }
-        // this.handlePageClick = this.handlePageClick.bind(this);
-        // this.changeCountPerPage = this.changeCountPerPage.bind(this);
+        this.handlePageClick = this.handlePageClick.bind(this);
+        this.changeCountPerPage = this.changeCountPerPage.bind(this);
     }
 
     componentDidMount() {
-        this.findAllFAQs()
+        // this.findAllFAQs()
+        this.faqService
+        .findPagedFAQs(this.state.currentPage, this.state.countPerPage)
+        .then(data => {
+            this.props.history.push("/admin/faqs/page/" + this.state.currentPage + "/count/" + this.state.countPerPage)
+            this.setState({
+                faqs: data.content,
+                countPerPage: data.pageable.pageSize,
+                currentPage: data.pageable.pageNumber,
+                totalPages: data.totalPages,
+                totalFaqs: data.totalElements
+            })
+        })
     }
 
     findAllFAQs = () => {
@@ -151,20 +163,141 @@ class FAQContainer extends React.Component {
         });
     }
 
-    render = () =>
-        <FAQs
-              title={this.state.title}
-              question={this.state.question}
-              faqs={this.state.faqs}
-              updateTitle={this.updateTitle}
-              updateQuestion={this.updateQuestion}
-              createFAQ={this.createFAQ}
-              editFAQ={this.editFAQ}
-              deleteFAQ={this.deleteFAQ}
-              moveToEdit={this.moveToEdit}
-              searchButton={this.searchButton}
-        />
-}
+    // The following functions deal with pagination
+    handlePageClick(event) {
+        const pageId = event.target.id
+        let newPageNum = pageId
+        if (pageId == "previous") {
+            newPageNum = this.state.currentPage - 1
+        } else if (pageId == "next") {
+            newPageNum = this.state.currentPage + 1
+        }
+        this.faqService
+            .findPagedFAQs(newPageNum, this.state.countPerPage)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + this.state.countPerPage)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: data.pageable.pageNumber
+                })
+            })
+    }
 
+    changeCountPerPage(event) {
+        const newCount = event.target.value
+        let newPageNum = Math.ceil(this.state.totalPages / this.state.totalFaqs) - 1
+
+        this.faqService
+            .findPagedFAQs(newPageNum, newCount)
+            .then(data => {
+                this.props.history.push("/admin/faqs/page/" + newPageNum + "/count/" + newCount)
+                this.setState({
+                    faqs: data.content,
+                    countPerPage: data.pageable.pageSize,
+                    currentPage: newPageNum,
+                    totalPages: data.totalPages
+                })
+            })
+    }
+
+    render = () => {
+        const pageNumbers = [];
+        for (let i = 0; i < this.state.totalPages; i++) {
+            pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+            if (number == this.state.currentPage) {
+                return(
+                    <li className="page-item active">
+                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
+                    </li>)
+            } else {
+                return (
+                    <li className="page-item">
+                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
+                    </li>
+                )
+            }
+        })
+
+        const renderNext = () => {
+            if (this.state.currentPage >= this.state.totalPages - 1) {
+                return (
+                    <li className="page-item disabled">
+                        <a className="page-link" id="next">Next</a>
+                    </li>
+                )
+            } else if (this.state.currentPage < this.state.totalPages - 1) {
+                return (
+                    <li className="page-item">
+                        <a className="page-link" id="next" onClick={this.handlePageClick}>Next</a>
+                    </li>
+                )
+            }
+        }
+
+        const renderPrev = () => {
+            if (this.state.currentPage <= 0) {
+                return(
+                <li className="page-item disabled">
+                    <a className="page-link" id="previous">Previous</a>
+                </li>)
+            } else if (this.state.currentPage > 0) {
+                return (
+                <li className="page-item">
+                    <a className="page-link" id="previous" onClick={this.handlePageClick}>Previous</a>
+                </li>)
+            }
+        }
+
+        const countOptions = [];
+        if (this.state.totalFaqs > 10) {
+            countOptions.push(10);
+        }
+        if (this.state.totalFaqs > 25) {
+            countOptions.push(25);
+        }
+        if (this.state.totalFaqs > 50) {
+            countOptions.push(50);
+        }
+        if (this.state.totalFaqs > 100) {
+            countOptions.push(100);
+        }
+        countOptions.push(this.state.totalFaqs);
+
+        const renderCountOptions = countOptions.map(countVal => {
+            if (countVal == this.state.totalFaqs) {
+                return (
+                    <option value={countVal}>All</option>
+                )
+            } else {
+                return (
+                    <option value={countVal}>{countVal}</option>
+                )
+            }
+        })
+
+        return(
+        <FAQs
+            title={this.state.title}
+            question={this.state.question}
+            faqs={this.state.faqs}
+            updateTitle={this.updateTitle}
+            updateQuestion={this.updateQuestion}
+            createFAQ={this.createFAQ}
+            editFAQ={this.editFAQ}
+            deleteFAQ={this.deleteFAQ}
+            moveToEdit={this.moveToEdit}
+            searchButton={this.searchButton}
+            changeCountPerPage={this.changeCountPerPage}
+            renderPageNumbers={renderPageNumbers}
+            renderNext={renderNext}
+            renderPrev={renderPrev}
+            renderCountOptions={renderCountOptions}
+        />)
+    }
+}
 
 export default FAQContainer
