@@ -28,8 +28,9 @@
         "id":22,
         "title":"company's age",
         "question":"How long have your company been operating for?",
-        "answers":[{"id":5,"answer":"3 years","question":"How long have your company been operating for?"}
-            ]
+        "answers":[
+            {"id":5,"answer":"3 years","question":"How long have your company been operating for?"}
+        ]
     },
     {
         "id":32,
