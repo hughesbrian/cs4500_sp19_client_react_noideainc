@@ -16,7 +16,7 @@ const Users = ({users, editingUser, setEditingUser, deleteUser, createUser, upda
                             firstName: editingUser.firstName,
                             lastName: editingUser.lastName
                         }
-                    })} className="form-control"
+                    })} className="form-control username-edit-field"
                            value={editingUser.username}/></td>
                 <td><input onChange={(e) =>
                     setEditingUser({
@@ -42,7 +42,7 @@ const Users = ({users, editingUser, setEditingUser, deleteUser, createUser, upda
                         })} className="form-control"
                            value={editingUser.lastName}/></td>
                 <td>
-                    <button className="btn btn-success" onClick={() => {
+                    <button className="btn btn-success save-user-btn" onClick={() => {
                         saveUser(editingUser, createUser, updateUser)
                     }}>Save
                     </button>
@@ -71,7 +71,7 @@ const Users = ({users, editingUser, setEditingUser, deleteUser, createUser, upda
                             }}
                             >Edit
                             </button>
-                            <button className="btn btn-danger" onClick={
+                            <button className="btn btn-danger delete-user-btn" onClick={
                                 () => deleteUser(user)
                             }>Delete
                             </button>
