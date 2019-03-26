@@ -1,0 +1,44 @@
+[
+  {
+    "choiceAnswer" : 0,
+    "id": 1,
+    "trueFalseAnswer": "",
+    "minRangeAnswer": "",
+    "maxRangeAnswer": ""
+  },
+  {
+    "choiceAnswer" : 1,
+    "id": 2,
+    "trueFalseAnswer": "",
+    "minRangeAnswer": "",
+    "maxRangeAnswer": ""
+  },
+  {
+  "choiceAnswer" : "",
+  "id": 3,
+  "trueFalseAnswer": "True",
+  "minRangeAnswer": "",
+  "maxRangeAnswer": ""
+  },
+  {
+    "choiceAnswer" : "",
+    "id": 4,
+    "trueFalseAnswer": "False",
+    "minRangeAnswer": "",
+    "maxRangeAnswer": ""
+  },
+  {
+    "choiceAnswer" : "",
+    "id": 5,
+    "trueFalseAnswer": "",
+    "minRangeAnswer": "1",
+    "maxRangeAnswer": "2"
+  },
+  {
+    "choiceAnswer" : "",
+    "id": 6,
+    "trueFalseAnswer": "",
+    "minRangeAnswer": "3",
+    "maxRangeAnswer": "4"
+  }
+]
