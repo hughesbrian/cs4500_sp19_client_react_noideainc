@@ -1,0 +1,1247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceCategoriesContainer renders correctly 1`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value=""
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Tutoring
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 2`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value=""
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Tutoring
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 3`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value="New category"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Tutoring
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 4`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value="New category"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Tutoring
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 5`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value="Creation"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          New category
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 6`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value="Creation"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          New category
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ServiceCategoriesContainer renders correctly 7`] = `
+<div>
+  <h3>
+    Service Categories
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <b>
+            Title
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            className="title-field"
+            onChange={[Function]}
+            value="Creation"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-primary create-btn"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-success update-btn"
+            onClick={[Function]}
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          New category
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Fitness Trainer
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          House Painter
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="service-category-rows"
+      >
+        <td>
+          Creation
+        </td>
+        <td>
+          <button
+            className="btn btn-danger delete-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary select-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="row"
+          >
+            <div
+              className="col-3"
+            >
+              <select
+                className="form-control"
+                id="select-page"
+                onChange={[Function]}
+                value={0}
+              >
+                <option
+                  className="page-select-fields"
+                  value={0}
+                >
+                  1
+                </option>
+              </select>
+            </div>
+            <div
+              className="col-9"
+            >
+              <nav
+                aria-label="Page navigation example"
+              >
+                <ul
+                  className="pagination"
+                >
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link previous-btn"
+                      onClick={[Function]}
+                    >
+                      Previous
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link pagination-btns"
+                      onClick={[Function]}
+                    >
+                      1
+                    </button>
+                  </li>
+                  <li
+                    className="page-item"
+                  >
+                    <button
+                      className="page-link next-btn"
+                      onClick={[Function]}
+                    >
+                      Next
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

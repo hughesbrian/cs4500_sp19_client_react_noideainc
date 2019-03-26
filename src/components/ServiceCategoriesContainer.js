@@ -19,7 +19,7 @@ class ServiceCategoriesContainer extends React.Component {
     componentDidMount() {
         this.findAllServiceCategories()
     }
-    findAllServiceCategories = () =>
+    findAllServiceCategories = () => {
         this.serviceCategoryService
             .pagedServiceCategories(this.state.page, this.state.count)
             .then(response => {
@@ -28,6 +28,7 @@ class ServiceCategoriesContainer extends React.Component {
                     totalPages: response.totalPages
                 })
             })
+    }
     updateForm = e =>
         this.setState({
             serviceCategory: {

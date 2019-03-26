@@ -17,22 +17,23 @@ const ServiceCategories = ({page, count, totalPages, serviceCategories,
             <tr>
                 <td>
                     <input
+                        className="title-field"
                         onChange={e => updateForm(e)}
                         value={serviceCategory.title}></input>
                 </td>
                 <td>
-                    <button className="btn btn-primary" onClick={createServiceCategory}>Add</button>
-                    <button className="btn btn-success" onClick={updateServiceCategory}>Update</button>
+                    <button className="btn btn-primary create-btn" onClick={createServiceCategory}>Add</button>
+                    <button className="btn btn-success update-btn" onClick={updateServiceCategory}>Update</button>
                 </td>
             </tr>
             {
                 serviceCategories.map(sc =>
-                    <tr key={sc.id}>
+                    <tr key={sc.id} className="service-category-rows">
                         <td>{sc.title}</td>
-                        <td><button className="btn btn-danger" onClick={() => deleteServiceCategory(sc.id)}>
+                        <td><button className="btn btn-danger delete-btn" onClick={() => deleteServiceCategory(sc.id)}>
                             Delete
                         </button>
-                        <button className="btn btn-primary" onClick={() => selectServiceCategory(sc.id)}>
+                        <button className="btn btn-primary select-btn" onClick={() => selectServiceCategory(sc.id)}>
                             Edit
                         </button>
                         </td>
@@ -50,7 +51,7 @@ const ServiceCategories = ({page, count, totalPages, serviceCategories,
                                 className="form-control">
                                 {
                                     [...Array(totalPages).keys()].map(x =>
-                                        <option key={x} value={x}>{x + 1}</option>
+                                        <option className="page-select-fields" key={x} value={x}>{x + 1}</option>
                                     )
                                 }
                             </select>
@@ -59,7 +60,7 @@ const ServiceCategories = ({page, count, totalPages, serviceCategories,
                             <nav aria-label="Page navigation example">
                                 <ul className="pagination">
                                     <li className="page-item">
-                                        <button className="page-link"
+                                        <button className="page-link previous-btn"
                                                 onClick={() => setPagePagination(page - 1)}>
                                             Previous
                                         </button>
@@ -67,7 +68,7 @@ const ServiceCategories = ({page, count, totalPages, serviceCategories,
                                     {
                                         [...Array(totalPages).keys()].map(x =>
                                             <li key={x} className="page-item">
-                                                <button className="page-link"
+                                                <button className="page-link pagination-btns"
                                                         onClick={() => setPagePagination(x)}>
                                                     {x + 1}
                                                  </button>
@@ -75,7 +76,7 @@ const ServiceCategories = ({page, count, totalPages, serviceCategories,
                                         )
                                     }
                                     <li className="page-item">
-                                        <button className="page-link"
+                                        <button className="page-link next-btn"
                                                 onClick={() => setPagePagination(page + 1)}>
                                             Next
                                         </button>
