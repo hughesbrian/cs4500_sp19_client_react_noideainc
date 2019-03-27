@@ -7,7 +7,7 @@ const ServiceAnswerDetails = ({serviceAnswers, answer, createAnswer, serviceQues
                 <select
                     value={answer.id}
                     onChange={(e) => selectServiceAnswer(e.target.value)}
-                    className="form-control">
+                    className="select-answer">
                     {
                         serviceAnswers
                             .map(answer =>
@@ -24,28 +24,28 @@ const ServiceAnswerDetails = ({serviceAnswers, answer, createAnswer, serviceQues
                 <label>Answer ID</label><br/>
                 <input
                     onChange = {(e) => e }
-                    className="form-control"
+                    className="answer-id"
                     value={answer.id}/>
                 <label>Answer minAnswer</label><br/>
                 <input
                     onChange = { (e) => updateMinValue(e)}
-                    className="form-control"
+                    className="answer-min"
                     value={answer.minRangeAnswer}/>
 
                 <label>Answer maxAnswer</label><br/>
                 <input
                     onChange = { (e) => updateMaxValue(e)}
-                    className="form-control"
+                    className="answer-max"
                     value={answer.maxRangeAnswer}/>
                 <label>Answer choiceAnswer</label><br/>
                 <input
                     onChange = { (e) => updateChoiceAnswer(e)}
-                    className="form-control"
+                    className="answer-choice"
                     value={answer.choiceAnswer}/>
                 <label>Answer trueFalseAnswer</label><br/>
                 <input
                     onChange = { (e) => updateTrueFalse(e)}
-                    className="form-control"
+                    className="answer-true-false"
                     value={answer.trueFalseAnswer}/>
 
                 <button onClick={() => deleteServiceAnswer(answer.id)}>
@@ -58,7 +58,7 @@ const ServiceAnswerDetails = ({serviceAnswers, answer, createAnswer, serviceQues
                 <select
                     value={serviceQuestion.id}
                     onChange={(e) => selectServiceQuestion(e.target.value)}
-                    className="form-control">
+                    className="select-question">
                     {
                         serviceQuestions
                             .map(serviceQuestion =>
@@ -73,23 +73,23 @@ const ServiceAnswerDetails = ({serviceAnswers, answer, createAnswer, serviceQues
                 <label>Answer minAnswer</label><br/>
                 <input
                     onChange = { (e) => updateNewMinValue(e)}
-                    className="form-control"
+                    className="create-min"
                     value={createAnswer.minRangeAnswer}/>
 
                 <label>Answer maxAnswer</label><br/>
                 <input
                     onChange = { (e) => updateNewMaxValue(e)}
-                    className="form-control"
+                    className="create-max"
                     value={createAnswer.maxRangeAnswer}/>
                 <label>Answer choiceAnswer</label><br/>
                 <input
                     onChange = { (e) => updateNewChoiceAnswer(e)}
-                    className="form-control"
+                    className="create-choice"
                     value={createAnswer.choiceAnswer}/>
                 <label>Answer trueFalseAnswer</label><br/>
                 <input
                     onChange = { (e) => updateNewTrueFalse(e)}
-                    className="form-control"
+                    className="create-true-false"
                     value={createAnswer.trueFalseAnswer}/>
                 <button onClick={createServiceAnswer}>
                     Create
