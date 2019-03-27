@@ -7,8 +7,8 @@ import ServiceCategoriesContainer from './ServiceCategoriesContainer'
 import ServiceCategoryDetailsContainer from './ServiceCategoryDetailsContainer'
 import ServiceAnswerDetailsContainer from './ServiceAnswerDetailsContainer'
 import ServiceQuestionsContainer from './ServiceQuestionsContainer'
-import Services from './Services'
-import ServiceDetails from './ServiceDetails'
+import ServicesContainer from './ServicesContainer'
+import ServiceDetailsContainer from './ServiceDetailsContainer'
 import FAQContainer from './FAQContainer'
 import FAQDetails from './FAQDetails'
 import FAQAnswers from './FAQAnswers'
@@ -69,8 +69,8 @@ const Admin = () =>
                     <Route path="/admin/users/:id" exact component={UserDetailsContainer}/>
                     <Route path="/admin/service-questions" exact component={ServiceQuestionsContainer}/>
                     <Route path="/admin/service-questions/:id" exact component={ServiceQuestionDetails}/>
-                    <Route path="/admin/service" exact component={Services}/>
-                	<Route path="/admin/service/:id" exact component={ServiceDetails}/>
+                    <Route path="/admin/services" exact component={ServicesContainer}/>
+                	<Route path="/admin/services/:id" exact component={ServiceDetailsContainer}/>
                     <Route path="/admin/faqs/page/:page/count/:count" exact component={FAQContainer}/>
                     <Route path="/admin/faqs/:id" exact component={FAQDetails}/>
                     <Route path="/admin/faq-answers" exact component={FAQAnswers}/>
