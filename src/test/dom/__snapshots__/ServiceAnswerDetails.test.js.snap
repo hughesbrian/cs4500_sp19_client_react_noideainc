@@ -1,0 +1,493 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceAnswerDetails renders correctly 1`] = `
+<div>
+  <h3>
+    Service Answer Details
+  </h3>
+  <select
+    className="select-answer"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      1
+    </option>
+    <option
+      value={2}
+    >
+      2
+    </option>
+    <option
+      value={3}
+    >
+      3
+    </option>
+    <option
+      value={4}
+    >
+      4
+    </option>
+    <option
+      value={5}
+    >
+      5
+    </option>
+    <option
+      value={6}
+    >
+      6
+    </option>
+  </select>
+  <label>
+    Answer ID
+  </label>
+  <br />
+  <input
+    className="answer-id"
+    onChange={[Function]}
+    value={1}
+  />
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="answer-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="answer-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="answer-choice"
+    onChange={[Function]}
+    value={0}
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="answer-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Update
+  </button>
+  <h3>
+    Service Question Details
+  </h3>
+  <select
+    className="select-question"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      
+    </option>
+    <option
+      value={2}
+    >
+      
+    </option>
+    <option
+      value={3}
+    >
+      
+    </option>
+  </select>
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="create-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="create-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="create-choice"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="create-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Create
+  </button>
+</div>
+`;
+
+exports[`ServiceAnswerDetails renders correctly 2`] = `
+<div>
+  <h3>
+    Service Answer Details
+  </h3>
+  <select
+    className="select-answer"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      1
+    </option>
+    <option
+      value={2}
+    >
+      2
+    </option>
+    <option
+      value={3}
+    >
+      3
+    </option>
+    <option
+      value={4}
+    >
+      4
+    </option>
+    <option
+      value={5}
+    >
+      5
+    </option>
+    <option
+      value={6}
+    >
+      6
+    </option>
+  </select>
+  <label>
+    Answer ID
+  </label>
+  <br />
+  <input
+    className="answer-id"
+    onChange={[Function]}
+    value={1}
+  />
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="answer-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="answer-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="answer-choice"
+    onChange={[Function]}
+    value={0}
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="answer-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Update
+  </button>
+  <h3>
+    Service Question Details
+  </h3>
+  <select
+    className="select-question"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      
+    </option>
+    <option
+      value={2}
+    >
+      
+    </option>
+    <option
+      value={3}
+    >
+      
+    </option>
+  </select>
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="create-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="create-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="create-choice"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="create-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Create
+  </button>
+</div>
+`;
+
+exports[`ServiceAnswerDetails renders correctly 3`] = `
+<div>
+  <h3>
+    Service Answer Details
+  </h3>
+  <select
+    className="select-answer"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      1
+    </option>
+    <option
+      value={2}
+    >
+      2
+    </option>
+    <option
+      value={3}
+    >
+      3
+    </option>
+    <option
+      value={4}
+    >
+      4
+    </option>
+    <option
+      value={5}
+    >
+      5
+    </option>
+    <option
+      value={6}
+    >
+      6
+    </option>
+  </select>
+  <label>
+    Answer ID
+  </label>
+  <br />
+  <input
+    className="answer-id"
+    onChange={[Function]}
+    value={1}
+  />
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="answer-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="answer-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="answer-choice"
+    onChange={[Function]}
+    value={0}
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="answer-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Update
+  </button>
+  <h3>
+    Service Question Details
+  </h3>
+  <select
+    className="select-question"
+    onChange={[Function]}
+    value={1}
+  >
+    <option
+      value={1}
+    >
+      
+    </option>
+    <option
+      value={2}
+    >
+      
+    </option>
+    <option
+      value={3}
+    >
+      
+    </option>
+  </select>
+  <label>
+    Answer minAnswer
+  </label>
+  <br />
+  <input
+    className="create-min"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer maxAnswer
+  </label>
+  <br />
+  <input
+    className="create-max"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer choiceAnswer
+  </label>
+  <br />
+  <input
+    className="create-choice"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Answer trueFalseAnswer
+  </label>
+  <br />
+  <input
+    className="create-true-false"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Create
+  </button>
+</div>
+`;

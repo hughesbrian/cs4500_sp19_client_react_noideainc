@@ -47,7 +47,7 @@ class ServiceAnswerDetailsContainer extends React.Component {
     this.serviceAnswerService
         .findAllServiceAnswers()
         .then(serviceAnswers => {
-            this.props.history.push("/admin/service-answers/" + serviceAnswers[0].id);
+            //this.props.history.push("/admin/service-answers/" + serviceAnswers[0].id);
             this.setState({
                       serviceAnswers: serviceAnswers,
                       answer: serviceAnswers[0]
@@ -58,7 +58,7 @@ selectServiceAnswer = id =>
 this.serviceAnswerService
     .findServiceAnswerById(id)
     .then(answer => {
-    this.props.history.push("/admin/service-answers/" + id);
+    //this.props.history.push("/admin/service-answers/" + id);
     this.setState({
         answer: answer
     })
