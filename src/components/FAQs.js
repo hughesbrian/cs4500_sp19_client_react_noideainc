@@ -28,7 +28,24 @@ const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ,
                         <Button onClick={editFAQ} className="buttons" variant="info"><TiTickOutline /></Button>
                     </td>
                 </tr>
-                {
+                <tr>
+                    <td className="all-faqs" colSpan={3}>
+                        {
+                            faqs.map(faq =>
+                                <tr className="table-row faq-row" key={faq.id}>
+                                    <td className="faq-title"><a href={"/admin/faqs/" + faq.id}>
+                                        {faq.title}</a></td>
+                                    <td className="faq-question">{faq.question}</td>
+                                    <td className="del-edit">
+                                        <Button onClick={() => deleteFAQ(faq.id)} className="buttons" variant="danger"> <TiTimesOutline/> </Button>
+                                        <Button onClick={() => moveToEdit(faq)} className="buttons" variant="primary"><TiEdit /></Button>
+                                    </td>
+                                </tr>
+                            )
+                        }
+                    </td>
+                </tr>
+                {/* {
                     faqs.map(faq =>
                         <tr className="table-row" key={faq.id}>
                             <td><Link to={"/admin/faqs/" + faq.id}>
@@ -40,7 +57,7 @@ const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ,
                             </td>
                         </tr>
                     )
-                }
+                } */}
             </tbody>
         </table>
         <div className="table-bottom">
