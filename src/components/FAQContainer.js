@@ -1,9 +1,6 @@
 import React from 'react'
 import FAQService from '../services/FAQService'
 import FAQs from '../components/FAQs'
-import { Button } from 'react-bootstrap';
-import { TiTimesOutline } from "react-icons/ti";
-import { IoIosSearch } from "react-icons/io";
 
 class FAQContainer extends React.Component {
     constructor(props) {
@@ -82,16 +79,7 @@ class FAQContainer extends React.Component {
                     console.log(error)
                 }
             }
-    }
-
-    searchButton = () => {
-            if(this.state.filtered) {
-                return <Button className="buttons searchButton" variant="warning" onClick={this.clearSearch}><TiTimesOutline /></Button>
-            } else {
-                return <Button className="buttons searchButton" variant="warning"
-                onClick={this.filterFAQs}><IoIosSearch /></Button>
-            }
-    }
+    } 
 
     clearSearch = () => {
             this.setState({
@@ -283,6 +271,7 @@ class FAQContainer extends React.Component {
         <FAQs
             title={this.state.title}
             question={this.state.question}
+            filtered={this.state.filtered}
             faqs={this.state.faqs}
             updateTitle={this.updateTitle}
             updateQuestion={this.updateQuestion}
@@ -290,7 +279,8 @@ class FAQContainer extends React.Component {
             editFAQ={this.editFAQ}
             deleteFAQ={this.deleteFAQ}
             moveToEdit={this.moveToEdit}
-            searchButton={this.searchButton}
+            filterFAQs={this.filterFAQs}
+            clearSearch={this.clearSearch}
             changeCountPerPage={this.changeCountPerPage}
             renderPageNumbers={renderPageNumbers}
             renderNext={renderNext}

@@ -1,4 +1,4 @@
-import users from '../MockData/Users.mock'
+import users from '../mockdata/Users.mock'
 
 global.fetch = jest.fn().mockImplementation((url, config) => {
     if (!config) {

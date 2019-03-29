@@ -1,9 +1,9 @@
 import React from 'react'
 import Users from '../../components/Users'
 import TestRenderer from 'react-test-renderer'
-import users from '../MockData/Users.mock'
+import users from '../mockdata/Users.mock'
 import UserService from '../../services/UserService'
-import '../service/UserService.mock'
+import '../mockservice/UserService.mock'
 import UsersContainer from "../../components/UsersContainer";
 
 const userService = UserService.getInstance();
@@ -37,7 +37,6 @@ test('Create and Delete Users', () => {
 
     const createUserBtn = testInstance.findByProps({className: 'btn btn-success save-user-btn'});
     createUserBtn.props.onClick();
-    createUserBtn.props.onClick();
 
     const deleteUserBtns = testInstance.findAllByProps({className: 'btn btn-danger delete-user-btn'});
     deleteUserBtns[1].props.onClick();
@@ -56,7 +55,7 @@ test('List of Users Renders Directly', () => {
     const usernameField = testInstance.findByProps({className: 'form-control username-edit-field'});
     const numUsers = testInstance.findAllByProps({className: 'btn btn-danger delete-user-btn'});
 
-    expect(usernameField.props.value).toBe('nate');
+    expect(usernameField.props.value).toBe('sam');
     expect(numUsers.length).toBe(users.length);
 });
 
@@ -74,7 +73,7 @@ test('List of Users Renders from Service', () => {
         const usernameField = testInstance.findByProps({className: 'form-control username-edit-field'});
         const numUsers = testInstance.findAllByProps({className: 'btn btn-danger delete-user-btn'});
 
-        expect(usernameField.props.value).toBe('nate');
+        expect(usernameField.props.value).toBe('sam');
         expect(numUsers.length).toBe(users.length);
     });
 });

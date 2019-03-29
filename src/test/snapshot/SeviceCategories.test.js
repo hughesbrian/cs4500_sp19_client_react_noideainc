@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceCategories from '../../components/ServiceCategories'
 import TestRenderer from 'react-test-renderer'
-import serviceCategories from '../MockData/ServiceCategories.mock.json'
+import serviceCategories from '../mockdata/ServiceCategories.mock.json'
 import ServiceCategoryService from '../../services/ServiceCategoryService'
 const serviceCategoryService = ServiceCategoryService.getInstance()
 import '../mockservice/ServiceCategoryService.mock'
