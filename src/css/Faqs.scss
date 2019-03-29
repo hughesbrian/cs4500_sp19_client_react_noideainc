@@ -8,12 +8,27 @@
             height: 60px;
             border-bottom: 1px solid #ddd;
         }
+        .faq-row {
+            width: 90%;
+            height: 60px;
+            border-bottom: 1px solid #ddd;
+        }
         .buttons {
             padding: 1px 8px;
             font-size: 30px;
             margin-left: 5px;
         }
         .field {
+            width: 240px;
+            height: 40px;
+            border-radius: 6px;
+        }
+        .faqTitle {
+            width: 240px;
+            height: 40px;
+            border-radius: 6px;
+        }
+        .faqQuestion {
             width: 240px;
             height: 40px;
             border-radius: 6px;
