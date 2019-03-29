@@ -42,7 +42,6 @@ test('create and delete faqs', () => {
     expect(tree).toMatchSnapshot();
 
     const testInstance = testRenderer.root;
-    // const faqRows = testInstance.findAllByProps({className: 'table-row faq-row'})
     
     const createFAQBtn = testInstance.findByProps({className: 'buttons create-btn btn btn-primary'});
     createFAQBtn.props.onClick();
