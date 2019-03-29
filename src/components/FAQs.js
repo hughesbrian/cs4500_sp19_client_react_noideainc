@@ -6,12 +6,17 @@ import { TiPlusOutline } from "react-icons/ti";
 import { TiTickOutline } from "react-icons/ti";
 import { TiTimesOutline } from "react-icons/ti";
 import { TiEdit } from "react-icons/ti";
+import { IoIosSearch } from "react-icons/io";
 
 // Refactor Stateful Components as Stateless
-const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ, 
-    editFAQ, deleteFAQ, moveToEdit, searchButton, changeCountPerPage,
-    renderPageNumbers, renderNext, renderPrev, renderCountOptions}) =>
+const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, createFAQ, 
+    editFAQ, deleteFAQ, moveToEdit, filterFAQs, clearSearch, changeCountPerPage,
+    renderPageNumbers, renderNext, renderPrev, renderCountOptions}) =>  {
 
+let searchButton = filtered ? <Button className="buttons searchButton" variant="warning" onClick={clearSearch}><TiTimesOutline /></Button>
+    : <Button className="buttons searchButton" variant="warning"onClick={filterFAQs}><IoIosSearch /></Button>
+    
+return (
     <div className="faq-component">
         <h3>Frequently Asked Questions</h3>
         <table className="faq-table">
@@ -71,8 +76,9 @@ const FAQs = ({title, question, faqs, updateTitle, updateQuestion, createFAQ,
                     {renderNext()}
                 </ul>
             </nav>
-            {searchButton()}
+            {searchButton}
         </div>
-    </div>
+    </div>)
+}
 
 export default FAQs
