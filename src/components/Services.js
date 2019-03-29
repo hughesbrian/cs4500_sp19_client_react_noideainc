@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Services = ({services, editingService, setEditingService, deleteService, createService, updateService, saveService}) =>
+const Services = ({services, editingService, setEditingService, deleteService,
+                   createService, updateService, saveService}) =>
     <div>
         <h3>Services</h3>
 
@@ -15,7 +16,7 @@ const Services = ({services, editingService, setEditingService, deleteService, c
                             description: editingService.description
                         }
                     })} className="form-control title-edit-field"
-                           value={editingService.titile}/></td>
+                           value={editingService.title}/></td>
                 <td><input onChange={(e) =>
                     setEditingService({
                         editingService: {
@@ -25,13 +26,13 @@ const Services = ({services, editingService, setEditingService, deleteService, c
                         }
                     })} className="form-control"
                            value={editingService.description}/></td>
-                
+
                 <td>
-                    <button className="btn btn-success save-user-btn" onClick={() => {
+                    <button className="btn btn-success save-service-btn" onClick={() => {
                         saveService(editingService, createService, updateService)
                     }}>Save
                     </button>
-                    <button className="btn btn-warning" onClick={() => {
+                    <button className="btn btn-warning update-service-button" onClick={() => {
                         setEditingService({
                             editingService: {
                                 title: '',
@@ -48,12 +49,12 @@ const Services = ({services, editingService, setEditingService, deleteService, c
                         <td>{service.title}</td>
                         <td>{service.description}</td>
                         <td>
-                            <button className="btn btn-primary" onClick={() => {
+                            <button className="btn btn-primary edit-service-btn" onClick={() => {
                                 editingService = service
                             }}
                             >Edit
                             </button>
-                            <button className="btn btn-danger" onClick={
+                            <button className="btn btn-danger delete-service-btn" onClick={
                                 () => deleteService(service)
                             }>Delete
                             </button>
