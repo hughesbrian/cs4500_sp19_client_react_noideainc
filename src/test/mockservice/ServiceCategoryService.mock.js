@@ -1,4 +1,4 @@
-import serviceCategories from '../MockData/ServiceCategories.mock.json'
+import serviceCategories from '../mockdata/ServiceCategories.mock.json'
 
 global.fetch = jest.fn().mockImplementation((url, config) => {
     if(!config) {

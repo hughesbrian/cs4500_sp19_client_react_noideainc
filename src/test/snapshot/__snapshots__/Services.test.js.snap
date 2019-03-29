@@ -1,0 +1,441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create and Delete Services 1`] = `
+<div>
+  <h3>
+    Services
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control title-edit-field"
+            onChange={[Function]}
+            value="cleaning3"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="no3cleaningService"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-service-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning update-service-button"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning1
+        </td>
+        <td>
+          p4ssw0rd
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning2
+        </td>
+        <td>
+          pa55word
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Create and Delete Services 2`] = `
+<div>
+  <h3>
+    Services
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control title-edit-field"
+            onChange={[Function]}
+            value="cleaning3"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="no3cleaningService"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-service-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning update-service-button"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning1
+        </td>
+        <td>
+          p4ssw0rd
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning2
+        </td>
+        <td>
+          pa55word
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Create and Delete Services 3`] = `
+<div>
+  <h3>
+    Services
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control title-edit-field"
+            onChange={[Function]}
+            value="cleaning3"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="no3cleaningService"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-service-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning update-service-button"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning1
+        </td>
+        <td>
+          p4ssw0rd
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning2
+        </td>
+        <td>
+          pa55word
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`List of Services Renders Directly 1`] = `
+<div>
+  <h3>
+    Services
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control title-edit-field"
+            onChange={[Function]}
+            value="cleaning2"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="pa55word"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-service-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning update-service-button"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning2
+        </td>
+        <td>
+          pa55word
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning3
+        </td>
+        <td>
+          no3cleaningService
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`List of Services Renders from Service 1`] = `
+<div>
+  <h3>
+    Services
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control title-edit-field"
+            onChange={[Function]}
+            value="cleaning2"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="pa55word"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-service-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning update-service-button"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning2
+        </td>
+        <td>
+          pa55word
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          cleaning3
+        </td>
+        <td>
+          no3cleaningService
+        </td>
+        <td>
+          <button
+            className="btn btn-primary edit-service-btn"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-service-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

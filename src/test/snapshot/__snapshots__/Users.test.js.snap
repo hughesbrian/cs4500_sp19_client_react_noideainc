@@ -1,0 +1,506 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create and Delete Users 1`] = `
+<div>
+  <h3>
+    Users
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control username-edit-field"
+            onChange={[Function]}
+            value="pparker"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Peter"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Parker"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-user-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          nate
+        </td>
+        <td>
+          Nathan
+        </td>
+        <td>
+          Jones
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sam
+        </td>
+        <td>
+          Sam
+        </td>
+        <td>
+          Atkins
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Create and Delete Users 2`] = `
+<div>
+  <h3>
+    Users
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control username-edit-field"
+            onChange={[Function]}
+            value="pparker"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Peter"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Parker"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-user-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          nate
+        </td>
+        <td>
+          Nathan
+        </td>
+        <td>
+          Jones
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sam
+        </td>
+        <td>
+          Sam
+        </td>
+        <td>
+          Atkins
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Create and Delete Users 3`] = `
+<div>
+  <h3>
+    Users
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control username-edit-field"
+            onChange={[Function]}
+            value="pparker"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Peter"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Parker"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-user-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          nate
+        </td>
+        <td>
+          Nathan
+        </td>
+        <td>
+          Jones
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sam
+        </td>
+        <td>
+          Sam
+        </td>
+        <td>
+          Atkins
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`List of Users Renders Directly 1`] = `
+<div>
+  <h3>
+    Users
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control username-edit-field"
+            onChange={[Function]}
+            value="sam"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Sam"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Atkins"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-user-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sam
+        </td>
+        <td>
+          Sam
+        </td>
+        <td>
+          Atkins
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pparker
+        </td>
+        <td>
+          Peter
+        </td>
+        <td>
+          Parker
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`List of Users Renders from Service 1`] = `
+<div>
+  <h3>
+    Users
+  </h3>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <input
+            className="form-control username-edit-field"
+            onChange={[Function]}
+            value="sam"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Sam"
+          />
+        </td>
+        <td>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            value="Atkins"
+          />
+        </td>
+        <td>
+          <button
+            className="btn btn-success save-user-btn"
+            onClick={[Function]}
+          >
+            Save
+          </button>
+          <button
+            className="btn btn-warning"
+            onClick={[Function]}
+          >
+            Clear
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          sam
+        </td>
+        <td>
+          Sam
+        </td>
+        <td>
+          Atkins
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          pparker
+        </td>
+        <td>
+          Peter
+        </td>
+        <td>
+          Parker
+        </td>
+        <td>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="btn btn-danger delete-user-btn"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,4 +1,4 @@
-import FAQ from '../MockData/FAQ.mock.json'
+import FAQ from '../mockdata/FAQ.mock.json'
 
 global.fetch = jest.fn().mockImplementation((url, config) => {
     if(!config) {
