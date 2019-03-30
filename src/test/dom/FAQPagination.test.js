@@ -162,7 +162,6 @@ test('render pagination and faqs on the first page correctly from services', () 
                     />)
 
             const testInstance = testRenderer.root
-
             const nextBtn = testInstance.findAllByProps({className: 'page-link next-btn'})
             const prevBtn = testInstance.findAllByProps({className: 'page-link prev-btn'})
             const faqRows = testInstance.findAllByProps({className: 'faq-row'})
