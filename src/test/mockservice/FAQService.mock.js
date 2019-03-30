@@ -28,6 +28,20 @@ global.fetch = jest.fn().mockImplementation((url, config) => {
                 })
             })
         }
+        else if(url.indexOf("api/faqs/filtered?title=test&question=22222222") != -1){
+            return new Promise((resolve, reject) => {
+                resolve({ json: function() {
+                    return faqs[7]
+                }})
+            })
+        }
+        else if(url.indexOf("api/faqs/filtered") != -1) {
+            return new Promise((resolve, reject) => {
+                resolve({ json: function() {
+                    return faqs
+                }})
+            })
+        }
     } else if(config.method === 'post') {
         // create one FAQ
         if(url.indexOf('/api/faqs') != -1) {
