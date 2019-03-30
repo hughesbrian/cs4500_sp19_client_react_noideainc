@@ -12,8 +12,8 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
     editFAQ, deleteFAQ, moveToEdit, filterFAQs, clearSearch, handlePageClick, changeCountPerPage,
     currentPage, totalPages, totalFaqs}) =>  {
 
-    let searchButton = filtered ? <Button className="buttons searchButton" variant="warning" onClick={clearSearch}><TiTimesOutline /></Button>
-        : <Button className="buttons searchButton" variant="warning"onClick={filterFAQs}><IoIosSearch /></Button>
+    let searchButton = filtered ? <Button className="buttons searchButton search-clear" variant="warning" onClick={clearSearch}><TiTimesOutline /></Button>
+    : <Button className="buttons searchButton search-search" variant="warning" onClick={filterFAQs}><IoIosSearch /></Button>
 
     const pageNumbers = [];
     for (let i = 0; i < totalPages; i++) {
