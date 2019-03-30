@@ -37,18 +37,18 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
 
     let renderNext = (currentPage >= totalPages - 1) ? 
                     <li className="page-item disabled">
-                        <a className="page-link" id="next">Next</a>
+                        <a className="page-link next-btn" id="next">Next</a>
                     </li> :
                     <li className="page-item">
-                        <a className="page-link" id="next" onClick={handlePageClick}>Next</a>
+                        <a className="page-link next-btn" id="next" onClick={handlePageClick}>Next</a>
                     </li>
 
     let renderPrev = (currentPage <= 0) ? 
                     <li className="page-item disabled">
-                        <a className="page-link" id="previous">Previous</a>
+                        <a className="page-link prev-btn" id="previous">Previous</a>
                     </li> :
                     <li className="page-item">
-                        <a className="page-link" id="previous" onClick={handlePageClick}>Previous</a>
+                        <a className="page-link prev-btn" id="previous" onClick={handlePageClick}>Previous</a>
                     </li>
 
     const countOptions = [];
