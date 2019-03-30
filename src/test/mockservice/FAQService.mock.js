@@ -41,6 +41,12 @@ global.fetch = jest.fn().mockImplementation((url, config) => {
                     return faqs
                 }})
             })
+        } else if(url.indexOf("api/faqs/paged?page=0&count=10") != -1) {
+            return new Promise((resolve, reject) => {
+                resolve({ json: function() {
+                        return {content: faqs, totalPages: 2}
+                }})
+            })
         }
     } else if(config.method === 'post') {
         // create one FAQ

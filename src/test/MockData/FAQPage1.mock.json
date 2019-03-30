@@ -67,29 +67,5 @@
     "title":"appointment",
     "question":"how to make an appointment?",
     "answers":[]
-  },
-  {
-    "id":92,
-    "title":"training",
-    "question":"do you provide staff training?",
-    "answers":[]
-  },
-  {
-    "id":102,
-    "title":"refund",
-    "question":"Can I get a refund?",
-    "answers":[]
-  },
-  {
-    "id":112,
-    "title":"refund1",
-    "question":"Can I get a refund1?",
-    "answers":[]
-  },
-  {
-    "id":122,
-    "title":"refund2",
-    "question":"Can I get a refund2?",
-    "answers":[]
   }
 ]
