@@ -36,3 +36,75 @@ let question = 'you'
             expect(tree).toMatchSnapshot()
     })
 
+
+    test('filtering faqs', () => {
+
+        const filterFAQs = () => {
+            faqs = [
+                {
+                    "id":1,
+                    "title":"background check",
+                    "question":"How many projects do you experienced?",
+                    "answers":[]
+                },
+                {
+                    "id":2,
+                    "title":"background check",
+                    "question":"Have you passed a background check?",
+                    "answers":[
+                        {"id":1,"answer":"Yes","question":"Have you passed a background check?"},
+                        {"id":2,"answer":"Yes","question":"Have you passed a background check?"},
+                        {"id":6,"answer":"no","question":"Have you passed a background check?"}
+                    ]
+                }]
+
+            let tree = testRenderer.toJSON();
+            expect(tree).toMatchSnapshot()
+
+        }
+
+        const testRenderer = TestRenderer.create(
+            <FAQs title={title}
+                question={question}
+                faqs={faqs}
+                filtered={false}
+                filterFAQs={filterFAQs}
+        />)
+
+        let tree = testRenderer.toJSON();
+        expect(tree).toMatchSnapshot()
+
+        const testInstance = testRenderer.root
+
+        const searchBtn = testInstance.findAllByProps({className: 'buttons searchButton search-search btn btn-warning'})
+        searchBtn[0].props.onClick()
+    })
+
+
+    test('clear search for faqs', () => {
+
+        const clearSearch = () => {
+            faqs = faqData
+
+            let tree = testRenderer.toJSON();
+            expect(tree).toMatchSnapshot()
+
+    }
+
+    const testRenderer = TestRenderer.create(
+        <FAQs title={title}
+              question={question}
+              faqs={faqs}
+              filtered={true}
+              clearSearch={clearSearch}
+        />)
+
+    let tree = testRenderer.toJSON();
+    expect(tree).toMatchSnapshot()
+
+    const testInstance = testRenderer.root
+
+    const clearBtn = testInstance.findAllByProps({className: 'buttons searchButton search-clear btn btn-warning'})
+    clearBtn[0].props.onClick()
+})
+
