@@ -190,82 +190,6 @@ class FAQContainer extends React.Component {
     }
 
     render = () => {
-        const pageNumbers = [];
-        for (let i = 0; i < this.state.totalPages; i++) {
-            pageNumbers.push(i);
-        }
-
-        const renderPageNumbers = pageNumbers.map(number => {
-            if (number == this.state.currentPage) {
-                return(
-                    <li className="page-item active">
-                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
-                    </li>)
-            } else {
-                return (
-                    <li className="page-item">
-                        <a className="page-link" key={number} id={number} onClick={this.handlePageClick}>{number+1}</a>
-                    </li>
-                )
-            }
-        })
-
-        const renderNext = () => {
-            if (this.state.currentPage >= this.state.totalPages - 1) {
-                return (
-                    <li className="page-item disabled">
-                        <a className="page-link" id="next">Next</a>
-                    </li>
-                )
-            } else if (this.state.currentPage < this.state.totalPages - 1) {
-                return (
-                    <li className="page-item">
-                        <a className="page-link" id="next" onClick={this.handlePageClick}>Next</a>
-                    </li>
-                )
-            }
-        }
-
-        const renderPrev = () => {
-            if (this.state.currentPage <= 0) {
-                return(
-                <li className="page-item disabled">
-                    <a className="page-link" id="previous">Previous</a>
-                </li>)
-            } else if (this.state.currentPage > 0) {
-                return (
-                <li className="page-item">
-                    <a className="page-link" id="previous" onClick={this.handlePageClick}>Previous</a>
-                </li>)
-            }
-        }
-
-        const countOptions = [];
-        if (this.state.totalFaqs > 10) {
-            countOptions.push(10);
-        }
-        if (this.state.totalFaqs > 25) {
-            countOptions.push(25);
-        }
-        if (this.state.totalFaqs > 50) {
-            countOptions.push(50);
-        }
-        if (this.state.totalFaqs > 100) {
-            countOptions.push(100);
-        }
-        countOptions.push(this.state.totalFaqs);
-
-        const renderCountOptions = countOptions.map(countVal => {
-            if (countVal == this.state.totalFaqs) {
-                return (
-                    <option value={countVal}>All</option>
-                )
-            } else {
-                return (
-                    <option value={countVal}>{countVal}</option>
-                )
-            }
-        })
 
         return(
         <FAQs
@@ -281,11 +205,11 @@ class FAQContainer extends React.Component {
             moveToEdit={this.moveToEdit}
             filterFAQs={this.filterFAQs}
             clearSearch={this.clearSearch}
+            handlePageClick={this.handlePageClick}
             changeCountPerPage={this.changeCountPerPage}
-            renderPageNumbers={renderPageNumbers}
-            renderNext={renderNext}
-            renderPrev={renderPrev}
-            renderCountOptions={renderCountOptions}
+            currentPage={this.state.currentPage}
+            totalPages={this.state.totalPages}
+            totalFaqs={this.state.totalFaqs}
         />)
     }
 }
