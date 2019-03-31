@@ -265,10 +265,13 @@ exports[`clear search for faqs 1`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -279,7 +282,7 @@ exports[`clear search for faqs 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link prev-btn"
             id="previous"
           >
             Previous
@@ -289,7 +292,7 @@ exports[`clear search for faqs 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link next-btn"
             id="next"
           >
             Next
@@ -593,10 +596,13 @@ exports[`clear search for faqs 2`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -607,7 +613,7 @@ exports[`clear search for faqs 2`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link prev-btn"
             id="previous"
           >
             Previous
@@ -617,7 +623,7 @@ exports[`clear search for faqs 2`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link next-btn"
             id="next"
           >
             Next
@@ -1389,10 +1395,13 @@ exports[`filtering faqs 1`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -1403,7 +1412,7 @@ exports[`filtering faqs 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link prev-btn"
             id="previous"
           >
             Previous
@@ -1413,7 +1422,7 @@ exports[`filtering faqs 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link next-btn"
             id="next"
           >
             Next
@@ -2183,10 +2192,13 @@ exports[`filtering faqs 2`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -2197,7 +2209,7 @@ exports[`filtering faqs 2`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link prev-btn"
             id="previous"
           >
             Previous
@@ -2207,7 +2219,7 @@ exports[`filtering faqs 2`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link next-btn"
             id="next"
           >
             Next
@@ -2977,10 +2989,13 @@ exports[`render filtered list for faqs and the correct button 1`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -2991,7 +3006,7 @@ exports[`render filtered list for faqs and the correct button 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link prev-btn"
             id="previous"
           >
             Previous
@@ -3001,7 +3016,7 @@ exports[`render filtered list for faqs and the correct button 1`] = `
           className="page-item"
         >
           <a
-            className="page-link"
+            className="page-link next-btn"
             id="next"
           >
             Next
