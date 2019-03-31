@@ -734,10 +734,13 @@ exports[`create and delete faqs 1`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -767,7 +770,7 @@ exports[`create and delete faqs 1`] = `
       </ul>
     </nav>
     <button
-      className="buttons searchButton btn btn-warning"
+      className="buttons searchButton search-search btn btn-warning"
       disabled={false}
       type="button"
     >
@@ -1528,10 +1531,13 @@ exports[`create and delete faqs 2`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -1561,7 +1567,7 @@ exports[`create and delete faqs 2`] = `
       </ul>
     </nav>
     <button
-      className="buttons searchButton btn btn-warning"
+      className="buttons searchButton search-search btn btn-warning"
       disabled={false}
       type="button"
     >
@@ -2322,10 +2328,13 @@ exports[`create and delete faqs 3`] = `
       className="page-nav"
     >
       <select
-        className="form-control"
+        className="form-control count-dropdown"
         id="inputState"
       >
-        <option>
+        <option
+          className="count-option"
+          id="count-all"
+        >
           All
         </option>
       </select>
@@ -2355,7 +2364,7 @@ exports[`create and delete faqs 3`] = `
       </ul>
     </nav>
     <button
-      className="buttons searchButton btn btn-warning"
+      className="buttons searchButton search-search btn btn-warning"
       disabled={false}
       type="button"
     >

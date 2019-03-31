@@ -20,15 +20,15 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
         pageNumbers.push(i);
     }
 
-    const renderPageNumbers = pageNumbers.map(number => {
+    const renderPageNumbers = pageNumbers.map((number, index) => {
         if (number == currentPage) {
             return(
-                <li className="page-item active">
+                <li key={index} className="page-item active">
                     <a className="page-link page-num" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
                 </li>)
         } else {
             return (
-                <li className="page-item">
+                <li key={index} className="page-item">
                     <a className="page-link page-num" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
                 </li>
             )
@@ -66,14 +66,14 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
     }
     countOptions.push(totalFaqs);
 
-    const renderCountOptions = countOptions.map(countVal => {
+    const renderCountOptions = countOptions.map( (countVal, index) => {
         if (countVal == totalFaqs) {
             return (
-                <option className="count-option" id="count-all" value={countVal}>All</option>
+                <option className="count-option" key={index} id="count-all" value={countVal}>All</option>
             )
         } else {
             return (
-                <option className="count-option" value={countVal}>{countVal}</option>
+                <option className="count-option"  key={index} value={countVal}>{countVal}</option>
             )
         }
     })
