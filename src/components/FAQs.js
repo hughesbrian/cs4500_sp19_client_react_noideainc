@@ -24,12 +24,12 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
         if (number == currentPage) {
             return(
                 <li className="page-item active">
-                    <a className="page-link" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
+                    <a className="page-link page-num" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
                 </li>)
         } else {
             return (
                 <li className="page-item">
-                    <a className="page-link" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
+                    <a className="page-link page-num" key={number} id={number} onClick={handlePageClick}>{number+1}</a>
                 </li>
             )
         }
@@ -37,18 +37,18 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
 
     let renderNext = (currentPage >= totalPages - 1) ? 
                     <li className="page-item disabled">
-                        <a className="page-link" id="next">Next</a>
+                        <a className="page-link next-btn-disabled" id="next">Next</a>
                     </li> :
                     <li className="page-item">
-                        <a className="page-link" id="next" onClick={handlePageClick}>Next</a>
+                        <a className="page-link next-btn" id="next" onClick={handlePageClick}>Next</a>
                     </li>
 
     let renderPrev = (currentPage <= 0) ? 
                     <li className="page-item disabled">
-                        <a className="page-link" id="previous">Previous</a>
+                        <a className="page-link prev-btn-disabled" id="previous">Previous</a>
                     </li> :
                     <li className="page-item">
-                        <a className="page-link" id="previous" onClick={handlePageClick}>Previous</a>
+                        <a className="page-link prev-btn" id="previous" onClick={handlePageClick}>Previous</a>
                     </li>
 
     const countOptions = [];
@@ -69,11 +69,11 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
     const renderCountOptions = countOptions.map(countVal => {
         if (countVal == totalFaqs) {
             return (
-                <option value={countVal}>All</option>
+                <option className="count-option" id="count-all" value={countVal}>All</option>
             )
         } else {
             return (
-                <option value={countVal}>{countVal}</option>
+                <option className="count-option" value={countVal}>{countVal}</option>
             )
         }
     })
@@ -113,7 +113,7 @@ const FAQs = ({title, question, filtered, faqs, updateTitle, updateQuestion, cre
             </table>
             <div className="table-bottom">
                 <nav className="page-nav" aria-label="Page navigation example">
-                    <select id="inputState" className="form-control" onChange={changeCountPerPage}>
+                    <select id="inputState" className="form-control count-dropdown" onChange={changeCountPerPage}>
                         {renderCountOptions}
                     </select>
                     <ul className="pagination">
