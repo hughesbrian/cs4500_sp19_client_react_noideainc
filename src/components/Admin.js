@@ -16,6 +16,8 @@ import FAQAnswerDetails from './FAQAnswerDetails'
 import ServiceAnswers from './ServiceAnswers'
 import ServiceQuestionDetails from './ServiceQuestionDetails'
 import ServiceAnswerDetails from './ServiceAnswerDetails'
+import ServiceProviderNavigator from "./SearchProviders/ServiceProviderNavigator";
+import ServiceProviderNavigatorContainer from "./SearchProviders/ServiceProviderNavigatorContainer"
 
 const Admin = () =>
     <div>
@@ -51,6 +53,8 @@ const Admin = () =>
                     <br/>
                     <Link to="/admin/faq-answers/1">FAQ Answer Details</Link>
                     <br/>
+                    <Link to="/admin/provider-search/">Provider Search</Link>
+                    <br/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
@@ -77,6 +81,7 @@ const Admin = () =>
                     <Route path="/admin/faq-answers/:id" exact component={FAQAnswerDetails}/>
                     <Route path="/admin/service-answers" exact component={ServiceAnswers}/>
                     <Route path="/admin/service-answers/:id" exact component={ServiceAnswerDetailsContainer}/>
+                    <Route path="/admin/provider-search" exact component = {ServiceProviderNavigatorContainer}/>
                     {/* THE CURLY BRACKETS ARE PART OF THE COMMENT. IF REMOVED,
                     THE CODE BELOW WILL BE RUNNED, EVEN THOUGH IT IS COMMENTED OUT.
                     JUST CUT OUT WHAT YOU NEED AND PASTE IT ABOVE.
