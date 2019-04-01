@@ -11,6 +11,11 @@
         "title": "Nate's Landscaping",
         "description": "You want a good-looking yard? Let Nate fix it up for you!"
       }
+    ],
+    "reviews": [
+      {
+        "review": "This place is awesome"
+      }
     ]
   },
   {
@@ -18,6 +23,18 @@
     "username": "sam",
     "password": "pa55word",
     "firstName": "Sam",
-    "lastName": "Atkins"
+    "lastName": "Atkins",
+    "services": [
+      {
+        "id": 2,
+        "title": "Sam's Landscaping",
+        "description": "Our landscaping blows Nate's out of the water!"
+      }
+    ],
+    "reviews": [
+      {
+        "review": "This place sucks"
+      }
+    ]
   }
 ]
