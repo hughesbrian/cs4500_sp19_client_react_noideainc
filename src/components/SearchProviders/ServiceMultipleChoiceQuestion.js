@@ -1,13 +1,14 @@
 import React from 'react'
 
-const ServiceMultipleChoiceQuestion = ({serviceQuestion}) =>
+const ServiceMultipleChoiceQuestion = ({serviceQuestion, Criteria, add_Criteria}) =>
     <div>
         <h5>{serviceQuestion.question}</h5>
         {
             serviceQuestion.choices.map(choice =>
                 <div>
                     <label>
-                        <input name={serviceQuestion.question} type="radio"/>
+                        <input name={serviceQuestion.question} type="radio"
+                               onChange = { (e) => add_Criteria([choice,serviceQuestion])}/>
                         &nbsp;
                         {choice}
                     </label>
