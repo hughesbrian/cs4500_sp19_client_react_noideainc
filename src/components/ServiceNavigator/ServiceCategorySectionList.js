@@ -6,7 +6,7 @@ const ServiceCategorySectionList = ({serviceCategories}) =>
         {
             serviceCategories.map(serviceCategory =>
                 <li key={serviceCategory.id}
-                    className="list-group-item no-border">
+                    className="list-group-item no-border service-category-sections">
                     <ServiceCategorySection
                         serviceCategory={serviceCategory}/>
                 </li>

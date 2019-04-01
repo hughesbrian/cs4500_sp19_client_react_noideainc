@@ -7,7 +7,7 @@ const ServiceCards = ({services}) =>
                 <div key={service.id}
                      className="card no-border col-6">
                     <img src="https://picsum.photos/300/200"
-                         className="card-img-top"/>
+                         className="card-img-top service-card"/>
                     <div className="card-body">
                         <p className="card-text">
                             <a href="/providers"> {service.title}</a>

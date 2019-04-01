@@ -5,7 +5,7 @@ const ServiceCategoryList = ({serviceCategories}) =>
         {
             serviceCategories.map(serviceCategory =>
                 <li key={serviceCategory.id}
-                    className="list-group-item no-border">
+                    className="list-group-item no-border category-side-list">
                     <a href={`#${serviceCategory.id}`}>{serviceCategory.title}</a>
                 </li>
             )
