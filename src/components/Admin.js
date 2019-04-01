@@ -96,3 +96,47 @@ const Admin = () =>
     </div>
 
 export default Admin
+
+/*
+'123','House Cleaners',NULL
+'234','Exterior Painters',NULL
+'321','Math Tutoring',NULL
+'345','Handymen',NULL
+'432','Piano Lessons',NULL
+'456','Photographers',NULL
+'543','Personal Training',NULL
+'567','Makeup Artists',NULL
+'678','Dog Groomers',NULL
+'789','Dog Trainers',NULL
+'890','Pet Sitters',NULL
+'902','CPR Training',NULL
+'912','CPR Training',NULL
+'922','CPR Training',NULL
+'942','CPR Training',NULL
+'952','Exterior Painters',NULL
+'962','CPR Training',NULL
+'972','CPR Training',NULL
+'982','CPR Training',NULL
+'992','CPR Training',NULL
+'1002','CPR Training',NULL
+'1012','Interior Painters',NULL
+'1022','Interior Painters',NULL
+'1032','Interior Painters',NULL
+'1042','Interior Painters',NULL
+'1052','Interior Painters',NULL
+'1072','CPR Training',NULL
+'1082','CPR Training',NULL
+'1092','CPR Training',NULL
+'1102','CPR Training',NULL
+'1112','123',NULL
+'1122','',NULL
+'1132','','ssdsds'
+'1142','','CHDEA'
+
+'1','Tutorings'
+'2','Home'
+'12','Weddings'
+'22','Events'
+'32','Wellness'
+'42','Lessons'
+*/
