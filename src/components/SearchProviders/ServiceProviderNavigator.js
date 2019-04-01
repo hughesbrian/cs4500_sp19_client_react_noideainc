@@ -3,11 +3,11 @@ import ServiceProviderFilter from './ServiceProviderFilter'
 import ServiceProviderList from './ServiceProviderList'
 import SearchBar from '../SearchBar/SearchBar'
 
-const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions}) =>
+const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions, History}) =>
     <div>
         <div className="row">
             <div className="col-8">
-                <SearchBar/>
+                <SearchBar history = {[{history: "history"}]}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>

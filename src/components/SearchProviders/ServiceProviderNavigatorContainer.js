@@ -11,7 +11,8 @@ class ServiceProviderNavigatorContainer extends React.Component {
     }
     render = () => <ServiceProviderNavigator serviceProviders = {ServiceProviders}
                                             serviceCategories = {serviceCategories}
-                                            serviceQuestions = {serviceQuestions}/>;
+                                            serviceQuestions = {serviceQuestions}
+                                            history/>;
 
 }
 

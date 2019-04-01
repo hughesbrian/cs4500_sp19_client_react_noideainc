@@ -1,13 +1,14 @@
 import React from 'react'
 
-const ServiceMultipleChoiceQuestion = ({serviceQuestion}) =>
+
+const ServiceRangeAnswerQuestion = ({serviceQuestion}) =>
     <div>
         <h5>{serviceQuestion.question}</h5>
         {
             serviceQuestion.choices.map(choice =>
                 <div>
                     <label>
-                        <input name={serviceQuestion.question} type="radio"/>
+                        <input name={serviceQuestion.question} type="checkbox"/>
                         &nbsp;
                         {choice}
                     </label>
@@ -17,4 +18,4 @@ const ServiceMultipleChoiceQuestion = ({serviceQuestion}) =>
         <br/>
     </div>
 
-export default ServiceMultipleChoiceQuestion
+export default ServiceRangeAnswerQuestion
