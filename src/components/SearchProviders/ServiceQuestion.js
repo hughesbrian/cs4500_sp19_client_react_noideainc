@@ -2,6 +2,7 @@
 import React from 'react'
 import ServiceMultipleChoiceQuestion from './ServiceMultipleChoiceQuestion'
 import ServiceTrueFalseQuestion from './ServiceTrueFalseQuestion'
+import ServiceRangeAnswerQuestion from "./ServiceRangeAnswerQuestion";
 const ServiceQuestion = ({serviceQuestion}) =>
     <div>
         {
@@ -12,6 +13,11 @@ const ServiceQuestion = ({serviceQuestion}) =>
         {
             serviceQuestion.type === 'TRUE_FALSE' &&
             <ServiceTrueFalseQuestion
+                serviceQuestion={serviceQuestion}/>
+        }
+        {
+            serviceQuestion.type === 'RANGE' &&
+            <ServiceRangeAnswerQuestion
                 serviceQuestion={serviceQuestion}/>
         }
 

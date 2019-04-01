@@ -9,7 +9,7 @@ const ServiceMultipleChoiceQuestion = ({serviceQuestion}) =>
                     <label>
                         <input name={serviceQuestion.question} type="radio"/>
                         &nbsp;
-                        {choice.title}
+                        {choice}
                     </label>
                 </div>
             )
