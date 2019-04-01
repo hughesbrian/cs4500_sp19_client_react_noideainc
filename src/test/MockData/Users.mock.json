@@ -12,9 +12,45 @@
         "description": "You want a good-looking yard? Let Nate fix it up for you!"
       }
     ],
-    "reviews": [
+    "reviewsOfMe": [
       {
+        "reviewer": {
+          "id": 234,
+          "username": "sam",
+          "password": "pa55word",
+          "firstName": "Sam",
+          "lastName": "Atkins",
+          "services": [
+            {
+              "id": 2,
+              "title": "Sam's Landscaping",
+              "description": "Our landscaping blows Nate's out of the water!"
+            }
+          ],
+          "reviewsOfMe": [
+            {
+              "review": "This place sucks"
+            }
+          ]
+        },
         "review": "This place is awesome"
+      }
+    ],
+    "frequentlyAskedAnswers": [
+      {
+        "id": 1,
+        "answer": "Yes",
+        "question": "Have you passed a background check?"
+      },
+      {
+        "id": 3,
+        "answer": "500",
+        "question": "How many employees does your company have?"
+      },
+      {
+        "id": 6,
+        "answer": "no",
+        "question": "Have you passed a background check?"
       }
     ]
   },
@@ -31,7 +67,7 @@
         "description": "Our landscaping blows Nate's out of the water!"
       }
     ],
-    "reviews": [
+    "reviewsOfMe": [
       {
         "review": "This place sucks"
       }
