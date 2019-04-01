@@ -4,7 +4,7 @@ import ServiceMultipleChoiceQuestion from './ServiceMultipleChoiceQuestion'
 const ServiceQuestion = ({serviceQuestion}) =>
     <div>
         {
-            serviceQuestion.questionType === 'MULTIPLE-CHOICE' &&
+            serviceQuestion.type === 'MULTIPLE_CHOICE' &&
             <ServiceMultipleChoiceQuestion
                 serviceQuestion={serviceQuestion}/>
         }

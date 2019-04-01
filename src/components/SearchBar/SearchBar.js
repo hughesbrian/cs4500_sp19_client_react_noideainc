@@ -13,7 +13,8 @@ const SearchBar = ({history}) =>
         <div className="input-group-append">
             <button
                 onClick={() => {
-                    history.push('/providers')
+                    console.log(history)
+                    history.push('/admin/provider-search/')
                 }}
                 className="btn btn-primary"
                 type="button">
