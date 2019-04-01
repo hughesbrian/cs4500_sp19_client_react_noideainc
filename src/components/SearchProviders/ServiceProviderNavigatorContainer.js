@@ -18,12 +18,39 @@ class ServiceProviderNavigatorContainer extends React.Component {
 
 
     add_Criteria = e =>
-        //console.log(this.state.questions)
 
     {
         console.log(this.state.criteria)
+        if(e[1].type == "TRUE_FALSE"){
+            if(this.state.criteria[this.state.questions.indexOf(e[1])] == null){
+                this.state.criteria[this.state.questions.indexOf(e[1])] = 1
+            }
+            else{
+                this.state.criteria[this.state.questions.indexOf(e[1])] = this.state.criteria[this.state.questions.indexOf(e[1])] * -1
+            }
+            console.log(this.state.criteria)
+            return
+        }
+        if(e[1].type == "RANGE"){
+            if(this.state.criteria[this.state.questions.indexOf(e[1])] == null){
+                this.state.criteria[this.state.questions.indexOf(e[1])] = new Array(e[1].choices.length)
+                this.state.criteria[this.state.questions.indexOf(e[1])][e[1].choices.indexOf(e[0])] = 1
+            }
+            else{
+                if(this.state.criteria[this.state.questions.indexOf(e[1])][e[1].choices.indexOf(e[0])] == null){
+                    this.state.criteria[this.state.questions.indexOf(e[1])][e[1].choices.indexOf(e[0])] = 1
+                }
+                else {
+                    this.state.criteria[this.state.questions.indexOf(e[1])][e[1].choices.indexOf(e[0])] = this.state.criteria[this.state.questions.indexOf(e[1])][e[1].choices.indexOf(e[0])] * -1
+                }
+            }
+            console.log(this.state.criteria)
+            return
+        }
         this.state.criteria[this.state.questions.indexOf(e[1])] = e[0]
-    console.log(this.state.criteria)}
+        console.log(this.state.criteria)
+    }
+
 
 
 
