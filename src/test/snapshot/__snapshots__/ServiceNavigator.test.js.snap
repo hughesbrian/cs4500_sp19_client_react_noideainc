@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render service navigator 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-8"
+    >
+      <div
+        className="input-group input-group-lg"
+      >
+        <input
+          className="form-control"
+          placeholder="Search for providers"
+          type="text"
+        />
+        <input
+          className="form-control"
+          placeholder="Zip code"
+          type="text"
+        />
+        <div
+          className="input-group-append"
+        >
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-3 text-right"
+    >
+      <a
+        href="#"
+      >
+        Sign up
+      </a>
+    </div>
+    <div
+      className="col-1"
+    >
+      <a
+        href="#"
+      >
+        Log in
+      </a>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div
+    className="row"
+  >
+    <div
+      className="col-3"
+    >
+      <ul
+        className="list-group"
+      >
+        <li
+          className="list-group-item no-border category-side-list"
+        >
+          <a
+            href="#1"
+          >
+            Tutoring
+          </a>
+        </li>
+        <li
+          className="list-group-item no-border category-side-list"
+        >
+          <a
+            href="#2"
+          >
+            Fitness Trainer
+          </a>
+        </li>
+        <li
+          className="list-group-item no-border category-side-list"
+        >
+          <a
+            href="#3"
+          >
+            House Painter
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="col-9"
+    >
+      <ul
+        className="list-group no-border"
+      >
+        <li
+          className="list-group-item no-border service-category-sections"
+        >
+          <div>
+            <a
+              id={1}
+            />
+            <h2>
+              Tutoring
+            </h2>
+            <div>
+              <div
+                className="row"
+              >
+                <div
+                  className="card no-border col-6"
+                >
+                  <img
+                    className="card-img-top service-card"
+                    src="https://picsum.photos/300/200"
+                  />
+                  <div
+                    className="card-body"
+                  >
+                    <p
+                      className="card-text"
+                    >
+                      <a
+                        href="/providers"
+                      >
+                         
+                        cleaning1
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row"
+              >
+                <div
+                  className="col-6 list-group-item no-border service-links"
+                >
+                  <a
+                    href="/providers"
+                  >
+                     
+                    cleaning1
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          className="list-group-item no-border service-category-sections"
+        >
+          <div>
+            <a
+              id={2}
+            />
+            <h2>
+              Fitness Trainer
+            </h2>
+            <div>
+              <div
+                className="row"
+              >
+                <div
+                  className="card no-border col-6"
+                >
+                  <img
+                    className="card-img-top service-card"
+                    src="https://picsum.photos/300/200"
+                  />
+                  <div
+                    className="card-body"
+                  >
+                    <p
+                      className="card-text"
+                    >
+                      <a
+                        href="/providers"
+                      >
+                         
+                        cleaning1
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row"
+              >
+                <div
+                  className="col-6 list-group-item no-border service-links"
+                >
+                  <a
+                    href="/providers"
+                  >
+                     
+                    cleaning1
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          className="list-group-item no-border service-category-sections"
+        >
+          <div>
+            <a
+              id={3}
+            />
+            <h2>
+              House Painter
+            </h2>
+            <div>
+              <div
+                className="row"
+              />
+              <div
+                className="row"
+              />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
