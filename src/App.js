@@ -15,8 +15,8 @@ class App extends Component {
                 <h1>No Idea Inc</h1>
                 <Router>
                     <div>
-                        <Link to="/admin">Admin</Link>
-                        <Link to="/provider">Provider</Link>
+                        <Link to="/admin">Admin</Link> | 
+                        <Link to="/provider"> Provider</Link> | 
                         <Route path="/provider" exact
                                render={() => <Provider provider={users[0]}/>}/>
                         <Route path="/admin" component={Admin}/>
