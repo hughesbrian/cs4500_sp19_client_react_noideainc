@@ -3,7 +3,7 @@ import ServiceProviderFilter from './ServiceProviderFilter'
 import ServiceProviderList from './ServiceProviderList'
 import SearchBar from '../SearchBar/SearchBar'
 
-const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions, History}) =>
+const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria}) =>
     <div>
         <div className="row">
             <div className="col-8">
@@ -18,11 +18,14 @@ const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQ
         </div>
         <br/>
         <br/>
+        <script>console.log(add_Criteria);</script>
 
         <div className="row">
             <div className="col-3">
                 <ServiceProviderFilter
                     serviceQuestions={serviceQuestions}
+                    Criteria = {Criteria}
+                    add_Criteria = {add_Criteria}
                 />
             </div>
             <div className="col-9">
@@ -31,5 +34,6 @@ const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQ
             </div>
         </div>
     </div>
+
 
 export default ServiceProviderNavigator
