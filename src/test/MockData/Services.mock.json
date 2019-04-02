@@ -2,7 +2,12 @@
   {
     "id": 777,
     "title": "cleaning1",
-    "description": "p4ssw0rd"
+    "description": "p4ssw0rd",
+    "serviceCategories": [
+        {"id": 1, "title": "Tutoring"},
+        {"id": 2, "title": "Fitness Trainer"}
+    ]
+
   },
   {
     "id": 778,
