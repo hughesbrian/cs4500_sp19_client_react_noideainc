@@ -8,8 +8,9 @@ const ServiceProvider = ({serviceProvider}) =>
             </div>
             <div className="col-7">
                 <a href="#">
-                    {serviceProvider.title}
+                    {serviceProvider.username}
                 </a>
+                {/*
                 <div>
                     <span>{serviceProvider.rating} </span>
                     <i className="fa fa-star cs4500-yellow"/>
@@ -19,6 +20,7 @@ const ServiceProvider = ({serviceProvider}) =>
                     <i className="fa fa-star cs4500-yellow"/>
                     <span> {serviceProvider.reviews.length} reviews</span>
                 </div>
+                */}
                 <div>
                     <span>{serviceProvider.yearsInBusiness}</span> years in business,
                     <span>{serviceProvider.hires}</span> hires

@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 //import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
+import ServiceCategories from './components/ServiceCategories'
+import ServiceCategoryDetails from './components/ServiceCategoryDetails'
+import users from './test/MockData/Users.mock'
+import Provider from './components/Provider/Provider'
 import Home from './components/Home'
 import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavigatorContainer'
 
@@ -22,7 +26,7 @@ class App extends Component {
             <br/>
             <Route path="/admin" component={Admin}/>
             <Route path="/services" exact component={ServiceNavigatorContainer}/>
-            
+            <Route path="/provider" exact render={() => <Provider provider={users[0]}/>}/>
             {/* <Route
                 path="/provider"
                 exact
@@ -45,6 +49,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
