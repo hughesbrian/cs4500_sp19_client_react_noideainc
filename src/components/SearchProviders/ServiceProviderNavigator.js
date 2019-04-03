@@ -3,7 +3,7 @@ import ServiceProviderFilter from './ServiceProviderFilter'
 import ServiceProviderList from './ServiceProviderList'
 import SearchBar from '../SearchBar/SearchBar'
 
-const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria}) =>
+const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria,send_request}) =>
     <div>
         <div className="row">
             <div className="col-8">
@@ -15,6 +15,9 @@ const ServiceProviderNavigator = ({serviceProviders, serviceCategories, serviceQ
             <div className="col-1">
                 <a href="#">Log in</a>
             </div>
+            <button className="button" onClick={send_request}>
+                SEARCH HERE
+            </button>
         </div>
         <br/>
         <br/>
