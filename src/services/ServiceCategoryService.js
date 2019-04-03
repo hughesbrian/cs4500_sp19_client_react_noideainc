@@ -1,3 +1,6 @@
+const baseURL = "https://cs4500-sp19-noideainc.herokuapp.com";
+//const baseURL = "http://localhost:8080";
+
 export default class ServiceCategoryService {
     static instance = null;
     static getInstance() {
@@ -8,20 +11,20 @@ export default class ServiceCategoryService {
     }
 
     findServiceCategoryById = categoryId =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories/${categoryId}`)
+        fetch(baseURL + `/api/categories/${categoryId}`)
             .then(response => response.json())
 
     findAllServiceCategories = () =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories`)
+        fetch(baseURL +  `/api/categories`)
             .then(response => response.json())
 
     pagedServiceCategories = (page, count) =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories/paged?page=${page}&count=${count}`)
+        fetch(baseURL + `/api/categories/paged?page=${page}&count=${count}`)
             .then(response => response.json())
 
     createServiceCategory = sc => {
         delete sc.id;
-        return fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories`, {
+        return fetch(baseURL + `/api/categories`, {
             method: 'post',
             body: JSON.stringify(sc),
             headers: {
@@ -32,7 +35,16 @@ export default class ServiceCategoryService {
     }
 
     updateServiceCategory = sc =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories/${sc.id}`, {
+        fetch(baseURL + `/api/categories/${sc.id}`, {
+            method: 'put',
+            body: JSON.stringify(sc),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }).then(response => response.json())
+    
+    updateServiceCategoryScore = sc =>
+        fetch(baseURL + `/api/categories/score/${sc.id}`, {
             method: 'put',
             body: JSON.stringify(sc),
             headers: {
@@ -41,7 +53,7 @@ export default class ServiceCategoryService {
         }).then(response => response.json())
 
     deleteServiceCategory = id =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/categories/${id}`, {
+        fetch(baseURL + `/api/categories/${id}`, {
             method: 'delete'
         })
 }
