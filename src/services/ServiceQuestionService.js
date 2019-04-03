@@ -18,6 +18,10 @@ export default class ServiceQuestionService {
         fetch(`${this.backend_url}/api/service-questions`)
             .then(response => response.json())
 
+    findAllServiceQuestionsByServiceId = (serviceId) =>
+        fetch(`${this.backend_url}/api/service-questions/service/${serviceId}`)
+            .then(response => response.json())
+
     createQuestion = (question) =>
         fetch(`${this.backend_url}/api/service-questions`,
         {
