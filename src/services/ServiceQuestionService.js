@@ -1,8 +1,8 @@
 export default class ServiceQuestionService {
     static instance = null;
 
-    //backend_url = 'http://localhost:8080';
-    backend_url = 'https://cs4500-sp19-noideainc.herokuapp.com';
+    backend_url = 'http://localhost:8080';
+    //backend_url = 'https://cs4500-sp19-noideainc.herokuapp.com';
 
     static getInstance() {
         if(ServiceQuestionService.instance === null) {
