@@ -3,7 +3,7 @@ import ServiceProvider from './ServiceProvider'
 const ServiceProviderList = ({serviceProviders}) =>
     <div>
         {
-            serviceProviders.map(serviceProvider =>
+            Array.from(serviceProviders).map(serviceProvider =>
                 <ServiceProvider
                     serviceProvider={serviceProvider}/>
             )

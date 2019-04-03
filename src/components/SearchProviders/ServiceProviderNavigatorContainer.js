@@ -29,6 +29,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
     componentDidMount() {
         this.serviceQuestionService.findAllServiceQuestionsByServiceId(this.service).then((questions) => {
             var serviceQuestions = questions
+            console.log("QUESTIONS")
             console.log(serviceQuestions)
             console.log(serviceQuestions[0])
             console.log(serviceQuestions[1])
@@ -87,7 +88,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
     }
 
     send_request = (e) => {
-        this.servicesearch.getResults(this.state.service, this.state.criteria, this.state.questions).then((new_providers) => {
+        this.servicesearch.getResults(this.service, this.state.criteria, this.state.questions).then((new_providers) => {
             this.setState
             ({
                 providers: new_providers
