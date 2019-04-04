@@ -83,7 +83,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
             console.log(this.state.criteria)
             return
         }
-        this.state.criteria[this.state.questions.indexOf(e[1])] = e[0]
+        this.state.criteria[this.state.questions.indexOf(e[1])] = e[1].choices.indexOf(e[0])
         console.log(this.state.criteria)
     }
 

@@ -36,12 +36,11 @@ class App extends Component {
                 path="/admin"
                 exact
                 component={Admin}/>
-                */
+                */}
             <Route
                 path="/providers"
                 exact
                 component={ServiceProviderNavigatorContainer}/>
-            }
           </div>
         </Router>
       </div>
