@@ -4,7 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
 import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavigatorContainer'
-import ServiceProviderNavigatorContainr from './components/SearchProviders/ServiceProviderNavigatorContainer'
+import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
 
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
             <Route
                 path="/providers"
                 exact
-                component={ServiceProviderNavigatorContainr}/>
+                component={ServiceProviderNavigatorContainer}/>
             }
           </div>
         </Router>
