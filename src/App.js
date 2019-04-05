@@ -10,6 +10,8 @@ import users from './test/MockData/Users.mock'
 import Provider from './components/Provider/Provider'
 import Home from './components/Home'
 import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavigatorContainer'
+import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
+
 
 class App extends Component {
   render() {
@@ -39,11 +41,11 @@ class App extends Component {
                 path="/admin"
                 exact
                 component={Admin}/>
+                */}
             <Route
                 path="/providers"
                 exact
-                component={ServiceProviderNavigator}/> */}
-           
+                component={ServiceProviderNavigatorContainer}/>
           </div>
         </Router>
       </div>

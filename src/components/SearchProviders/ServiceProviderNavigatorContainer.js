@@ -29,6 +29,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
     componentDidMount() {
         this.serviceQuestionService.findAllServiceQuestionsByServiceId(this.service).then((questions) => {
             var serviceQuestions = questions
+            console.log("QUESTIONS")
             console.log(serviceQuestions)
             console.log(serviceQuestions[0])
             console.log(serviceQuestions[1])
@@ -82,12 +83,12 @@ class ServiceProviderNavigatorContainer extends React.Component {
             console.log(this.state.criteria)
             return
         }
-        this.state.criteria[this.state.questions.indexOf(e[1])] = e[0]
+        this.state.criteria[this.state.questions.indexOf(e[1])] = e[1].choices.indexOf(e[0])
         console.log(this.state.criteria)
     }
 
     send_request = (e) => {
-        this.servicesearch.getResults(this.state.service, this.state.criteria, this.state.questions).then((new_providers) => {
+        this.servicesearch.getResults(this.service, this.state.criteria, this.state.questions).then((new_providers) => {
             this.setState
             ({
                 providers: new_providers

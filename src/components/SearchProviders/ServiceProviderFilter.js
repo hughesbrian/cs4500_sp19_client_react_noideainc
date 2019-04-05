@@ -7,6 +7,7 @@ const ServiceProviderFilter = ({serviceQuestions,Criteria,add_Criteria}) =>
         <br/>
         {
             Array.from(serviceQuestions).map(question =>
+
                 <ServiceQuestion
                     serviceQuestion={question}
                     Criteria = {Criteria}
