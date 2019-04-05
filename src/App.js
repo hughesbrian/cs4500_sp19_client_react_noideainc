@@ -37,10 +37,6 @@ class App extends Component {
                 path="/home"
                 exact
                 component={Home}/>
-                path="/admin"
-                exact
-                component={Admin}/>
-                */}
             <Route
                 path="/providers"
                 exact
