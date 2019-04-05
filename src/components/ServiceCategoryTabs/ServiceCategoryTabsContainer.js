@@ -1,12 +1,13 @@
 import React from 'react'
 import ServiceCategoryTabs from './ServiceCategoryTabs'
 import ServiceCategoryService from '../../services/ServiceCategoryService'
-import { withRouter } from 'react-router-dom'
+import ServiceService from '../../services/ServiceService'
 
 class ServiceCategoryTabsContainer extends React.Component {
     constructor(props) {
         super(props);
         this.serviceCategoryService = ServiceCategoryService.getInstance();
+        this.serviceService = ServiceService.getInstance();
         this.state = {
             serviceCategories: [],
             services: [],
@@ -24,13 +25,22 @@ class ServiceCategoryTabsContainer extends React.Component {
             .findAllServiceCategories()
             .then(serviceCategories => {
                     this.setState({
-                        serviceCategories: this.findTopPopularity(serviceCategories)
+                        serviceCategories: this.findTopCategories(serviceCategories)
                     })
                 }
             )
 
+    findAllServicesByCategoryName = () =>
+        this.serviceCategoryService
+            .findAllServicesByCategoryName(this.state.activeCategory.title)
+            .then(services => {
+                this.setState({
+                    services: this.findTopServices(services)
+                })
+            })
+    
     // find the top three popularity service categories and display them in pills
-    findTopPopularity = (serviceCategories) => {
+    findTopCategories = (serviceCategories) => {
         let filterArray = [];
         serviceCategories.forEach((item) => {
             let start = 0;
@@ -41,15 +51,34 @@ class ServiceCategoryTabsContainer extends React.Component {
                 start++;
             }
             filterArray.splice(start, 1, item)
-            if (filterArray.length > 10) {
-                filterArray = filterArray.slice(0, 10);
+            if (filterArray.length > 6) {
+                filterArray = filterArray.slice(0, 6);
             }
         })
         console.log(filterArray)
         return filterArray;
     }
 
-    updateScore = (serviceCategory) => {
+    // find top 6 services in the active category (sort descending)
+    findTopServices = (services) => {
+        // console.log("top services:")
+        // console.log(services)
+        services.sort(function(a, b){
+            let serviceA = a.score, serviceB = b.score
+            if (serviceA < serviceB)
+                return 1 
+            if (serviceA > serviceB)
+                return -1
+            return 0 // default return value (no sorting)
+        })
+
+        if (services.length > 6) {
+            return services.slice(0, 6);
+        }
+        return services;
+    }
+
+    updateCategoryScore = (serviceCategory) => {
         serviceCategory.score = serviceCategory.score + 1;
         this.serviceCategoryService
             .updateServiceCategoryScore(serviceCategory)
@@ -57,16 +86,21 @@ class ServiceCategoryTabsContainer extends React.Component {
 
     }
 
+    updateServiceScore = (service) => {
+        service.score = service.score + 1;
+        this.serviceService
+            .updateServiceScore(service)
+            .then()
+    }
+
     handleTabClick(category) {
         const categoryName = category.title
-        console.log("in handle click")
-        console.log(categoryName)
+        this.updateCategoryScore(category)
         this.serviceCategoryService
             .findAllServicesByCategoryName(categoryName)
             .then(services => {
-                // this.props.history.push("/" + categoryName)
                 this.setState({
-                    services: services,
+                    services: this.findTopServices(services),
                     activeCategory: category
                 })
             })
@@ -75,7 +109,7 @@ class ServiceCategoryTabsContainer extends React.Component {
     render = () => {
         return(
               <ServiceCategoryTabs serviceCategories={this.state.serviceCategories} 
-                updateScore={this.updateScore}
+                updateServiceScore={this.updateServiceScore}
                 handleTabClick={this.handleTabClick}
                 services={this.state.services}
                 activeCategory={this.state.activeCategory}  />
@@ -83,5 +117,4 @@ class ServiceCategoryTabsContainer extends React.Component {
     }
 }
 
-// export default withRouter(ServiceCategoryTabsContainer)
 export default ServiceCategoryTabsContainer
