@@ -2,6 +2,7 @@ import React from 'react'
 import SearchBar from './SearchBar/SearchBar'
 // import ServiceTabNavigator from './ServiceTabNavigator/ServiceTabNavigator'
 import ServiceCategoryPillsContainer from './ServiceCategoryPills/ServiceCategoryPillsContainer'
+import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryTabsContainer'
 // import serviceCategories from '../data/service-categories.mock.json'
 const Home = ({history}) =>
     <div className="home-screen">
@@ -24,6 +25,10 @@ const Home = ({history}) =>
         <br/>
         <div>
             <ServiceCategoryPillsContainer/>
+            <br/>
+            <br/>
+            <br/>
+            <ServiceCategoryTabsContainer/>
         </div>
         <br/>
         <br/>

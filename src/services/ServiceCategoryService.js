@@ -1,5 +1,5 @@
 const baseURL = "https://cs4500-sp19-noideainc.herokuapp.com";
-//const baseURL = "http://localhost:8080";
+// const baseURL = "http://localhost:8080";
 
 export default class ServiceCategoryService {
     static instance = null;
@@ -56,4 +56,8 @@ export default class ServiceCategoryService {
         fetch(baseURL + `/api/categories/${id}`, {
             method: 'delete'
         })
+
+    findAllServicesByCategoryName = catName =>
+        fetch(baseURL +  `/api/${catName}`)
+            .then(response => response.json())
 }
