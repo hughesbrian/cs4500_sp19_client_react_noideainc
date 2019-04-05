@@ -3,11 +3,11 @@ import ServiceCategoryList from './ServiceCategoryList'
 import ServiceCategorySectionList from './ServiceCategorySectionList'
 import SearchBar from '../SearchBar/SearchBar'
 
-const ServiceNavigator = ({serviceCategories}) =>
+const ServiceNavigator = ({serviceCategories, history}) =>
     <div>
         <div className="row">
             <div className="col-8">
-                <SearchBar/>
+                <SearchBar history={history}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>

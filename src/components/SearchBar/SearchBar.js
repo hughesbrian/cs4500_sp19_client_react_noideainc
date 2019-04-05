@@ -1,21 +1,24 @@
 import React from 'react'
 
-const SearchBar = ({history}) =>
+const SearchBar = ({history, filteredProviders, updateField, name, zip, findFilteredProviders}) =>
     <div className="input-group input-group-lg">
         <input
             placeholder="Search for providers"
             type="text"
+            name="name"
+            value={name}
+            onChange={updateField}
             className="form-control"/>
         <input
             placeholder="Zip code"
             type="text"
+            name="zip"
+            value={zip}
+            onChange={updateField}
             className="form-control"/>
         <div className="input-group-append">
             <button
-                onClick={() => {
-                    console.log(history)
-                    history.push('/admin/provider-search/')
-                }}
+                onClick={findFilteredProviders}
                 className="btn btn-primary"
                 type="button">
                 Search
