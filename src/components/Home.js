@@ -3,6 +3,7 @@ import SearchBar from './SearchBar/SearchBar'
 import SearchBarContainer from './SearchBar/SearchBarContainer'
 // import ServiceTabNavigator from './ServiceTabNavigator/ServiceTabNavigator'
 import ServiceCategoryPillsContainer from './ServiceCategoryPills/ServiceCategoryPillsContainer'
+import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryTabsContainer'
 // import serviceCategories from '../data/service-categories.mock.json'
 
 const Home = ({history}) =>
@@ -27,6 +28,10 @@ const Home = ({history}) =>
         <br/>
         <div>
             <ServiceCategoryPillsContainer/>
+            <br/>
+            <br/>
+            <br/>
+            <ServiceCategoryTabsContainer/>
         </div>
         <br/>
         <br/>
