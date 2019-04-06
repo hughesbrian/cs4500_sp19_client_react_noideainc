@@ -39,24 +39,21 @@ class ServiceCategoryTabsContainer extends React.Component {
                 })
             })
     
-    // find the top three popularity service categories and display them in pills
+    // find the top 10 service categories to be displayed in navigation tabs
     findTopCategories = (serviceCategories) => {
-        let filterArray = [];
-        serviceCategories.forEach((item) => {
-            let start = 0;
-            while (filterArray.length > start) {
-                if (item.score > filterArray[start]) {
-                    break;
-                }
-                start++;
-            }
-            filterArray.splice(start, 1, item)
-            if (filterArray.length > 6) {
-                filterArray = filterArray.slice(0, 6);
-            }
+        serviceCategories.sort(function(a, b){
+            let cateA = a.score, cateB = b.score
+            if (cateA < cateB)
+                return 1 
+            if (cateA > cateB)
+                return -1
+            return 0 // default return value (no sorting)
         })
-        console.log(filterArray)
-        return filterArray;
+
+        if (serviceCategories.length > 10) {
+            return serviceCategories.slice(0, 10);
+        }
+        return serviceCategories;
     }
 
     // find top 6 services in the active category (sort descending)
