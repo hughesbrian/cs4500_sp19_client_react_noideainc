@@ -40,7 +40,7 @@ const ServiceCategoryTabs = ({serviceCategories, updateServiceScore, handleTabCl
                                     </div>) 
                                 } 
                             </div> : 
-                            <div className="tab-pane fade show active"></div>
+                            <div className="tab-pane fade show"></div>
         
     return(
         <Router>
