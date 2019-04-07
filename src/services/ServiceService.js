@@ -33,4 +33,14 @@ export default class ServiceService {
             {
                 method: 'DELETE',
             })
+
+    updateServiceScore = service =>
+        // change to http://localhost:8080 to test locally
+        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/score/${service.id}`, {
+            method: 'put',
+            body: JSON.stringify(service),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }).then(response => response.json())
 }
