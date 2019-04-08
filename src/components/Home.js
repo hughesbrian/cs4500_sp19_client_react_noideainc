@@ -20,7 +20,7 @@ const Home = ({history}) =>
                 <a href="#">Sign up</a>
             </div>
             <div className="col-1">
-                <a href="#">Log in</a>
+                <a href="/login">Log in</a>
             </div>
         </div>
         <br/>
