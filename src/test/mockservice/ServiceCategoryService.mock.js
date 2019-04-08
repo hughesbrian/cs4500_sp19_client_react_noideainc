@@ -1,4 +1,5 @@
 import serviceCategories from '../mockdata/ServiceCategories.mock.json'
+import serviceCategories2 from '../mockdata/ServiceCategories2.mock.json'
 
 global.fetch = jest.fn().mockImplementation((url, config) => {
     if(!config) {
@@ -42,13 +43,24 @@ global.fetch = jest.fn().mockImplementation((url, config) => {
         })
     }
     else if(config.method === 'put') {
-        let sc = JSON.parse(config.body)
-        serviceCategories[0] = sc
-        return new Promise((resolve, reject) => {
-            resolve({ json: function() {
-                return serviceCategories
-            }})
-        })
+        if(url.indexOf("/api/categories/score/1") != -1) {
+            let sc = JSON.parse(config.body)
+            sc.score = sc.score + 1
+            serviceCategories2[0] = sc
+            return new Promise((resolve, reject) => {
+                resolve({ json: function() {
+                    return serviceCategories2
+                }})
+            })
+        } else {
+            let sc = JSON.parse(config.body)
+            serviceCategories[0] = sc
+            return new Promise((resolve, reject) => {
+                resolve({ json: function() {
+                    return serviceCategories
+                }})
+            })
+        }
     }
     else if(config.method === 'delete') {
         serviceCategories.shift()
