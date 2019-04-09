@@ -1,45 +1,58 @@
 [
   {
     "id": 123,
-    "username": "nate",
-    "password": "p4ssw0rd",
-    "firstName": "Nathan",
-    "lastName": "Jones",
+    "username": "alice",
+    "password": "alice2",
+    "firstName": "Alice",
+    "lastName": "Wonderland",
+    "rating": 4,
     "services": [
+      [
+        {
+          "id": 123,
+          "title": "House Cleaners",
+          "description": null,
+          "score": null,
+          "serviceCategories": []
+        }
+      ]
+    ],
+    "serviceAnswers": [
       {
-        "id": 1,
-        "title": "Nate's Landscaping",
-        "description": "You want a good-looking yard? Let Nate fix it up for you!"
+        "id": 352,
+        "trueFalseAnswer": true,
+        "maxRangeAnswer": null,
+        "minRangeAnswer": null,
+        "choiceAnswer": null
+      },
+      {
+        "id": 382,
+        "trueFalseAnswer": null,
+        "maxRangeAnswer": 10,
+        "minRangeAnswer": 9,
+        "choiceAnswer": null
+      },
+      {
+        "id": 442,
+        "trueFalseAnswer": null,
+        "maxRangeAnswer": null,
+        "minRangeAnswer": null,
+        "choiceAnswer": 1
       }
     ],
     "reviewsOfMe": [
       {
-        "reviewer": {
-          "id": 234,
-          "username": "sam",
-          "password": "pa55word",
-          "firstName": "Sam",
-          "lastName": "Atkins",
-          "services": [
-            {
-              "id": 2,
-              "title": "Sam's Landscaping",
-              "description": "Our landscaping blows Nate's out of the water!"
-            }
-          ],
-          "reviewsOfMe": [
-            {
-              "review": "This place sucks"
-            }
-          ]
-        },
-        "review": "This place is awesome"
+        "id": 2,
+        "title": "Review A",
+        "review": "Good Work",
+        "rating": 4
       }
     ],
+    "myReviewsOfOthers": [],
     "frequentlyAskedAnswers": [
       {
         "id": 1,
-        "answer": "Yes",
+        "answer": "No",
         "question": "Have you passed a background check?"
       },
       {
@@ -69,7 +82,10 @@
     ],
     "reviewsOfMe": [
       {
-        "review": "This place sucks"
+        "id": 4,
+        "title": "Review B",
+        "review": "Not Good",
+        "rating": 1
       }
     ]
   }

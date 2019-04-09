@@ -1,6 +1,7 @@
 import React from 'react'
 import Review from './Review'
 import FAQ from './FAQ'
+import Rating from './Rating'
 import SearchBar from '../SearchBar/SearchBar'
 
 const Provider = ({provider, history}) =>
@@ -37,7 +38,13 @@ const Provider = ({provider, history}) =>
             </div>
             <div className="col-10">
                 <h3>{provider.title}</h3>
-                Number of Reviews: ({provider.reviewsOfMe.length})
+                {provider.rating}
+                <i className="fa fa-star"/>
+                <i className="fa fa-star"/>
+                <i className="fa fa-star"/>
+                <i className="fa fa-star"/>
+                <i className="fa fa-star"/>
+                ({provider.reviewsOfMe ? provider.reviewsOfMe.length : ''})
             </div>
         </div>
         <div>
