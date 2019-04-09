@@ -1,0 +1,36 @@
+.register-form {
+    height: 700px;
+    width: 65%;
+    margin-top: 20px;
+    margin-left: 250px;
+    border: 1px solid black;
+    .header {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .form {
+        margin-left: 120px;
+        margin-top: 20px;
+        .field {
+            margin-top: 15px;
+            margin-left: 100px
+        }
+        .input-field {
+            height: 45px;
+            width: 400px;
+            display: block;
+            border: 1px solid grey
+        }
+        .register-button {
+            height: 40px;
+            width: 200px;
+            text-align: center;
+            float: right;
+            margin-top: 35px;
+            margin-right: 200px;
+            font-size: 20px;
+            background-color:#8AD8E3;
+            border: none
+        }
+    }
+}
