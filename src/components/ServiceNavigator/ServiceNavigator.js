@@ -1,13 +1,13 @@
 import React from 'react'
 import ServiceCategoryList from './ServiceCategoryList'
 import ServiceCategorySectionList from './ServiceCategorySectionList'
-import SearchBar from '../SearchBar/SearchBar'
+import SearchBarContainer from '../SearchBar/SearchBarContainer';
 
 const ServiceNavigator = ({serviceCategories, history}) =>
     <div>
         <div className="row">
             <div className="col-8">
-                <SearchBar history={history}/>
+                <SearchBarContainer history={history}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>
