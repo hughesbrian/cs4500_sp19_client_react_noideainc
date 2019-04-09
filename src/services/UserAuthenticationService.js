@@ -1,4 +1,5 @@
-const baseURL = process.env.NODE_ENV !== 'development' ? 'http://localhost:8080' : 'https://cs4500-sp19-noideainc.herokuapp.com'
+
+const baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://cs4500-sp19-noideainc.herokuapp.com'
 
 export default class UserAuthenticationService {
     static instance = null;
@@ -16,6 +17,18 @@ export default class UserAuthenticationService {
                 method: 'POST',
                 body: JSON.stringify(user),
                 headers: {'content-type': 'application/json'}
+            }
+        ).then(response => {
+            return response.json()
+        })
+
+    register = user => 
+        fetch(baseURL + "/api/register", 
+            {
+                method: 'POST',
+                body: JSON.stringify(user),
+                headers: {'content-type': 'application/json'},
+                credentials: 'include'
             }
         ).then(response => {
             return response.json()

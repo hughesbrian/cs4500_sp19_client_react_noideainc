@@ -1,11 +1,11 @@
 import React from 'react'
-import UserService from '../../services/UserService'
+import userAuthentication from '../../services/UserAuthenticationService'
 import Register from './Register';
 
 class RegisterContainer extends React.Component {
     constructor(props) {
         super(props)
-        this.userService = UserService.getInstance()
+        this.userAuthentication = userAuthentication.getInstance()
         this.state = {
             first: "",
             last: "",
@@ -21,10 +21,10 @@ class RegisterContainer extends React.Component {
         })
     }
 
-    createUser = () => {
+    register = () => {
         if (this.state.first && this.state.last && this.state.username && this.state.email && this.state.password) {
-            this.userService
-            .createUser({
+            this.userAuthentication
+            .register({
                 firstName: this.state.first,
                 lastName: this.state.last,
                 username: this.state.username,
@@ -32,18 +32,22 @@ class RegisterContainer extends React.Component {
                 password: this.state.password
             }).then(
                 (res) => {
-                    this.setState({
-                        first: "",
-                        last: "",
-                        username: "",
-                        email: "",
-                        password: ""
-                    })
-                    alert("added a user")
-                    this.props.history.push("/home") // change this to profile page once it's implemented!
+                    if(res != null & res.email != null) {
+                        this.setState({
+                            first: "",
+                            last: "",
+                            username: "",
+                            email: "",
+                            password: ""
+                        })
+                        alert("added a user")
+                        this.props.history.push("/home") // change this to profile page once it's implemented!
+                    } else {
+                        alert("Email is already used. Please use a different email!");
+                    }
                 }
             ).catch(function (error) {
-                alert("Failed to create a new User");
+                console.log(error)
             });
         } else {
             alert("please input all the information");
@@ -59,7 +63,7 @@ class RegisterContainer extends React.Component {
             email={this.state.email} 
             password={this.state.password}
             updateField={this.updateField}
-            createUser={this.createUser}
+            register={this.register}
             />
         )
     }
