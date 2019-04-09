@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/Register.scss'
 import { Button } from 'react-bootstrap';
 
-const Register = ({first, last, username, email, password, updateField, createUser}) => {
+const Register = ({first, last, username, email, password, updateField, register}) => {
     return (
         <div className="register-form">
             <h1 className="header">Create Your Account</h1>
@@ -27,7 +27,7 @@ const Register = ({first, last, username, email, password, updateField, createUs
                     <label>Password</label>
                     <input value={password} name="password" onChange={updateField} className="input-field"></input>
                 </div>
-                <Button onClick={createUser} className="register-button">SIGN UP</Button>
+                <Button onClick={register} className="register-button">SIGN UP</Button>
             </div>
         </div>
     )
