@@ -1,10 +1,7 @@
 import React from 'react'
-import SearchBar from './SearchBar/SearchBar'
 import SearchBarContainer from './SearchBar/SearchBarContainer'
-// import ServiceTabNavigator from './ServiceTabNavigator/ServiceTabNavigator'
 import ServiceCategoryPillsContainer from './ServiceCategoryPills/ServiceCategoryPillsContainer'
 import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryTabsContainer'
-// import serviceCategories from '../data/service-categories.mock.json'
 
 const Home = ({history}) =>
     <div className="home-screen">
@@ -13,8 +10,7 @@ const Home = ({history}) =>
                 <h1>
                     Find professionals near you.
                 </h1>
-                {/* <SearchBar history={history}/> */}
-                <SearchBarContainer />
+                <SearchBarContainer history={history}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>
@@ -36,7 +32,6 @@ const Home = ({history}) =>
         <br/>
         <br/>
         <br/>
-        {/* <ServiceTabNavigator serviceCategories={serviceCategories}/> */}
     </div>
 
 export default Home
