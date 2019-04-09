@@ -12,8 +12,10 @@ import Home from './components/Home'
 import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavigatorContainer'
 import ServiceProviderNavigator from './components/SearchProviders/ServiceProviderNavigator'
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
+import LoginContainer from './components/Login/LoginContainer'
 
 class App extends Component {
+
   render() {
     return (
       <div className="container-fluid home">
@@ -24,7 +26,8 @@ class App extends Component {
             <Link to="/services"> Services</Link> |
             <Link to="/providers"> Providers</Link> |
             <Link to="/admin">Admin</Link> |
-            <Link to="/provider"> Provider</Link>
+            <Link to="/provider"> Provider</Link> |
+            <Link to="/login"> Login</Link>
             <br/>
             <Route path="/admin" component={Admin}/>
             <Route path="/services" exact component={ServiceNavigatorContainer}/>
@@ -41,6 +44,10 @@ class App extends Component {
                 path="/providers"
                 exact
                 component={ServiceProviderNavigatorContainer}/>
+            <Route
+                path="/login"
+                exact
+                component={LoginContainer}/>
           </div>
         </Router>
       </div>

@@ -30,12 +30,12 @@ class ServiceCategoryPillsContainer extends React.Component {
         serviceCategories.forEach((item) => {
             let start = 0;
             while (filterArray.length > start) {
-                if (item.score > filterArray[start]) {
+                if (item.score > filterArray[start].score) {
                     break;
                 }
                 start++;
             }
-            filterArray.splice(start, 1, item)
+            filterArray.splice(start, 0, item)
             if (filterArray.length > 3) {
                 filterArray = filterArray.slice(0, 3);
             }
