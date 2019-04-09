@@ -9,6 +9,7 @@ import ServiceCategoryDetails from './components/ServiceCategoryDetails'
 import users from './test/MockData/Users.mock'
 import Provider from './components/Provider/Provider'
 import Home from './components/Home'
+import RegisterContainer from './components/Signup/RegisterContainer'
 import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavigatorContainer'
 import ServiceProviderNavigator from './components/SearchProviders/ServiceProviderNavigator'
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
@@ -27,6 +28,7 @@ class App extends Component {
             <Link to="/providers"> Providers</Link> |
             <Link to="/admin">Admin</Link> |
             <Link to="/provider"> Provider</Link> |
+            <Link to="/Register"> Register</Link> |
             <Link to="/login"> Login</Link>
             <br/>
             <Route path="/admin" component={Admin}/>
@@ -40,6 +42,7 @@ class App extends Component {
                 path="/home"
                 exact
                 component={Home}/>
+            <Route path="/register" component={RegisterContainer}/>
             <Route
                 path="/providers"
                 exact
