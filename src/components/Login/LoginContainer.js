@@ -1,11 +1,11 @@
 import React from 'react'
 import Login from '../../components/Login/Login'
-import usereAnthentication from '../../services/UserAuthenticationService'
+import userAnthentication from '../../services/UserAuthenticationService'
 
 class LoginContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.usereAnthentication = usereAnthentication.getInstance();
+        this.userAnthentication = userAnthentication.getInstance();
         this.state = {
             email: "",
             password: ""
@@ -21,15 +21,16 @@ class LoginContainer extends React.Component {
     login = () => {
         console.log("log in")
         if (this.state.email != "" && this.state.password != "") {
-            this.usereAnthentication
+            this.userAnthentication
             .login({
                 email: this.state.email,
                 password: this.state.password
             })
             .then((response) => {
                 //console.log(response)
-                if (response != null) {
+                if (response != null && response.email != null && response.password != null) {
                     alert("Log in Successfully")
+                    window.location.reload()
                     this.props.history.push("/home")
                 }
             }).catch((error) => {
