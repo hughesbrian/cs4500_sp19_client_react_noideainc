@@ -1,0 +1,455 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render serviceCategroy in ServiceCategoryPills correctly 1`] = `
+<ul
+  className="nav nav-pills nav-fill wd-shadow wd-padding-20"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-home"
+      />
+      <br />
+      Home
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Fitness Trainer
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      House Painter
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-briefcase"
+      />
+      <br />
+      Business
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-heart"
+      />
+      <br />
+      Wellness
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-paw"
+      />
+      <br />
+      Pets
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-ellipsis-h"
+      />
+      <br />
+      More
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`render serviceCategroy in ServiceCategoryPills from service 1`] = `
+<ul
+  className="nav nav-pills nav-fill wd-shadow wd-padding-20"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-home"
+      />
+      <br />
+      Home
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Tutoring
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Fitness Trainer
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      House Painter
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-ellipsis-h"
+      />
+      <br />
+      More
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`update score for one serviceCategory 1`] = `
+<ul
+  className="nav nav-pills nav-fill wd-shadow wd-padding-20"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-home"
+      />
+      <br />
+      Home
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Tutoring
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Fitness Trainer
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      House Painter
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-briefcase"
+      />
+      <br />
+      Business
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-heart"
+      />
+      <br />
+      Wellness
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-paw"
+      />
+      <br />
+      Pets
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-ellipsis-h"
+      />
+      <br />
+      More
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`update score for one serviceCategory 2`] = `
+<ul
+  className="nav nav-pills nav-fill wd-shadow wd-padding-20"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-home"
+      />
+      <br />
+      Home
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Tutoring
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      Fitness Trainer
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-bookmark"
+      />
+      <br />
+      House Painter
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-briefcase"
+      />
+      <br />
+      Business
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-heart"
+      />
+      <br />
+      Wellness
+    </a>
+  </li>
+  <li
+    className="nav-item"
+    onClick={[Function]}
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-paw"
+      />
+      <br />
+      Pets
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link btn-lg text-center"
+      href="/services"
+    >
+      <i
+        className="fa fa-ellipsis-h"
+      />
+      <br />
+      More
+    </a>
+  </li>
+</ul>
+`;
