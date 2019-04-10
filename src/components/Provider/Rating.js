@@ -1,10 +1,19 @@
 import React from 'react'
+
+function renderStar(ratingNumber) {
+    let stars = [];
+    for (let i = 1; i <= ratingNumber && i <= 5; i++) {
+        stars.push(<i className="fa fa-star"/>);
+    }
+    return stars;
+}
+
 const Rating = ({score, index}) =>
     <div>
         <div className="row">
             <div className="col-2 text-right">
                 {index}&nbsp;
-                <i className="fa fa-star cs4500-yellow"/>
+                {renderStar(score)}
             </div>
             <div className="col-8">
                 <div class="progress">

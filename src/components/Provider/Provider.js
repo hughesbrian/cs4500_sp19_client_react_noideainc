@@ -4,6 +4,14 @@ import FAQ from './FAQ'
 import Rating from './Rating'
 import SearchBar from '../SearchBar/SearchBar'
 
+function renderStar(ratingNumber) {
+    let stars = [];
+    for (let i = 1; i <= ratingNumber && i <= 5; i++) {
+        stars.push(<i className="fa fa-star"/>);
+    }
+    return stars;
+}
+
 const Provider = ({provider, history}) =>
     <div>
 
@@ -38,12 +46,7 @@ const Provider = ({provider, history}) =>
             </div>
             <div className="col-10">
                 <h3>{provider.title}</h3>
-                {provider.rating}
-                <i className="fa fa-star"/>
-                <i className="fa fa-star"/>
-                <i className="fa fa-star"/>
-                <i className="fa fa-star"/>
-                <i className="fa fa-star"/>
+                {renderStar(provider.rating)}
                 ({provider.reviewsOfMe ? provider.reviewsOfMe.length : ''})
             </div>
         </div>
