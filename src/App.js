@@ -14,8 +14,52 @@ import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavi
 import ServiceProviderNavigator from './components/SearchProviders/ServiceProviderNavigator'
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
 import LoginContainer from './components/Login/LoginContainer'
+import usereAnthentication from './services/UserAuthenticationService'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.usereAnthentication = usereAnthentication.getInstance();
+    this.state = {
+      checkLog: false
+    }
+  }
+
+  componentDidMount() {
+    this.checklog()
+  }
+
+  logout = () => {
+    alert("logout successfully")
+    this.usereAnthentication.logout()
+    .then((response) => {
+      console.log(response)
+    }).catch((error) => {
+      console.log(error)
+    });
+    window.location.reload()
+  }
+
+  checklog = async () => {
+    try {
+      let res = await this.usereAnthentication.checkLogin();
+      if (res.email != null && res.password != null) {
+        this.setState({
+          checkLog: true
+        })
+      }       
+    } catch (error) {
+        console.log(error)
+    }
+  }
+
+  LogComponent = () => {
+    if (this.state.checkLog) {
+      return <Link onClick={this.logout} to="/home"> Logout</Link>;
+    } else {
+      return <Link to="/login"> Login</Link>;
+    }
+  }
 
   render() {
     return (
@@ -29,7 +73,7 @@ class App extends Component {
             <Link to="/admin">Admin</Link> |
             <Link to="/provider"> Provider</Link> |
             <Link to="/Register"> Register</Link> |
-            <Link to="/login"> Login</Link>
+            {this.LogComponent()}
             <br/>
             <Route path="/admin" component={Admin}/>
             <Route path="/services" exact component={ServiceNavigatorContainer}/>
@@ -38,10 +82,11 @@ class App extends Component {
                 path="/provider"
                 exact
                 render={() => <Provider provider={serviceCategories[0].serviceProviders[0]}/>}/> */}
+            {/* {`/home/${this.state.checkLog}`} */}
             <Route
                 path="/home"
                 exact
-                component={Home}/>
+                component={() => <Home LogComponent={this.LogComponent()} />}/>
             <Route path="/register" component={RegisterContainer}/>
             <Route
                 path="/providers"
