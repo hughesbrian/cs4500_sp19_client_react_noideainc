@@ -1,22 +1,69 @@
 [
   {
     "id": 123,
+    "userType": null,
     "username": "alice",
     "password": "alice2",
     "firstName": "Alice",
     "lastName": "Wonderland",
-    "rating": 4,
-    "services": [
-      [
-        {
-          "id": 123,
-          "title": "House Cleaners",
-          "description": null,
-          "score": null,
-          "serviceCategories": []
-        }
-      ]
+    "rating": 4.5,
+    "email": null,
+    "reviewsOfMe": [
+      {
+        "id": 2,
+        "title": "Review A",
+        "review": "Good Work",
+        "rating": 4
+      },
+      {
+        "id": 3,
+        "title": "Review B",
+        "review": "Fantastic Work",
+        "rating": 5
+      }
     ],
+    "services": [
+      {
+        "id": 123,
+        "title": "House Cleaners",
+        "description": null,
+        "score": null,
+        "serviceCategories": []
+      }
+    ],
+    "myReviewsOfOthers": [],
+    "frequentlyAskedAnswers": [
+      {
+        "id": 1,
+        "answer": "No",
+        "question": "Have you passed a background check?"
+      },
+      {
+        "id": 3,
+        "answer": "500",
+        "question": "How many employees does your company have?"
+      },
+      {
+        "id": 6,
+        "answer": "no",
+        "question": "Have you passed a background check?"
+      }
+    ],
+    "businessName": "Wonderland Cleaning",
+    "yearFounded": 2010,
+    "numOfEmployees": 10,
+    "businessAddress": {
+      "id": 2,
+      "street": "110 Huntington",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02115"
+    },
+    "businessEmail": null,
+    "paymentMethods": [],
+    "facebook": null,
+    "instagram": null,
+    "twitter": null,
     "serviceAnswers": [
       {
         "id": 352,
@@ -38,38 +85,6 @@
         "maxRangeAnswer": null,
         "minRangeAnswer": null,
         "choiceAnswer": 1
-      }
-    ],
-    "reviewsOfMe": [
-      {
-        "id": 2,
-        "title": "Review A",
-        "review": "Good Work",
-        "rating": 4
-      },
-      {
-        "id": 3,
-        "title": "Review B",
-        "review": "Fantastic Work",
-        "rating": 5
-      }
-    ],
-    "myReviewsOfOthers": [],
-    "frequentlyAskedAnswers": [
-      {
-        "id": 1,
-        "answer": "No",
-        "question": "Have you passed a background check?"
-      },
-      {
-        "id": 3,
-        "answer": "500",
-        "question": "How many employees does your company have?"
-      },
-      {
-        "id": 6,
-        "answer": "no",
-        "question": "Have you passed a background check?"
       }
     ]
   },

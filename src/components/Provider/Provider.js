@@ -13,6 +13,14 @@ function renderStar(ratingNumber) {
     return stars;
 }
 
+function renderBigStar(ratingNumber) {
+    let stars = [];
+    for (let i = 1; i <= ratingNumber && i <= 5; i++) {
+        stars.push(<i className="fa fa-star cs4500-yellow wd-font-size-2-em"/>);
+    }
+    return stars
+}
+
 const Provider = ({provider, history}) =>
     <div>
 
@@ -46,7 +54,8 @@ const Provider = ({provider, history}) =>
                 <img src="https://picsum.photos/150/150"/>
             </div>
             <div className="col-10">
-                <h3>{provider.title}</h3>
+                <h3>{provider.businessName}</h3>
+                <h6>{provider.email}</h6>
                 {renderStar(provider.rating)}
                 ({provider.reviewsOfMe ? provider.reviewsOfMe.length : ''})
             </div>
@@ -56,6 +65,32 @@ const Provider = ({provider, history}) =>
             <p>
                 {provider.services[0].description}
             </p>
+        </div>
+        <div className="row">
+            <div className="col-6">
+                <h4>Overview</h4>
+                <i className="fa fa-trophy"/>
+                &nbsp;
+                Hired {provider.hires} times
+                <br/>
+                <i className="fa fa-lock"/>
+                &nbsp;
+                {provider.backgroundChecked ? 'Background checked' : 'Not background checked'}
+                <br/>
+                <i className="fa fa-users"/>
+                &nbsp;
+                {provider.numOfEmployees} Employees
+                <br/>
+                <i className="fa fa-briefcase"/>
+                &nbsp;
+                {(new Date().getFullYear() - provider.yearFounded)} Years in business
+            </div>
+            <div className="col-6">
+                <h4>Payment methods</h4>
+                <i className="fa fa-usd"/>
+                &nbsp;
+                {provider.paymentMethods}
+            </div>
         </div>
         <hr/>
         <div className="row">
@@ -69,7 +104,24 @@ const Provider = ({provider, history}) =>
         </div>
         <div className="row">
             <div className="col-4">
-                {provider.reviewsOfMe.length} reviews
+                <h4>
+                    {renderBigStar(provider.rating)} {provider.rating ? provider.rating : ''}
+                </h4>
+                <br/>
+                {
+                    provider.reviewsOfMe ?
+                        provider.reviewsOfMe.length : ''
+                } reviews
+            </div>
+            <div className="col-8">
+                {
+                    provider.ratingScores ?
+                        provider.ratingScores.map((score, index) =>
+                            <Rating key={index}
+                                    index={5 - index}
+                                    score={score}/>
+                        ) : ''
+                }
             </div>
         </div>
         <br/>
