@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchBar = ({history, filteredProviders, updateField, name, zip, findFilteredProviders}) =>
+const SearchBar = ({updateField, name, zip, findFilteredProviders}) =>
     <div className="input-group input-group-lg">
         <input
             placeholder="Search for providers"

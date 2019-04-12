@@ -3,6 +3,7 @@ import Review from './Review'
 import FAQ from './FAQ'
 import Rating from './Rating'
 import SearchBar from '../SearchBar/SearchBar'
+import SearchBarContainer from '../SearchBar/SearchBarContainer'
 
 function renderStar(ratingNumber) {
     let stars = [];
@@ -17,7 +18,7 @@ const Provider = ({provider, history}) =>
 
         <div className="row">
             <div className="col-8">
-                <SearchBar/>
+                <SearchBarContainer history={history}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>
