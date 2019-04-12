@@ -20,7 +20,7 @@ export default class ServiceSearchService {
                 continue;
             }
             if (Array.isArray(criteria[i])){
-                console.log("got here")
+                //console.log("got here")
                 var j;
                 criteriastring = criteriastring + "-r"
                 for(j =0;j<criteria[i].length;j++){
@@ -33,9 +33,17 @@ export default class ServiceSearchService {
                 criteriastring = criteriastring + criteria[i] + ","
                 qidsstring = qidsstring + qids[i].id +","
             }
-            console.log(criteria[i])
+            //console.log(criteria[i])
         }
         return fetch(`${this.backend_url}/api/service-search/${id}/${qidsstring}/${criteriastring}`)
             .then(response => response.json())
     }
+
+    findAddressByUserId = userId =>
+        fetch(`${this.backend_url}/api/user_address/${userId}`)
+            .then(response => response.json())
+
+    findAllAddresses = () =>
+        fetch(`${this.backend_url}/api/addresses`)
+            .then(response => response.json())
 }

@@ -37,7 +37,7 @@ class ServiceNavigatorContainer extends React.Component {
             )
 
     render = () =>
-        <ServiceNavigator serviceCategories={this.state.serviceCategories}/>
+        <ServiceNavigator serviceCategories={this.state.serviceCategories} history={this.props.history}/>
 
 }
 

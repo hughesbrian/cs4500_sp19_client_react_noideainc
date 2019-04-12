@@ -1,14 +1,14 @@
 import React from 'react'
 import Review from './Review'
 import FAQ from './FAQ'
-import SearchBar from '../SearchBar/SearchBar'
+import SearchBarContainer from '../SearchBar/SearchBarContainer'
 
 const Provider = ({provider, history}) =>
     <div>
 
         <div className="row">
             <div className="col-8">
-                <SearchBar/>
+                <SearchBarContainer history={history}/>
             </div>
             <div className="col-3 text-right">
                 <a href="#">Sign up</a>
