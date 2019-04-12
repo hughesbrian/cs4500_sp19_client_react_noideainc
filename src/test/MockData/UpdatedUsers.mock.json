@@ -1,0 +1,291 @@
+[
+  {
+    "id" : 1,
+    "userType" : "Provider",
+    "username" : "a",
+    "password" : "b",
+    "firstName" : "c",
+    "lastName" : "d",
+    "rating" : 2,
+    "email" : "e@gmail.com",
+    "reviewsOfMe" : [
+      {
+        "id": 11,
+        "title": "k",
+        "review": "l",
+        "rating": 10
+
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 12,
+        "title": "m",
+        "review": "n",
+        "rating": 9
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 13,
+        "answer" : "o",
+        "frequentlyAskedQuestion" : {
+          "id" : 20,
+          "title" : "ohnanana",
+          "question" : "conmigo"
+        },
+        "question" : "p"
+      }
+    ],
+    "businessName" : "f",
+    "yearFounded" : 2005,
+    "numOfEmployees" : 2,
+    "businessAddress" : {
+      "id" : 14,
+      "street" : "q",
+      "city" : "r",
+      "state" : "s",
+      "zip" : "11111"
+    },
+    "businessEmail" : "g",
+    "paymentMethods" : [
+      {
+        "id" : 15,
+        "paymentMethod" : "Cash"
+      }
+    ],
+    "facebook" : "h",
+    "instagram" : "i",
+    "twitter" : "j",
+    "serviceAnswers" : [
+      {
+        "id" : 16,
+        "trueFalseAnswer" : true,
+        "maxRangeAnswer" : 10,
+        "minRangeAnswer" : 0,
+        "choiceAnswer" : 1
+
+      }
+    ]
+
+  },
+
+  {
+    "id" : 2,
+    "userType" : "Client",
+    "username" : "",
+    "password" : "",
+    "firstName" : "",
+    "lastName" : "",
+    "rating" : 0,
+    "email" : "",
+    "reviewsOfMe" : [
+      {
+        "id": 0,
+        "title": "",
+        "review": "",
+        "rating": 0
+
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 0,
+        "title": "",
+        "review": "",
+        "rating": 0
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 0,
+        "answer" : "",
+        "frequentlyAskedQuestion" : {
+          "id" : 0,
+          "title" : "",
+          "question" : ""
+        },
+        "question" : ""
+      }
+    ],
+    "businessName" : "",
+    "yearFounded" : 0,
+    "numOfEmployees" : 2,
+    "businessAddress" : {
+      "id" : 0,
+      "street" : "",
+      "city" : "",
+      "state" : "",
+      "zip" : ""
+    },
+    "businessEmail" : "",
+    "paymentMethods" : [
+      {
+        "id" : 0,
+        "paymentMethod" : ""
+      }
+    ],
+    "facebook" : "",
+    "instagram" : "",
+    "twitter" : "",
+    "serviceAnswers" : [
+      {
+        "id" : 0,
+        "trueFalseAnswer" : false,
+        "maxRangeAnswer" : 0,
+        "minRangeAnswer" : 0,
+        "choiceAnswer" : 0
+
+      }
+    ]
+
+  },
+
+  {
+    "id" : 99,
+    "userType" : null,
+    "username" : null,
+    "password" : null,
+    "firstName" : null,
+    "lastName" : null,
+    "rating" : null,
+    "email" : null,
+    "reviewsOfMe" : [
+      {
+        "id": null,
+        "title": null,
+        "review": null,
+        "rating": null
+
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": null,
+        "title": null,
+        "review": null,
+        "rating": null
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : null,
+        "answer" : null,
+        "frequentlyAskedQuestion" : {
+          "id" : null,
+          "title" : null,
+          "question" : null
+        },
+        "question" : null
+      }
+    ],
+    "businessName" : null,
+    "yearFounded" : null,
+    "numOfEmployees" : null,
+    "businessAddress" : {
+      "id" : null,
+      "street" : null,
+      "city" : null,
+      "state" : null,
+      "zip" : null
+    },
+    "businessEmail" : null,
+    "paymentMethods" : [
+      {
+        "id" : null,
+        "paymentMethod" : null
+      }
+    ],
+    "facebook" : null,
+    "instagram" : null,
+    "twitter" : null,
+    "serviceAnswers" : [
+      {
+        "id" : null,
+        "trueFalseAnswer" : null,
+        "maxRangeAnswer" : null,
+        "minRangeAnswer" : null,
+        "choiceAnswer" : null
+
+      }
+    ]
+
+  },
+  {
+    "id" : 1111,
+    "userType" : "Client",
+    "username" : "abc",
+    "password" : "bcd",
+    "firstName" : "cdef",
+    "lastName" : "def",
+    "rating" : 2222,
+    "email" : "jjj@yahoo.com",
+    "reviewsOfMe" : [
+      {
+        "id": 111,
+        "title": "l.o.d",
+        "review": "amazing",
+        "rating": 8
+
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 57,
+        "title": "mac",
+        "review": "bsd",
+        "rating": 1
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 1313,
+        "answer" : "on and on",
+        "frequentlyAskedQuestion" : {
+          "id" : 2020,
+          "title" : "how",
+          "question" : "why"
+        },
+        "question" : "what"
+      }
+    ],
+    "businessName" : "fff",
+    "yearFounded" : 1999,
+    "numOfEmployees" : 200,
+    "businessAddress" : {
+      "id" : 1415,
+      "street" : "q street",
+      "city" : "Oregon",
+      "state" : "MA",
+      "zip" : "22506"
+    },
+    "businessEmail" : "g@hotmail.com",
+    "paymentMethods" : [
+      {
+        "id" : 1519,
+        "paymentMethod" : "Cash"
+      }
+    ],
+    "facebook" : "hijk",
+    "instagram" : "ingr",
+    "twitter" : "jitt",
+    "serviceAnswers" : [
+      {
+        "id" : 1620,
+        "trueFalseAnswer" : true,
+        "maxRangeAnswer" : 100,
+        "minRangeAnswer" : 0,
+        "choiceAnswer" : 2
+
+      }
+    ]
+
+  }
+
+
+
+]
