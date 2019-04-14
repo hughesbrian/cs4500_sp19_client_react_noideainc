@@ -35,4 +35,13 @@ export default class UserService {
             {
                 method: 'DELETE',
             })
+
+    updateProfile = user =>
+        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/profile/${user.id}`,
+            {
+                method: 'PUT',
+                body: JSON.stringify(user),
+                headers: {'content-type': 'application/json'}
+            })
+            .then(response => response.json())
 }
