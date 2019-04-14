@@ -13,8 +13,9 @@
         "id": 11,
         "title": "k",
         "review": "l",
-        "rating": 10
-
+        "rating": 10,
+        "reply":"Thank you!",
+        "reviewerName":"x"
       }
     ],
     "myReviewsOfOthers" : [
@@ -22,8 +23,9 @@
         "id": 12,
         "title": "m",
         "review": "n",
-        "rating": 9
-
+        "rating": 9,
+        "reply":null,
+        "reviewerName":null
       }
     ],
     "frequentlyAskedAnswers" : [
@@ -53,6 +55,15 @@
       {
         "id" : 15,
         "paymentMethod" : "Cash"
+      }
+    ],
+    "services": [
+      {
+        "id": 123,
+        "title": "House Cleaners",
+        "description": null,
+        "score": null,
+        "serviceCategories": []
       }
     ],
     "facebook" : "h",

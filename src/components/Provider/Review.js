@@ -11,6 +11,7 @@ function renderStar(ratingNumber) {
 const Review = ({review}) =>
     <div>
         <h4>{review.title}</h4>
+        <h6>{review.reviewerName}</h6>
         {renderStar(review.rating)}
         <br/>
         <div>{review.review}</div>

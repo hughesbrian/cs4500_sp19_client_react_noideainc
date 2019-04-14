@@ -21,6 +21,14 @@ function renderBigStar(ratingNumber) {
     return stars
 }
 
+function renderPaymentMethods(paymentMethods) {
+    let methods = [];
+    for(let i = 0; i < paymentMethods.length; i++) {
+        methods.push(<p>{paymentMethods[i].paymentMethod}</p>)
+    }
+    return methods;
+}
+
 const Provider = ({provider, history}) =>
     <div>
 
@@ -89,7 +97,7 @@ const Provider = ({provider, history}) =>
                 <h4>Payment methods</h4>
                 <i className="fa fa-usd"/>
                 &nbsp;
-                {provider.paymentMethods}
+                {renderPaymentMethods(provider.paymentMethods)}
             </div>
         </div>
         <hr/>
