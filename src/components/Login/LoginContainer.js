@@ -30,8 +30,8 @@ class LoginContainer extends React.Component {
                 //console.log(response)
                 if (response != null && response.email != null && response.password != null) {
                     alert("Log in Successfully")
+                    this.props.history.push("/Profile/" + response.id)
                     window.location.reload()
-                    this.props.history.push("/home")
                 }
             }).catch((error) => {
                 console.log(error)
