@@ -1,45 +1,41 @@
 [
   {
     "id": 123,
-    "username": "nate",
-    "password": "p4ssw0rd",
-    "firstName": "Nathan",
-    "lastName": "Jones",
-    "services": [
-      {
-        "id": 1,
-        "title": "Nate's Landscaping",
-        "description": "You want a good-looking yard? Let Nate fix it up for you!"
-      }
-    ],
+    "userType": null,
+    "username": "alice",
+    "password": "alice2",
+    "firstName": "Alice",
+    "lastName": "Wonderland",
+    "rating": 4.5,
+    "email": null,
     "reviewsOfMe": [
       {
-        "reviewer": {
-          "id": 234,
-          "username": "sam",
-          "password": "pa55word",
-          "firstName": "Sam",
-          "lastName": "Atkins",
-          "services": [
-            {
-              "id": 2,
-              "title": "Sam's Landscaping",
-              "description": "Our landscaping blows Nate's out of the water!"
-            }
-          ],
-          "reviewsOfMe": [
-            {
-              "review": "This place sucks"
-            }
-          ]
-        },
-        "review": "This place is awesome"
+        "id": 2,
+        "title": "Review A",
+        "review": "Good Work",
+        "rating": 4
+      },
+      {
+        "id": 3,
+        "title": "Review B",
+        "review": "Fantastic Work",
+        "rating": 5
       }
     ],
+    "services": [
+      {
+        "id": 123,
+        "title": "House Cleaners",
+        "description": null,
+        "score": null,
+        "serviceCategories": []
+      }
+    ],
+    "myReviewsOfOthers": [],
     "frequentlyAskedAnswers": [
       {
         "id": 1,
-        "answer": "Yes",
+        "answer": "No",
         "question": "Have you passed a background check?"
       },
       {
@@ -51,6 +47,44 @@
         "id": 6,
         "answer": "no",
         "question": "Have you passed a background check?"
+      }
+    ],
+    "businessName": "Wonderland Cleaning",
+    "yearFounded": 2010,
+    "numOfEmployees": 10,
+    "businessAddress": {
+      "id": 2,
+      "street": "110 Huntington",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02115"
+    },
+    "businessEmail": null,
+    "paymentMethods": [],
+    "facebook": null,
+    "instagram": null,
+    "twitter": null,
+    "serviceAnswers": [
+      {
+        "id": 352,
+        "trueFalseAnswer": true,
+        "maxRangeAnswer": null,
+        "minRangeAnswer": null,
+        "choiceAnswer": null
+      },
+      {
+        "id": 382,
+        "trueFalseAnswer": null,
+        "maxRangeAnswer": 10,
+        "minRangeAnswer": 9,
+        "choiceAnswer": null
+      },
+      {
+        "id": 442,
+        "trueFalseAnswer": null,
+        "maxRangeAnswer": null,
+        "minRangeAnswer": null,
+        "choiceAnswer": 1
       }
     ]
   },
@@ -69,7 +103,10 @@
     ],
     "reviewsOfMe": [
       {
-        "review": "This place sucks"
+        "id": 4,
+        "title": "Review B",
+        "review": "Not Good",
+        "rating": 1
       }
     ]
   }
