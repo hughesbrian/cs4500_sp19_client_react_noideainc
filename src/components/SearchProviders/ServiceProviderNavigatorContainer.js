@@ -100,13 +100,31 @@ class ServiceProviderNavigatorContainer extends React.Component {
 
     findProviders = async () => {
         let params = window.location.pathname.split('/');
-        let name = params[2]
-        let zip = params[3]
+        var name;
+        var zip;
+        var param;
+        var filteredProviders
         let providers = await this.servicesearch.getResults(this.service, this.state.criteria, this.state.questions);
 
-        var filteredProviders = providers.filter(function (provider) {
-            return provider.username === name && provider.businessAddress.zip === zip
-        });
+        if(params.length == 4) {
+            name = params[2]
+            zip = params[3]
+            filteredProviders = providers.filter(function (provider) {
+                return provider.username === name && provider.addresses[0].zip === zip
+            });
+        } else {
+            param = params[2]
+            if(isNaN(param)) {
+                filteredProviders = providers.filter(function (provider) {
+                    return provider.username === param
+                });
+            } else {
+                filteredProviders = providers.filter(function (provider) {
+                    return provider.addresses[0].zip === param
+                });
+            }
+        }
+        
         this.setState({
             providers: filteredProviders
         })

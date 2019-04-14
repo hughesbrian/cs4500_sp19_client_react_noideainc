@@ -11,16 +11,26 @@ class SearchBarContainer extends React.Component {
     }
 
     findFilteredProviders = () => {
+        var path;
+
         if(this.state.name && this.state.zip) {
-            this.props.history.push({
-                pathname: `/providers/${this.state.name}/${this.state.zip}`
-            })
-            if(this.props.findProviders) {
-                this.props.findProviders()
-            }          
+            path = `/providers/${this.state.name}/${this.state.zip}`
+        } else if(this.state.name) {
+            path = `/providers/${this.state.name}`
+        } else if(this.state.zip) {
+            path = `/providers/${this.state.zip}`
         } else {
-            alert('please enter both name and zip')
+            alert('please enter name or zip')
+            return
         }
+
+        this.props.history.push({
+            pathname: path
+        })
+
+        if(this.props.findProviders) {
+            this.props.findProviders()
+        } 
     }
      
 
