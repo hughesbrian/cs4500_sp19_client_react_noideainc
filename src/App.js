@@ -12,6 +12,8 @@ import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavi
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
 import LoginContainer from './components/Login/LoginContainer'
 import usereAnthentication from './services/UserAuthenticationService'
+import userService from './services/UserService'
+import ProfileContainer from './components/Profile/ProfileContainer'
 
 class App extends Component {
 
@@ -19,7 +21,9 @@ class App extends Component {
     super(props);
     this.usereAnthentication = usereAnthentication.getInstance();
     this.state = {
-      checkLog: false
+      checkLog: false,
+      userId: null,
+      user: null
     }
   }
 
@@ -43,7 +47,9 @@ class App extends Component {
       let res = await this.usereAnthentication.checkLogin();
       if (res.email != null && res.password != null) {
         this.setState({
-          checkLog: true
+          checkLog: true,
+          userId: res.id,
+          user: res
         })
       }       
     } catch (error) {
@@ -59,6 +65,12 @@ class App extends Component {
     }
   }
 
+  renderProfileLink = () => {
+    if (this.state.checkLog) {
+      return <span><Link to={"/Profile/" + this.state.userId}> Profile</Link> | </span>
+    }
+  }
+
   render() {
     return (
       <div className="container-fluid home">
@@ -71,6 +83,7 @@ class App extends Component {
             <Link to="/admin">Admin</Link> |
             <Link to="/provider"> Provider</Link> |
             <Link to="/Register"> Register</Link> |
+            {this.renderProfileLink()}
             {this.LogComponent()}
             <br/>
             <Route path="/admin" component={Admin}/>
@@ -87,6 +100,10 @@ class App extends Component {
             <Route
                 path="/login"
                 component={LoginContainer}/>
+            <Route
+                path={"/Profile/" + this.state.userId}
+                exact
+                component={() => <ProfileContainer userId={this.state.userId} user={this.state.user} />}/>
           </div>
         </Router>
       </div>
