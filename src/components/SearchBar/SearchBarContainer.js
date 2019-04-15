@@ -14,10 +14,18 @@ class SearchBarContainer extends React.Component {
         var path;
 
         if(this.state.name && this.state.zip) {
+            if(this.state.zip.length != 5 || isNaN(this.state.zip)) {
+                alert('please enter a valid zip code')
+                return
+            }
             path = `/providers/${this.state.name}/${this.state.zip}`
         } else if(this.state.name) {
             path = `/providers/${this.state.name}`
         } else if(this.state.zip) {
+            if(this.state.zip.length != 5 || isNaN(this.state.zip)) {
+                alert('please enter a valid zip code')
+                return
+            }
             path = `/providers/${this.state.zip}`
         } else {
             alert('please enter name or zip')
