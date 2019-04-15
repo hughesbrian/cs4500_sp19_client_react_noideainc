@@ -98,6 +98,25 @@ class ServiceProviderNavigatorContainer extends React.Component {
         }
     }
 
+    sortByAddress = (p1, p2) => {
+        return p1.distance - p2.distance;
+    }
+
+    sortProviders = async (providers, param) => {
+
+        await Promise.all(providers.map(async (provider, index) => {
+            var url = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode=" + param +"&tozipcode=" + provider.addresses[0].zip +"&key=DEMOAPIKEY";
+            let result = await fetch(url)
+            let res = await result.json()
+            providers[index].distance = res.DistanceInKm
+        }))
+        
+        this.setState({
+            providers : providers.sort(this.sortByAddress)
+        })
+        //return providers.sort(this.sortByAddress)
+    }
+
     findProviders = async () => {
         let params = window.location.pathname.split('/');
         var name;
@@ -110,8 +129,10 @@ class ServiceProviderNavigatorContainer extends React.Component {
             name = params[2]
             zip = params[3]
             filteredProviders = providers.filter(function (provider) {
-                return provider.username.includes(name) && provider.addresses[0].zip === zip
+                return provider.username.includes(name)
             });
+            this.sortProviders(filteredProviders, zip)
+            return
         } else {
             param = params[2]
             if(isNaN(param)) {
@@ -119,14 +140,13 @@ class ServiceProviderNavigatorContainer extends React.Component {
                     return provider.username.includes(param)
                 });
             } else {
-                filteredProviders = providers.filter(function (provider) {
-                    return provider.addresses[0].zip === param
-                });
+                this.sortProviders(providers, param)
+                return
             }
         }
-        
+
         this.setState({
-            providers: filteredProviders
+            providers : filteredProviders
         })
     }
 
