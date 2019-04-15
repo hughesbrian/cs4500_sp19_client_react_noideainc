@@ -110,13 +110,13 @@ class ServiceProviderNavigatorContainer extends React.Component {
             name = params[2]
             zip = params[3]
             filteredProviders = providers.filter(function (provider) {
-                return provider.username === name && provider.addresses[0].zip === zip
+                return provider.username.includes(name) && provider.addresses[0].zip === zip
             });
         } else {
             param = params[2]
             if(isNaN(param)) {
                 filteredProviders = providers.filter(function (provider) {
-                    return provider.username === param
+                    return provider.username.includes(param)
                 });
             } else {
                 filteredProviders = providers.filter(function (provider) {
