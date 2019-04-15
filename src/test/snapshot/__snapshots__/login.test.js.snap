@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test login 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Welcome back
+  </h1>
+  <br />
+  <div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-12"
+      >
+        <label
+          className="label"
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          className="form-control email"
+          id="email"
+          name="email"
+          value="nate@gamil.com"
+        />
+      </div>
+      <div
+        className="col-12"
+      >
+        <br />
+        <label
+          className="label"
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          className="form-control password"
+          id="password"
+          name="password"
+          value="p4ssw0rd"
+        />
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    >
+      <div
+        className="col-6"
+      >
+        <label
+          className="label"
+          htmlFor="remember"
+        >
+          <input
+            type="checkbox"
+          />
+            Remember me
+        </label>
+      </div>
+      <div
+        className="col-6"
+      >
+        <a
+          className="float-right"
+          href="#"
+        >
+          Forgot password?
+        </a>
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 login"
+        onClick={[Function]}
+      >
+        <a
+          className="btn btn-primary btn-block"
+        >
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test render login page correctly 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Welcome back
+  </h1>
+  <br />
+  <div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-12"
+      >
+        <label
+          className="label"
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          className="form-control email"
+          id="email"
+          name="email"
+          value="nate@gamil.com"
+        />
+      </div>
+      <div
+        className="col-12"
+      >
+        <br />
+        <label
+          className="label"
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          className="form-control password"
+          id="password"
+          name="password"
+          value="p4ssw0rd"
+        />
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    >
+      <div
+        className="col-6"
+      >
+        <label
+          className="label"
+          htmlFor="remember"
+        >
+          <input
+            type="checkbox"
+          />
+            Remember me
+        </label>
+      </div>
+      <div
+        className="col-6"
+      >
+        <a
+          className="float-right"
+          href="#"
+        >
+          Forgot password?
+        </a>
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 login"
+      >
+        <a
+          className="btn btn-primary btn-block"
+        >
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
