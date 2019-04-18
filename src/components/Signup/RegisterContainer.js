@@ -33,15 +33,8 @@ class RegisterContainer extends React.Component {
             }).then(
                 (res) => {
                     if(res != null & res.email != null) {
-                        this.setState({
-                            first: "",
-                            last: "",
-                            username: "",
-                            email: "",
-                            password: ""
-                        })
-                        alert("added a user")
-                        this.props.history.push("/home") // change this to profile page once it's implemented!
+                        alert("successfully registered!")
+                        this.login()
                     } else {
                         alert("Email is already used. Please use a different email!");
                     }
@@ -53,6 +46,31 @@ class RegisterContainer extends React.Component {
             alert("please input all the information");
         }
     }
+
+    login = () => {
+        console.log("called login")
+        this.userAuthentication
+        .login({
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then((response) => {
+            console.log(response)
+            if (response != null && response.email != null && response.password != null) {
+                this.props.history.push("/Profile/" + response.id)
+                window.location.reload()
+            }
+        }).catch((error) => {
+            console.log(error)
+            this.setState({
+                first: "",
+                last: "",
+                username: "",
+                email: "",
+                password: ""
+            })
+        });
+    } 
 
     render = () => {
         return(
