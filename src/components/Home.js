@@ -6,9 +6,6 @@ import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryT
 class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            LogComponent: props.LogComponent
-        }
     }
 
     render() {
@@ -35,7 +32,6 @@ class Home extends React.Component {
                 <br/>
                 <br/>
                 <br/>
-                {/* <ServiceTabNavigator serviceCategories={serviceCategories}/> */}
             </div>)
     }
 }
