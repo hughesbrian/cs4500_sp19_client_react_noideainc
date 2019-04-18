@@ -9,12 +9,6 @@ const ServiceNavigator = ({serviceCategories, history}) =>
             <div className="col-8">
                 <SearchBarContainer history={history}/>
             </div>
-            <div className="col-3 text-right">
-                <a href="#">Sign up</a>
-            </div>
-            <div className="col-1">
-                <a href="#">Log in</a>
-            </div>
         </div>
         <br/>
         <br/>

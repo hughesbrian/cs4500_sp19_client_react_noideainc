@@ -158,7 +158,6 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                         serviceQuestions = {this.state.questions}
                                         Criteria = {this.state.criteria}
                                         add_Criteria = {this.add_Criteria}
-                                        send_request = {this.send_request}
                                         findProviders= {this.findProviders}/>;
 
 
