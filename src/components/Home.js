@@ -5,7 +5,7 @@ import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryT
 
 class Home extends React.Component {
     constructor(props) {
-        console.log(props.LogComponent)
+        //console.log(props.LogComponent)
         super(props);
         this.state = {
             LogComponent: props.LogComponent
