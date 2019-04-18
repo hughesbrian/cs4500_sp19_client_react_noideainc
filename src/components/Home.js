@@ -5,7 +5,7 @@ import ServiceCategoryTabsContainer from './ServiceCategoryTabs/ServiceCategoryT
 
 class Home extends React.Component {
     constructor(props) {
-        //console.log(props.LogComponent)
+        console.log(props)
         super(props);
         this.state = {
             LogComponent: props.LogComponent
@@ -20,7 +20,7 @@ class Home extends React.Component {
                         <h1>
                             Find professionals near you.
                         </h1>
-                        <SearchBarContainer />
+                        <SearchBarContainer history={this.props.history}/>
                     </div>
                 </div>
                 <br/>
