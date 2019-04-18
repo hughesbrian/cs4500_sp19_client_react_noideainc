@@ -13,7 +13,7 @@ const Login = ({email, password, updateField, login}) =>
                 <div className="col-12">
                     <br/>
                     <label className="label" htmlFor ="password">Password</label>
-                    <input onChange={updateField} value={password} id="password" name="password" className="form-control password"/>
+                    <input onChange={updateField} value={password} type="password" id="password" name="password" className="form-control password"/>
                 </div>
             </div>
             <br/>

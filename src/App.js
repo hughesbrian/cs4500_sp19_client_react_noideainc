@@ -61,7 +61,7 @@ class App extends Component {
     if (this.state.checkLog) {
       return <Link onClick={this.logout} to="/home"> Logout</Link>;
     } else {
-      return <Link to="/login"> Login</Link>;
+      return <span><Link to="/Register"> Register</Link> | <Link to="/login"> Login</Link></span>
     }
   }
 
@@ -82,7 +82,7 @@ class App extends Component {
             <Link to="/providers"> Providers</Link> |
             <Link to="/admin">Admin</Link> |
             <Link to="/provider"> Provider</Link> |
-            <Link to="/Register"> Register</Link> |
+            {/* <Link to="/Register"> Register</Link> | */}
             {this.renderProfileLink()}
             {this.LogComponent()}
             <br/>

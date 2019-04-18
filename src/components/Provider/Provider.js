@@ -2,8 +2,6 @@ import React from 'react'
 import Review from './Review'
 import FAQ from './FAQ'
 import Rating from './Rating'
-import SearchBar from '../SearchBar/SearchBar'
-import SearchBarContainer from '../SearchBar/SearchBarContainer'
 
 function renderStar(ratingNumber) {
     let stars = [];
@@ -33,15 +31,6 @@ const Provider = ({provider, history}) =>
     <div>
 
         <div className="row">
-            <div className="col-8">
-                <SearchBarContainer history={history}/>
-            </div>
-            <div className="col-3 text-right">
-                <a href="#">Sign up</a>
-            </div>
-            <div className="col-1">
-                <a href="#">Log in</a>
-            </div>
         </div>
         <br/>
         <br/>

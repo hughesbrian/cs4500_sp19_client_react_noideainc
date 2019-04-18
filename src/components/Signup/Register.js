@@ -25,7 +25,7 @@ const Register = ({first, last, username, email, password, updateField, register
                 </div>
                 <div className="field">
                     <label>Password</label>
-                    <input value={password} name="password" onChange={updateField} className="input-field"></input>
+                    <input value={password} type="password" name="password" onChange={updateField} className="input-field"></input>
                 </div>
                 <Button onClick={register} className="register-button">SIGN UP</Button>
             </div>
