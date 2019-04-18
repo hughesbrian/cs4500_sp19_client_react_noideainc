@@ -12,7 +12,6 @@ import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavi
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
 import LoginContainer from './components/Login/LoginContainer'
 import usereAnthentication from './services/UserAuthenticationService'
-import userService from './services/UserService'
 import ProfileContainer from './components/Profile/ProfileContainer'
 
 class App extends Component {
@@ -92,7 +91,7 @@ class App extends Component {
             <Route
                 path="/home"
                 exact
-                component={() => <Home LogComponent={this.LogComponent()} />}/>
+                component={Home}/>
             <Route path="/register" component={RegisterContainer}/>
             <Route
                 path="/providers"
