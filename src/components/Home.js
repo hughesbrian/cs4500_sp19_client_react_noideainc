@@ -20,14 +20,7 @@ class Home extends React.Component {
                         <h1>
                             Find professionals near you.
                         </h1>
-                        {/* <SearchBar history={history}/> */}
                         <SearchBarContainer />
-                    </div>
-                    <div className="col-3 text-right">
-                        <a href="#">Sign up</a>
-                    </div>
-                    <div className="col-1">
-                        {this.state.LogComponent}
                     </div>
                 </div>
                 <br/>
