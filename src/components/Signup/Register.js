@@ -9,23 +9,23 @@ const Register = ({first, last, username, email, password, updateField, register
             <div className="form">
                 <div className="field">
                     <label>First Name</label>
-                    <input value={first} name="first" onChange={updateField} className="input-field"></input>
+                    <input value={first} name="first" onChange={updateField} className="input-field first"></input>
                 </div>
                 <div className="field">
                     <label>Last Name</label>
-                    <input value={last} name="last" onChange={updateField} className="input-field"></input>
+                    <input value={last} name="last" onChange={updateField} className="input-field last"></input>
                 </div>
                 <div className="field">
                     <label>Username</label>
-                    <input value={username} name="username" onChange={updateField} className="input-field"></input>
+                    <input value={username} name="username" onChange={updateField} className="input-field username"></input>
                 </div>
                 <div className="field">
                     <label>Email</label>
-                    <input value={email} name="email" onChange={updateField} className="input-field"></input>
+                    <input value={email} name="email" onChange={updateField} className="input-field email"></input>
                 </div>
                 <div className="field">
                     <label>Password</label>
-                    <input value={password} type="password" name="password" onChange={updateField} className="input-field"></input>
+                    <input value={password} type="password" name="password" onChange={updateField} className="input-field password"></input>
                 </div>
                 <Button onClick={register} className="register-button">SIGN UP</Button>
             </div>
