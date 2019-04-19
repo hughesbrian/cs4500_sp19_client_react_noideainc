@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceProviderNavigator from "./ServiceProviderNavigator";
-import serviceCategories from '../../test/MockData/ServiceCategories.mock'
+import serviceCategories from '../../test/mockdata/ServiceCategories.mock'
 import ServiceSearchService from "../../services/ServiceSearchService";
 import ServiceQuestionService from '../../services/ServiceQuestionService';
 
@@ -30,7 +30,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
             serviceQuestions.map(function(question){
                 question.choices = question.choices.split(',')
             })
-        
+
             this.setState({
                 questions: serviceQuestions,
                 criteria: new Array(serviceQuestions.length)
@@ -110,7 +110,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
             let res = await result.json()
             providers[index].distance = res.DistanceInKm
         }))
-        
+
         this.setState({
             providers : providers.sort(this.sortByAddress)
         })
