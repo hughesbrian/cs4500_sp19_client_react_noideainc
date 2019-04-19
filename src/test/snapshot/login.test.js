@@ -2,15 +2,16 @@ import React from 'react'
 import Login from '../../components/Login/Login'
 import TestRenderer from 'react-test-renderer'
 import users from "../MockData/Users1.mock.json"   
-import UserAuthenticationService from '../../services/UserAuthenticationService'
 import '../mockservice/UserAuthenticationService.mock'
 
 test('test login', () => {
     const login = () => {
-        return users[0]
 
         let tree = testRenderer.toJSON();
         expect(tree).toMatchSnapshot()
+        
+        return users[0]
+
     }
 
     const testRenderer = TestRenderer.create(

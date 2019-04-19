@@ -48,27 +48,25 @@ class RegisterContainer extends React.Component {
     }
 
     login = () => {
-        console.log("called login")
         this.userAuthentication
         .login({
             email: this.state.email,
             password: this.state.password
         })
         .then((response) => {
-            console.log(response)
             if (response != null && response.email != null && response.password != null) {
                 this.props.history.push("/Profile/" + response.id)
+                this.setState({
+                    first: "",
+                    last: "",
+                    username: "",
+                    email: "",
+                    password: ""
+                })
                 window.location.reload()
             }
         }).catch((error) => {
             console.log(error)
-            this.setState({
-                first: "",
-                last: "",
-                username: "",
-                email: "",
-                password: ""
-            })
         });
     } 
 
