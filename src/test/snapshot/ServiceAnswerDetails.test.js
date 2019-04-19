@@ -1,8 +1,8 @@
 import React from 'react'
 import ServiceAnswerDetails from '../../components/ServiceAnswerDetails'
 import TestRenderer from 'react-test-renderer'
-import ServiceAnswers from '../mockdata/ServiceAnswer.mock.json'
-import ServiceQuestions from '../mockdata/ServiceQuestion.mock.json'
+import ServiceAnswers from '../MockData/ServiceAnswer.mock.json'
+import ServiceQuestions from '../MockData/ServiceQuestion.mock.json'
 import serviceAnswerService from '../../services/ServiceAnswerService'
 const ServiceAnswerService = serviceAnswerService.getInstance()
 import '../mockservice/ServiceAnswerService.mock.js'

@@ -1,7 +1,7 @@
 import React from 'react'
 import Users from '../../components/Users'
 import TestRenderer from 'react-test-renderer'
-import users from '../mockdata/Users.mock'
+import users from '../MockData/Users.mock'
 import UserService from '../../services/UserService'
 import '../mockservice/UserService.mock'
 import UsersContainer from "../../components/UsersContainer";

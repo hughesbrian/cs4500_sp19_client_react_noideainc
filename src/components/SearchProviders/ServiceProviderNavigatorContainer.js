@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceProviderNavigator from "./ServiceProviderNavigator";
-import serviceCategories from '../../test/mockdata/ServiceCategories.mock'
+import serviceCategories from '../../test/MockData/ServiceCategories.mock'
 import ServiceSearchService from "../../services/ServiceSearchService";
 import ServiceQuestionService from '../../services/ServiceQuestionService';
 
