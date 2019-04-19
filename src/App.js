@@ -4,7 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Admin from './components/Admin'
-import users from './test/MockData/UpdatedUsers.mock'
+import users from './test/mockdata/UpdatedUsers.mock'
 import Provider from './components/Provider/Provider'
 import Home from './components/Home'
 import RegisterContainer from './components/Signup/RegisterContainer'
@@ -14,6 +14,7 @@ import LoginContainer from './components/Login/LoginContainer'
 import usereAnthentication from './services/UserAuthenticationService'
 import userService from './services/UserService'
 import ProfileContainer from './components/Profile/ProfileContainer'
+import BusinessContainer from './components/Business/BusinessContainer'
 
 class App extends Component {
 
@@ -51,7 +52,7 @@ class App extends Component {
           userId: res.id,
           user: res
         })
-      }       
+      }
     } catch (error) {
         console.log(error)
     }
@@ -104,6 +105,10 @@ class App extends Component {
                 path={"/Profile/" + this.state.userId}
                 exact
                 component={() => <ProfileContainer userId={this.state.userId} user={this.state.user} />}/>
+            <Route
+                path={"/Profile/" + this.state.userId + "/business"}
+                exact
+                component={() => <BusinessContainer userId={this.state.userId} user={this.state.user} />}/>
           </div>
         </Router>
       </div>
