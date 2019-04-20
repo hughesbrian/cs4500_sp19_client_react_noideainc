@@ -105,7 +105,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
     sortProviders = async (providers, param) => {
 
         await Promise.all(providers.map(async (provider, index) => {
-            var url = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode=" + param +"&tozipcode=" + provider.addresses[0].zip +"&key=DEMOAPIKEY";
+            var url = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode=" + param +"&tozipcode=" + provider.addresses[1].zip +"&key=DEMOAPIKEY";
             let result = await fetch(url)
             let res = await result.json()
             providers[index].distance = res.DistanceInKm
@@ -114,7 +114,6 @@ class ServiceProviderNavigatorContainer extends React.Component {
         this.setState({
             providers : providers.sort(this.sortByAddress)
         })
-        //return providers.sort(this.sortByAddress)
     }
 
     findProviders = async () => {
@@ -124,6 +123,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
         var param;
         var filteredProviders
         let providers = await this.servicesearch.getResults(this.service, this.state.criteria, this.state.questions);
+        console.log(providers)
 
         if(params.length == 4) {
             name = params[2]
