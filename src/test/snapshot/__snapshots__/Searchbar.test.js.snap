@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search by name 1`] = `
+<div
+  className="input-group input-group-lg"
+>
+  <input
+    className="form-control"
+    name="name"
+    placeholder="Search for providers"
+    type="text"
+    value="Alice"
+  />
+  <input
+    className="form-control"
+    name="zip"
+    placeholder="Zip code"
+    type="text"
+  />
+  <div
+    className="input-group-append"
+  >
+    <button
+      className="btn btn-primary search"
+      onClick={[Function]}
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`search by name 2`] = `
+<div
+  className="input-group input-group-lg"
+>
+  <input
+    className="form-control"
+    name="name"
+    placeholder="Search for providers"
+    type="text"
+    value="Alice"
+  />
+  <input
+    className="form-control"
+    name="zip"
+    placeholder="Zip code"
+    type="text"
+  />
+  <div
+    className="input-group-append"
+  >
+    <button
+      className="btn btn-primary search"
+      onClick={[Function]}
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`search by zip 1`] = `
+<div
+  className="input-group input-group-lg"
+>
+  <input
+    className="form-control"
+    name="name"
+    placeholder="Search for providers"
+    type="text"
+  />
+  <input
+    className="form-control"
+    name="zip"
+    placeholder="Zip code"
+    type="text"
+    value="02138"
+  />
+  <div
+    className="input-group-append"
+  >
+    <button
+      className="btn btn-primary search"
+      onClick={[Function]}
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`search by zip 2`] = `
+<div
+  className="input-group input-group-lg"
+>
+  <input
+    className="form-control"
+    name="name"
+    placeholder="Search for providers"
+    type="text"
+  />
+  <input
+    className="form-control"
+    name="zip"
+    placeholder="Zip code"
+    type="text"
+    value="02138"
+  />
+  <div
+    className="input-group-append"
+  >
+    <button
+      className="btn btn-primary search"
+      onClick={[Function]}
+      type="button"
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
