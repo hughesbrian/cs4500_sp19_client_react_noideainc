@@ -5,12 +5,16 @@ import ServiceProviderNavigator from "../SearchProviders/ServiceProviderNavigato
 import serviceCategories from '../../test/MockData/ServiceCategories.mock'
 import ServiceSearchService from "../../services/ServiceSearchService";
 import ServiceQuestionService from '../../services/ServiceQuestionService';
+import ServiceService from '../../services/ServiceService';
+import ServiceCategoryService from '../../services/ServiceCategoryService';
 import BusinessService from "./BusinessService";
 
 class ServiceProviderNavigatorContainer extends React.Component {
     constructor(props) {
         super(props)
         this.servicesearch = ServiceSearchService.getInstance()
+        this.serviceService = ServiceService.getInstance()
+        this.serviceCategoryService = ServiceCategoryService.getInstance()
         this.serviceQuestionService = ServiceQuestionService.getInstance()
         {/* SERVICE SELECTED HARD CODED FOR NOW */}
         this.service = 123
@@ -18,8 +22,11 @@ class ServiceProviderNavigatorContainer extends React.Component {
             providers: [],
             questions: [],
             criteria: [],
-            zip: ""
+            zip: "",
+            services: [],
+            businessServices: []
         }
+        {/*
         this.services = [
             {
                 "id": 777,
@@ -37,7 +44,9 @@ class ServiceProviderNavigatorContainer extends React.Component {
                 "description": "pa55word"
             }
         ]
-        this.businessServices = []
+        */}
+        {/*this.services = []
+        this.businessServices = []*/}
         this.add_Criteria = this.add_Criteria.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
     }
@@ -58,6 +67,12 @@ class ServiceProviderNavigatorContainer extends React.Component {
             })
         })
 
+        this.serviceService.findAllServices().then((all_services) => {
+            this.setState({
+                services: all_services
+            })
+        })
+
         this.send_request()
     }
 
@@ -73,18 +88,28 @@ class ServiceProviderNavigatorContainer extends React.Component {
     filterServices = e =>
     {
         if(e == ""){
-            this.services = this.services
+            this.serviceService.findAllServices().then((all_services) => {
+                this.setState({
+                    services: all_services
+                })
+            })
         }
         else{
-            var i = 0
+            this.serviceCategoryService.findAllServicesByCategoryName(e).then((filtered_services) => {
+                this.setState({
+                    services: filtered_services
+                })
+            })
+            
+            {/*var i = 0
             for(i = 0; i < this.services.length; i++){
                 console.log("test test" + this.services[i].title)
                 if(!(this.services[i].title.includes(e))){
                     this.services.splice(i,1)
                     i = i + 1;
                 }
-            }
-            this.services = []
+            }*/}
+            
         }
     }
 
@@ -172,8 +197,8 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                   add_Criteria = {this.add_Criteria}
                                   send_request = {this.send_request}
                                   findProviders= {this.findProviders}
-                                  Services  = {this.services}
-                                  BusinessServices = {this.businessServices}
+                                  Services  = {this.state.services}
+                                  BusinessServices = {this.state.businessServices}
                                   FilterServices = {this.filterServices}
                                   addService = {this.addService}/>;
 
