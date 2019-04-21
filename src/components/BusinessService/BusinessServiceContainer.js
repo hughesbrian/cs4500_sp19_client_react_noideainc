@@ -48,8 +48,10 @@ class ServiceProviderNavigatorContainer extends React.Component {
         {/*this.services = []
         this.businessServices = []*/}
         this.add_Criteria = this.add_Criteria.bind(this)
+        this.addService = this.addService.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
         this.updateQuestions = this.updateQuestions.bind(this)
+        this.removeFromServiceList = this.removeFromServiceList.bind(this)
     }
 
     componentDidMount() {
@@ -79,6 +81,31 @@ class ServiceProviderNavigatorContainer extends React.Component {
             })
     }
 
+    removeFromServiceList(service_id) {
+        for(var i = 0; i < this.state.filteredServices.length; i++){
+            if(service_id == this.state.filteredServices[i].id){
+                this.state.filteredServices.splice(i, 1)
+            {/*THIS IS REDUNDANT BUT IS NECESSARY FOR COMPONENT TO UPDATE*/}
+                this.setState({
+                    filteredServices: this.state.filteredServices
+                })
+            }
+        }
+    }
+
+    addService(service_id) {
+        console.log(this.state.filteredServices);
+        for(var i = 0; i < this.state.services.length; i++){
+            if(service_id == this.state.services[i].id){
+                this.state.filteredServices.push(this.state.services[i]);
+                {/*THIS IS REDUNDANT BUT IS NECESSARY FOR COMPONENT TO UPDATE*/}
+                this.setState({
+                    filteredServices: this.state.filteredServices
+                })
+            }
+        }
+    }
+
     filterServices = e =>
     {
         if(e == ""){
@@ -104,19 +131,6 @@ class ServiceProviderNavigatorContainer extends React.Component {
                 }
             }*/}
             
-        }
-    }
-
-    addService = e =>
-    {
-        console.log(e)
-        for(var i = 0; i < this.state.services.length; i++){
-            if(e == this.state.services[i].id){
-                var filteredServicesNew = this.state.filteredServices.push(this.state.services[i])
-                this.setState({
-                    filteredService: filteredServicesNew
-                })
-            }
         }
     }
 
@@ -197,7 +211,8 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                   BusinessServices = {this.state.filteredServices}
                                   FilterServices = {this.filterServices}
                                   addService = {this.addService}
-                                  UpdateQuestions = {this.updateQuestions}/>;
+                                  UpdateQuestions = {this.updateQuestions}
+                                  RemoveFromServiceList = {this.removeFromServiceList}/>;
 
 
 }

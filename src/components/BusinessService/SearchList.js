@@ -1,11 +1,13 @@
 import React from 'react'
 
-const SearchList = ({Services, UpdateQuestions}) =>
+const SearchList = ({Services, UpdateQuestions, RemoveFromServiceList}) =>
     <div>
         {
-            Array.from(Services).map(service =>
+            Services.map(service =>
                 <div>
-                    <button onClick={() => UpdateQuestions(service.id)}> {service.title} </button>
+                    {service.title} 
+                    <button onClick={() => UpdateQuestions(service.id)}> SELECT </button>
+                    <button onClick={() => RemoveFromServiceList(service.id)}> REMOVE </button>
                 </div>
 
             )
