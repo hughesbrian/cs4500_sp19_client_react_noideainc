@@ -1,11 +1,11 @@
 import React from 'react'
 
-const SearchList = ({Services}) =>
+const SearchList = ({Services, UpdateQuestions}) =>
     <div>
         {
             Array.from(Services).map(service =>
                 <div>
-                    <button> {service.title} </button>
+                    <button onClick={() => UpdateQuestions(service.id)}> {service.title} </button>
                 </div>
 
             )

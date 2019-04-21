@@ -4,7 +4,7 @@ import SearchBarContainer from '../SearchBar/SearchBarContainer'
 import React from 'react';
 import SearchList from "./SearchList";
 
-const BusinessService = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders, Services, BusinessServices, FilterServices, addService}) =>
+const BusinessService = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders, Services, BusinessServices, FilterServices, addService, UpdateQuestions}) =>
     <div>
         <div className="row">
             <div className="col-3 text-right">
@@ -44,7 +44,7 @@ const BusinessService = ({history, serviceProviders, serviceCategories, serviceQ
                 }
             </select>
                 <ul id="myUL">
-                    <SearchList Services = {BusinessServices}/>
+                    <SearchList Services = {BusinessServices} UpdateQuestions = {UpdateQuestions}/>
                 </ul>
             </div>
 

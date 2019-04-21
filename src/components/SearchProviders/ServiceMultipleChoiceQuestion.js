@@ -4,7 +4,7 @@ const ServiceMultipleChoiceQuestion = ({serviceQuestion, Criteria, add_Criteria}
     <div>
         <h5>{serviceQuestion.question}</h5>
         {
-            serviceQuestion.choices.map(choice =>
+            Array.from(serviceQuestion.choices).map(choice =>
                 <div>
                     <label>
                         <input name={serviceQuestion.question} type="radio"

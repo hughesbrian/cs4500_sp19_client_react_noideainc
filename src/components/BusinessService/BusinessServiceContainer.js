@@ -49,23 +49,10 @@ class ServiceProviderNavigatorContainer extends React.Component {
         this.businessServices = []*/}
         this.add_Criteria = this.add_Criteria.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
+        this.updateQuestions = this.updateQuestions.bind(this)
     }
 
     componentDidMount() {
-        this.serviceQuestionService.findAllServiceQuestionsByServiceId(this.service).then((questions) => {
-            var serviceQuestions = questions
-            // console.log(serviceQuestions)
-            // console.log(serviceQuestions[0])
-            // console.log(serviceQuestions[1])
-            serviceQuestions.map(function(question){
-                question.choices = question.choices.split(',')
-            })
-
-            this.setState({
-                questions: serviceQuestions,
-                criteria: new Array(serviceQuestions.length)
-            })
-        })
 
         this.serviceService.findAllServices().then((all_services) => {
             this.setState({
@@ -76,14 +63,21 @@ class ServiceProviderNavigatorContainer extends React.Component {
         this.send_request()
     }
 
-    updateQuestions = (service_id) => this.serviceQuestionService
-        .findAllServiceQuestionsByServiceId(service_id)
-        .then(questions =>
+    updateQuestions(service_id) {
+
+        this.serviceQuestionService.findAllServiceQuestionsByServiceId(service_id)
+            .then((new_questions) => {
+
+                new_questions.map(function(question) {
+                    question.choices = question.choices.split(',')
+                })
+
                 this.setState({
-                    questions: questions
-                }),
-            this.send_request()
-        );
+                    questions: new_questions
+                })
+                this.send_request()
+            })
+    }
 
     filterServices = e =>
     {
@@ -202,7 +196,8 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                   Services  = {this.state.services}
                                   BusinessServices = {this.state.filteredServices}
                                   FilterServices = {this.filterServices}
-                                  addService = {this.addService}/>;
+                                  addService = {this.addService}
+                                  UpdateQuestions = {this.updateQuestions}/>;
 
 
 }
