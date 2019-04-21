@@ -24,7 +24,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
             criteria: [],
             zip: "",
             services: [],
-            businessServices: []
+            filteredServices: []
         }
         {/*
         this.services = [
@@ -116,11 +116,13 @@ class ServiceProviderNavigatorContainer extends React.Component {
     addService = e =>
     {
         console.log(e)
-        for(var i = 0; i < this.services.length; i++){
-            if(e == this.services[i].id){
-                this.businessServices.push(this.services[i])
+        for(var i = 0; i < this.state.services.length; i++){
+            if(e == this.state.services[i].id){
+                var filteredServicesNew = this.state.filteredServices.push(this.state.services[i])
+                this.setState({
+                    filteredService: filteredServicesNew
+                })
             }
-            console.log(this.businessServices)
         }
     }
 
@@ -198,7 +200,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                   send_request = {this.send_request}
                                   findProviders= {this.findProviders}
                                   Services  = {this.state.services}
-                                  BusinessServices = {this.state.businessServices}
+                                  BusinessServices = {this.state.filteredServices}
                                   FilterServices = {this.filterServices}
                                   addService = {this.addService}/>;
 
