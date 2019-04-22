@@ -4,7 +4,7 @@ import SearchBarContainer from '../SearchBar/SearchBarContainer'
 import React from 'react';
 import SearchList from "./SearchList";
 
-const BusinessService = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders, Services, BusinessServices, FilterServices, addService, UpdateQuestions, RemoveFromServiceList}) =>
+const BusinessService = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders, Services, BusinessServices, FilterServices, addService, UpdateQuestions, RemoveFromServiceList, UpdateProviderInfo}) =>
     <div>
         <div className="row">
             <div className="col-3 text-right">
@@ -54,6 +54,8 @@ const BusinessService = ({history, serviceProviders, serviceCategories, serviceQ
                     Criteria = {Criteria}
                     add_Criteria = {add_Criteria}
                 />
+
+                <button onClick={() => UpdateProviderInfo()}> APPLY </button>
 
             </div>
 

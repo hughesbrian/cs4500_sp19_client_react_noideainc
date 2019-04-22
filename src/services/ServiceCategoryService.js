@@ -1,5 +1,5 @@
 const baseURL = "https://cs4500-sp19-noideainc.herokuapp.com";
-// const baseURL = "http://localhost:8080";
+//const baseURL = "http://localhost:8080";
 
 export default class ServiceCategoryService {
     static instance = null;

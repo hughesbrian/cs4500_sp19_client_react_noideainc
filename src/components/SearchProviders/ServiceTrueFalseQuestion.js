@@ -7,7 +7,7 @@ const ServiceTrueFalseQuestion = ({serviceQuestion, Criteria, add_Criteria}) =>
                 <div>
                     <label>
                         <input name={serviceQuestion.question} type="checkbox"
-                               onChange = { (e) => add_Criteria([e.target.value,serviceQuestion])}/>
+                                onChange = { (e) => add_Criteria([e.target.checked,serviceQuestion])}/>
 
                         &nbsp;
                     </label>

@@ -1,5 +1,9 @@
 export default class ServiceService {
     static instance = null;
+
+    //backend_url = 'http://localhost:8080';
+    backend_url = 'https://cs4500-sp19-noideainc.herokuapp.com';
+
     static getInstance() {
         if(ServiceService.instance === null) {
             ServiceService.instance = new ServiceService()
@@ -7,13 +11,13 @@ export default class ServiceService {
         return this.instance
     }
     findServiceById = serviceId =>
-        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/services/${serviceId}")
+        fetch(`${this.backend_url}/api/services/${serviceId}`)
             .then(response => response.json())
     findAllServices = () =>
-        fetch("https://cs4500-sp19-noideainc.herokuapp.com/api/services")
+        fetch(`${this.backend_url}/api/services`)
             .then(response => response.json())
     createService = service =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services`,
+        fetch(`${this.backend_url}/api/services`,
             {
                 method: 'POST',
                 body: JSON.stringify(service),
@@ -21,7 +25,7 @@ export default class ServiceService {
             })
             .then(response => response.json())
     updateService = service =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/${service.id}`,
+        fetch(`${this.backend_url}/api/services/${service.id}`,
             {
                 method: 'PUT',
                 body: JSON.stringify(service),
@@ -29,14 +33,14 @@ export default class ServiceService {
             })
             .then(response => response.json())
     deleteService = service =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/${service.id}`,
+        fetch(`${this.backend_url}/api/services/${service.id}`,
             {
                 method: 'DELETE',
             })
 
     updateServiceScore = service =>
         // change to http://localhost:8080 to test locally
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/services/score/${service.id}`, {
+        fetch(`${this.backend_url}/api/services/score/${service.id}`, {
             method: 'put',
             body: JSON.stringify(service),
             headers: {

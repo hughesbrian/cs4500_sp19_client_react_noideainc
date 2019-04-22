@@ -5,6 +5,8 @@ import ServiceProviderNavigator from "../SearchProviders/ServiceProviderNavigato
 import serviceCategories from '../../test/MockData/ServiceCategories.mock'
 import ServiceSearchService from "../../services/ServiceSearchService";
 import ServiceQuestionService from '../../services/ServiceQuestionService';
+import ServiceAnswerService from '../../services/ServiceAnswerService';
+import UserService from '../../services/UserService';
 import ServiceService from '../../services/ServiceService';
 import ServiceCategoryService from '../../services/ServiceCategoryService';
 import BusinessService from "./BusinessService";
@@ -16,8 +18,12 @@ class ServiceProviderNavigatorContainer extends React.Component {
         this.serviceService = ServiceService.getInstance()
         this.serviceCategoryService = ServiceCategoryService.getInstance()
         this.serviceQuestionService = ServiceQuestionService.getInstance()
+        this.serviceAnswerService = ServiceAnswerService.getInstance()
+        this.userService = UserService.getInstance()
         {/* SERVICE SELECTED HARD CODED FOR NOW */}
         this.service = 123
+        {/* PROVIDER SELECTED HARD CODED FOR NOW AS WELL */}
+        this.provider = 231
         this.state = {
             providers: [],
             questions: [],
@@ -52,6 +58,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
         this.componentDidMount = this.componentDidMount.bind(this)
         this.updateQuestions = this.updateQuestions.bind(this)
         this.removeFromServiceList = this.removeFromServiceList.bind(this)
+        this.updateProviderInfo = this.updateProviderInfo.bind(this)
     }
 
     componentDidMount() {
@@ -62,7 +69,54 @@ class ServiceProviderNavigatorContainer extends React.Component {
             })
         })
 
-        this.send_request()
+        {/* this.send_request() */}
+    }
+
+    updateProviderInfo() {
+        this.userService.findUserById(this.provider).then((provider_data) => {
+            var provider = provider_data;
+            console.log(provider);
+            var providerAnswers = provider_data.serviceAnswers;
+            for(var i = 0; i < this.state.questions.length; i++) {
+                for(var j = 0; j < providerAnswers.length; j++) {
+                    //if found corresponding service answer for the question
+                    if(this.state.questions[i].id == providerAnswers[j].serviceQuestion.id && this.state.criteria[i] != null){
+                        if(this.state.questions[i].type == "TRUE_FALSE"){
+                            providerAnswers[j].trueFalseAnswer = this.state.criteria[i];
+                        }
+                        else if(this.state.questions[i].type == "RANGE" && this.state.criteria[i] != null) {
+                            console.log(this.state.criteria[i]);
+
+                            //find index of min/max range values in the question choices
+                            var min_idx = 0;
+                            var max_idx = this.state.criteria[i].length - 1;
+                            for(var k = 0; k < this.state.criteria[i].length; k ++){
+                                if(this.state.criteria[i][k] == 1){
+                                    max_idx = k;
+                                }
+                            }
+                            for(var k = this.state.criteria[i].length - 1; k >= 0; k --){
+                                if(this.state.criteria[i][k] == 1){
+                                    min_idx = k;
+                                }
+                            }
+
+                            providerAnswers[j].maxRangeAnswer = this.state.questions[i].choices[max_idx];
+                            providerAnswers[j].minRangeAnswer = this.state.questions[i].choices[min_idx];
+                        }
+                        else if (this.state.criteria[i] != null) {
+                            providerAnswers[j].choiceAnswer = this.state.questions[i].choices[this.state.criteria[i]];
+                        }
+
+                        this.userService.updateUser(provider_data).then((body) => {
+                        {console.log("HERE")}
+                        });
+                    }
+                }
+            }
+        });
+
+        return;
     }
 
     updateQuestions(service_id) {
@@ -77,7 +131,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
                 this.setState({
                     questions: new_questions
                 })
-                this.send_request()
+                {/*this.send_request()*/}
             })
     }
 
@@ -140,11 +194,12 @@ class ServiceProviderNavigatorContainer extends React.Component {
     {
         //console.log(this.state.criteria)
         if(e[1].type == "TRUE_FALSE"){
+            console.log(e[0])
             if(this.state.criteria[this.state.questions.indexOf(e[1])] == null){
-                this.state.criteria[this.state.questions.indexOf(e[1])] = 1
+                this.state.criteria[this.state.questions.indexOf(e[1])] = e[0]
             }
             else{
-                this.state.criteria[this.state.questions.indexOf(e[1])] = this.state.criteria[this.state.questions.indexOf(e[1])] * -1
+                this.state.criteria[this.state.questions.indexOf(e[1])] = e[0]
             }
             //console.log(this.state.criteria)
             return
@@ -167,7 +222,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
         }
         this.state.criteria[this.state.questions.indexOf(e[1])] = e[1].choices.indexOf(e[0])
         //console.log(this.state.criteria)
-        this.send_request()
+        //this.send_request()
     }
 
     send_request = (e) => {
@@ -212,7 +267,8 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                   FilterServices = {this.filterServices}
                                   addService = {this.addService}
                                   UpdateQuestions = {this.updateQuestions}
-                                  RemoveFromServiceList = {this.removeFromServiceList}/>;
+                                  RemoveFromServiceList = {this.removeFromServiceList}
+                                  UpdateProviderInfo = {this.updateProviderInfo}/>;
 
 
 }
