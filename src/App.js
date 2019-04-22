@@ -13,6 +13,7 @@ import ServiceProviderNavigatorContainer from './components/SearchProviders/Serv
 import LoginContainer from './components/Login/LoginContainer'
 import usereAnthentication from './services/UserAuthenticationService'
 import ProfileContainer from './components/Profile/ProfileContainer'
+import BusinessServiceContainer from './components/BusinessService/BusinessServiceContainer'
 import BusinessContainer from './components/Business/BusinessContainer'
 
 class App extends Component {
@@ -82,7 +83,8 @@ class App extends Component {
             <Link to="/providers"> Providers</Link> |
             <Link to="/admin">Admin</Link> |
             <Link to="/provider"> Provider</Link> |
-            {/* <Link to="/Register"> Register</Link> | */}
+            <Link to="/Register"> Register</Link> |
+              <Link to="/user-business-services"> BusinessServices</Link> |
             {this.renderProfileLink()}
             {this.LogComponent()}
             <br/>
@@ -97,6 +99,8 @@ class App extends Component {
             <Route
                 path="/providers"
                 component={ServiceProviderNavigatorContainer}/>
+            <Route path="/user-business-services" component={BusinessServiceContainer}/>
+
             <Route
                 path="/login"
                 component={LoginContainer}/>

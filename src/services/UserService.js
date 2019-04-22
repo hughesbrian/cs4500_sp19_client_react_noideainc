@@ -1,6 +1,9 @@
 export default class UserService {
     static instance = null;
 
+    //backend_url = 'http://localhost:8080';
+    backend_url = 'https://cs4500-sp19-noideainc.herokuapp.com';
+
     static getInstance() {
         if (UserService.instance === null) {
             UserService.instance = new UserService()
@@ -9,13 +12,13 @@ export default class UserService {
     }
 
     findUserById = userId =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/users/${userId}`)
+        fetch(`${this.backend_url}/api/users/${userId}`)
             .then(response => response.json())
     findAllUsers = () =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/users`)
+        fetch(`${this.backend_url}/api/users`)
             .then(response => response.json())
     createUser = user =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/users`,
+        fetch(`${this.backend_url}/api/users`,
             {
                 method: 'POST',
                 body: JSON.stringify(user),
@@ -23,7 +26,7 @@ export default class UserService {
             })
             .then(response => response.json())
     updateUser = user =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/users/${user.id}`,
+        fetch(`${this.backend_url}/api/users/${user.id}`,
             {
                 method: 'PUT',
                 body: JSON.stringify(user),
@@ -31,13 +34,13 @@ export default class UserService {
             })
             .then(response => response.json())
     deleteUser = user =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/users/${user.id}`,
+        fetch(`${this.backend_url}/api/users/${user.id}`,
             {
                 method: 'DELETE',
             })
 
     updateProfile = user =>
-        fetch(`https://cs4500-sp19-noideainc.herokuapp.com/api/profile/${user.id}`,
+        fetch(`${this.backend_url}/api/profile/${user.id}`,
             {
                 method: 'PUT',
                 body: JSON.stringify(user),
