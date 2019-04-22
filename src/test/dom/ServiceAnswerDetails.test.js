@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceAnswerDetailsContainer from '../../components/ServiceAnswerDetailsContainer'
 import TestRenderer from 'react-test-renderer'
-import serviceAnswers from '../mockdata/ServiceAnswer.mock.json'
+import serviceAnswers from '../MockData/ServiceAnswer.mock.json'
 import sleep from '../util/sleep'
 import '../mockservice/ServiceAnswerService.mock.js'
 import serviceCategories from "../MockData/ServiceCategories.mock";

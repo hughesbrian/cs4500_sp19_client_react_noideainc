@@ -12,9 +12,9 @@ import ServiceNavigatorContainer from './components/ServiceNavigator/ServiceNavi
 import ServiceProviderNavigatorContainer from './components/SearchProviders/ServiceProviderNavigatorContainer'
 import LoginContainer from './components/Login/LoginContainer'
 import usereAnthentication from './services/UserAuthenticationService'
-import userService from './services/UserService'
 import ProfileContainer from './components/Profile/ProfileContainer'
 import BusinessServiceContainer from './components/BusinessService/BusinessServiceContainer'
+import BusinessContainer from './components/Business/BusinessContainer'
 
 class App extends Component {
 
@@ -52,7 +52,7 @@ class App extends Component {
           userId: res.id,
           user: res
         })
-      }       
+      }
     } catch (error) {
         console.log(error)
     }
@@ -62,7 +62,7 @@ class App extends Component {
     if (this.state.checkLog) {
       return <Link onClick={this.logout} to="/home"> Logout</Link>;
     } else {
-      return <Link to="/login"> Login</Link>;
+      return <span><Link to="/Register"> Register</Link> | <Link to="/login"> Login</Link></span>
     }
   }
 
@@ -85,7 +85,6 @@ class App extends Component {
             <Link to="/provider"> Provider</Link> |
             <Link to="/Register"> Register</Link> |
               <Link to="/user-business-services"> BusinessServices</Link> |
-
             {this.renderProfileLink()}
             {this.LogComponent()}
             <br/>
@@ -95,7 +94,7 @@ class App extends Component {
             <Route
                 path="/home"
                 exact
-                component={() => <Home LogComponent={this.LogComponent()} />}/>
+                component={Home}/>
             <Route path="/register" component={RegisterContainer}/>
             <Route
                 path="/providers"
@@ -109,6 +108,10 @@ class App extends Component {
                 path={"/Profile/" + this.state.userId}
                 exact
                 component={() => <ProfileContainer userId={this.state.userId} user={this.state.user} />}/>
+            <Route
+                path={"/Profile/" + this.state.userId + "/business"}
+                exact
+                component={() => <BusinessContainer userId={this.state.userId} user={this.state.user} />}/>
           </div>
         </Router>
       </div>

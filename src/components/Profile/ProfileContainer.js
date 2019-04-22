@@ -36,33 +36,9 @@ class ProfileContainer extends React.Component {
                     firstName: user.firstName,
                     lastName: user.lastName,
                     birthday: user.birthday,
-                    email: user.email
+                    email: user.email,
+                    address: user.addresses[0]
                 })
-
-                if (user.addresses != null) {
-                    if (user.addresses.length >= 1) {
-                        for (let i = 0; i < user.addresses.length; i++) {
-                            if (user.addresses[i].addressType === 0) {
-                                const initAddress = user.addresses[i];
-                                this.setState({
-                                    address: {
-                                        street: initAddress.street,
-                                        city: initAddress.city,
-                                        state: initAddress.state,
-                                        zip: initAddress.zip
-                                    }
-                                })
-
-                                if (user.addresses.length === 2) {
-                                    if (user.addresses[1].addressType === 1) {
-                                        this.businessAddress = user.addresses[1]
-                                    }
-                                }
-                                break
-                            }
-                        }
-                    }
-                }
             })
     }
 
@@ -81,26 +57,20 @@ class ProfileContainer extends React.Component {
     updateProfile(event) {
         event.preventDefault();
         // console.log("form submitted")
-        const newData = { 
-            id: this.state.userId, 
+        const newData = {
+            id: this.state.userId,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             birthday: this.state.birthday,
-            addresses: [
-                {
-                    street: this.state.address.street,
-                    city: this.state.address.city,
-                    state: this.state.address.state,
-                    zip: this.state.address.zip,
-                    addressType: 0,
-                    residentId: this.state.userId
-                },
-                
-                this.businessAddress
-            ],
+            addresses: this.state.user.addresses,
             email: this.state.email
         }
-        
+        newData.addresses[0].id = this.state.address.id
+        newData.addresses[0].street = this.state.address.street
+        newData.addresses[0].city = this.state.address.city
+        newData.addresses[0].state = this.state.address.state
+        newData.addresses[0].zip = this.state.address.zip
+
         this.userService
             .updateProfile(newData)
             .then(alert("profile updated sucessfully"))
@@ -108,7 +78,8 @@ class ProfileContainer extends React.Component {
     }
 
     render = () => {
-        return <Profile 
+        return <Profile
+                    userId={this.state.userId}
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
                     birthday={this.state.birthday}

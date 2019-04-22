@@ -40,7 +40,7 @@ class ServiceCategoryPillsContainer extends React.Component {
                 filterArray = filterArray.slice(0, 3);
             }
         })
-        console.log(filterArray)
+        //console.log(filterArray)
         return filterArray;
     }
 

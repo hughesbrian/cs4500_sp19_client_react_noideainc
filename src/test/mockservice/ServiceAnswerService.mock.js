@@ -1,5 +1,5 @@
-import serviceAnswers from '../mockdata/ServiceAnswer.mock.json'
-import serviceQuestions from '../mockdata/ServiceQuestion.mock'
+import serviceAnswers from '../MockData/ServiceAnswer.mock.json'
+import serviceQuestions from '../MockData/ServiceQuestion.mock'
 
 global.fetch = jest.fn().mockImplementation((url, config) => {
     if(!config) {

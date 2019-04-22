@@ -3,21 +3,12 @@ import ServiceProviderFilter from './ServiceProviderFilter'
 import ServiceProviderList from './ServiceProviderList'
 import SearchBarContainer from '../SearchBar/SearchBarContainer'
 
-const ServiceProviderNavigator = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders}) =>
+const ServiceProviderNavigator = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, findProviders}) =>
     <div>
         <div className="row">
             <div className="col-8">
                 <SearchBarContainer findProviders={findProviders} history={history}/>
             </div>
-            <div className="col-3 text-right">
-                <a href="#">Sign up</a>
-            </div>
-            <div className="col-1">
-                <a href="#">Log in</a>
-            </div>
-            {/* <button className="button" onClick={send_request}>
-                SEARCH HERE
-            </button> */}
         </div>
         <br/>
         <br/>

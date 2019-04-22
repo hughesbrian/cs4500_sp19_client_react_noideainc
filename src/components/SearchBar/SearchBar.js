@@ -19,7 +19,7 @@ const SearchBar = ({updateField, name, zip, findFilteredProviders}) =>
         <div className="input-group-append">
             <button
                 onClick={findFilteredProviders}
-                className="btn btn-primary"
+                className="btn btn-primary search"
                 type="button">
                 Search
             </button>

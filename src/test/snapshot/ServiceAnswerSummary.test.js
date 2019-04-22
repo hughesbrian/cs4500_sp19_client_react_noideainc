@@ -1,21 +1,20 @@
 import React from 'react'
-import ServiceAnswerDetails from '../../components/ServiceAnswerDetails'
 import TestRenderer from 'react-test-renderer'
-import ServiceAnswers from '../MockData/ServiceAnswer.mock.json'
-import ServiceQuestions from '../MockData/ServiceQuestion.mock.json'
+import ServiceAnswers from '../mockdata/ServiceAnswer.mock.json'
+import ServiceQuestions from '../mockdata/ServiceQuestion.mock.json'
 import serviceAnswerService from '../../services/ServiceAnswerService'
+import '../mockservice/ServuceAnswerServiceSummary.mock.js'
 const ServiceAnswerService = serviceAnswerService.getInstance()
-import '../mockservice/ServiceAnswerService.mock.js'
 
 test('create, delete, and update service categories', () => {
     const createServiceAnswer = () => {
         ServiceAnswers.push({
-            choiceAnswer: 5,
-            id: ServiceAnswers.length+1,
-            trueFalseAnswer: '',
-            minRangeAnswer: '',
-            maxRangeAnswer: ''
-        })
+                                choiceAnswer: 5,
+                                id: ServiceAnswers.length+1,
+                                trueFalseAnswer: '',
+                                minRangeAnswer: '',
+                                maxRangeAnswer: ''
+                            })
 
         let tree = testRenderer.toJSON()
         expect(tree).toMatchSnapshot()
@@ -36,7 +35,7 @@ test('create, delete, and update service categories', () => {
     }
 
     const testRenderer = TestRenderer.create(
-        <ServiceAnswerDetails serviceAnswers = {ServiceAnswers}
+        <ServiceAnswers serviceAnswers = {ServiceAnswers}
                               answer = {ServiceAnswers[0]}
                               createAnswer = {ServiceAnswers[1]}
                               serviceQuestion = {ServiceQuestions[0]}
@@ -68,7 +67,7 @@ test('render list for service categories', () => {
         .findAllServiceAnswers()
         .then(ServiceAnswers => {
             const testRenderer = TestRenderer.create(
-                <ServiceAnswerDetails serviceAnswers = {ServiceAnswers}
+                <ServiceAnswers serviceAnswers = {ServiceAnswers}
                                       answer = {ServiceAnswers[0]}
                                       createAnswer = {ServiceAnswers[1]}
                                       serviceQuestion = {ServiceQuestions[0]}

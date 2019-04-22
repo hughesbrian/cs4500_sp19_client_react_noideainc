@@ -30,7 +30,7 @@ class ServiceProviderNavigatorContainer extends React.Component {
             serviceQuestions.map(function(question){
                 question.choices = question.choices.split(',')
             })
-        
+
             this.setState({
                 questions: serviceQuestions,
                 criteria: new Array(serviceQuestions.length)
@@ -98,17 +98,54 @@ class ServiceProviderNavigatorContainer extends React.Component {
         }
     }
 
+    sortByAddress = (p1, p2) => {
+        return p1.distance - p2.distance;
+    }
+
+    sortProviders = async (providers, param) => {
+        await Promise.all(providers.map(async (provider, index) => {
+            var url = "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/CalculateDistance/ByZip?fromzipcode=" + param +"&tozipcode=" + provider.addresses[1].zip +"&key=N6AF9WOGKXXXLK4H5QIW";
+            let result = await fetch(url)
+            let res = await result.json()
+            providers[index].distance = res.DistanceInKm
+        }))
+
+        this.setState({
+            providers : providers.sort(this.sortByAddress)
+        })
+    }
+
     findProviders = async () => {
         let params = window.location.pathname.split('/');
-        let name = params[2]
-        let zip = params[3]
+        var name;
+        var zip;
+        var param;
+        var filteredProviders
         let providers = await this.servicesearch.getResults(this.service, this.state.criteria, this.state.questions);
+        //console.log(providers)
 
-        var filteredProviders = providers.filter(function (provider) {
-            return provider.username === name && provider.businessAddress.zip === zip
-        });
+        if(params.length == 4) {
+            name = params[2]
+            zip = params[3]
+            filteredProviders = providers.filter(function (provider) {
+                return provider.username.includes(name)
+            });
+            this.sortProviders(filteredProviders, zip)
+            return
+        } else {
+            param = params[2]
+            if(isNaN(param)) {
+                filteredProviders = providers.filter(function (provider) {
+                    return provider.username.includes(param)
+                });
+            } else {
+                this.sortProviders(providers, param)
+                return
+            }
+        }
+
         this.setState({
-            providers: filteredProviders
+            providers : filteredProviders
         })
     }
 
@@ -120,7 +157,6 @@ class ServiceProviderNavigatorContainer extends React.Component {
                                         serviceQuestions = {this.state.questions}
                                         Criteria = {this.state.criteria}
                                         add_Criteria = {this.add_Criteria}
-                                        send_request = {this.send_request}
                                         findProviders= {this.findProviders}/>;
 
 

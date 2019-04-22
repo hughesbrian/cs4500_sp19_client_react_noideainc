@@ -1,0 +1,224 @@
+[
+    {
+        "id" : 1,
+        "userType" : "Provider",
+        "username" : "Alice",
+        "password" : "alice",
+        "firstName" : "alice",
+        "lastName" : "Wonderland",
+        "rating" : 2,
+        "email" : "alice@gmail.com",
+        "reviewsOfMe" : [
+          {
+            "id": 14,
+            "title": "great",
+            "review": "it's a great provider",
+            "rating": 10,
+            "reply":"Thank you!",
+            "reviewerName":"molly"
+          }
+        ],
+        "myReviewsOfOthers" : [
+          {
+            "id": 123,
+            "title": "bad",
+            "review": "bad services",
+            "rating": 1,
+            "reply":null,
+            "reviewerName":null
+          }
+        ],
+        "frequentlyAskedAnswers" : [
+          {
+            "id" : 12,
+            "answer" : "no",
+            "frequentlyAskedQuestion" : {
+              "id" : 20,
+              "title" : "check",
+              "question" : "Did you pass the check?"
+            },
+            "question" : "Did you pass the check"
+          }
+        ],
+        "businessName" : "great services",
+        "yearFounded" : 2005,
+        "numOfEmployees" : 2,
+        "businessAddress" : {
+          "id" : 14,
+          "street" : "Huntington",
+          "city" : "Boston",
+          "state" : "MA",
+          "zip" : "02115"
+        },
+        "businessEmail" : "g",
+        "paymentMethods" : [
+          {
+            "id" : 15,
+            "paymentMethod" : "Cash"
+          }
+        ],
+        "services": [
+          {
+            "id": 123,
+            "title": "House Cleaners",
+            "description": null,
+            "score": null,
+            "serviceCategories": []
+          }
+        ],
+        "facebook" : null,
+        "instagram" : null,
+        "twitter" : null,
+        "serviceAnswers" : [
+          {
+            "id" : 16,
+            "trueFalseAnswer" : true,
+            "maxRangeAnswer" : 10,
+            "minRangeAnswer" : 0,
+            "choiceAnswer" : 1
+    
+          }
+        ]
+    
+      },
+    
+      {
+        "id" : 2,
+        "userType" : "Provider",
+        "username" : "dan",
+        "password" : "dan",
+        "firstName" : "dan",
+        "lastName" : "Li",
+        "rating" : 0,
+        "email" : "dan@gmail.com",
+        "reviewsOfMe" : [
+          {
+            "id": 13,
+            "title": "ha",
+            "review": "it's great!!",
+            "rating": 3
+          }
+        ],
+        "myReviewsOfOthers" : [
+          {
+            "id": 15,
+            "title": "good",
+            "review": "good service",
+            "rating": 8
+    
+          }
+        ],
+        "frequentlyAskedAnswers" : [
+          {
+            "id" : 123,
+            "answer" : "200",
+            "frequentlyAskedQuestion" : {
+              "id" : 123,
+              "title" : "employees",
+              "question" : "How many employees are there"
+            },
+            "question" : "How many employees are there"
+          }
+        ],
+        "businessName" : "happy company",
+        "yearFounded" : 3,
+        "numOfEmployees" : 200,
+        "businessAddress" : {
+          "id" : 1,
+          "street" : "Harvard Ave",
+          "city" : "Cambridge",
+          "state" : "MA",
+          "zip" : "02138"
+        },
+        "businessEmail" : "djhdhj",
+        "paymentMethods" : [
+          {
+            "id" : 2,
+            "paymentMethod" : "credit"
+          }
+        ],
+        "facebook" : null,
+        "instagram" : null,
+        "twitter" : null,
+        "serviceAnswers" : [
+          {
+            "id" : 123,
+            "trueFalseAnswer" : false,
+            "maxRangeAnswer" : 12,
+            "minRangeAnswer" : 0,
+            "choiceAnswer" : 3
+          }
+        ]
+    
+      },
+
+      {
+        "id" : 3,
+        "userType" : "Provider",
+        "username" : "danny",
+        "password" : "danny",
+        "firstName" : "danny",
+        "lastName" : "Lin",
+        "rating" : 5,
+        "email" : "danny@gmail.com",
+        "reviewsOfMe" : [
+          {
+            "id": 8,
+            "title": "bad",
+            "review": "it's bad!",
+            "rating": 4
+          }
+        ],
+        "myReviewsOfOthers" : [
+          {
+            "id": 10,
+            "title": "good",
+            "review": "good service",
+            "rating": 9
+    
+          }
+        ],
+        "frequentlyAskedAnswers" : [
+          {
+            "id" : 123,
+            "answer" : "300",
+            "frequentlyAskedQuestion" : {
+              "id" : 123,
+              "title" : "employees",
+              "question" : "How many employees are there"
+            },
+            "question" : "How many employees are there"
+          }
+        ],
+        "businessName" : "happy company",
+        "yearFounded" : 3,
+        "numOfEmployees" : 300,
+        "businessAddress" : {
+          "id" : 3,
+          "street" : "Harvard Ave",
+          "city" : "Cambridge",
+          "state" : "MA",
+          "zip" : "02110"
+        },
+        "businessEmail" : "ddhou",
+        "paymentMethods" : [
+          {
+            "id" : 2,
+            "paymentMethod" : "credit"
+          }
+        ],
+        "facebook" : null,
+        "instagram" : null,
+        "twitter" : null,
+        "serviceAnswers" : [
+          {
+            "id" : 123,
+            "trueFalseAnswer" : true,
+            "maxRangeAnswer" : 12,
+            "minRangeAnswer" : 0,
+            "choiceAnswer" : 3
+          }
+        ]
+    
+      }
+]

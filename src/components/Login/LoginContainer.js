@@ -32,6 +32,8 @@ class LoginContainer extends React.Component {
                     alert("Log in Successfully")
                     this.props.history.push("/Profile/" + response.id)
                     window.location.reload()
+                } else if (response.status == 500) {
+                    alert(response.message)
                 }
             }).catch((error) => {
                 console.log(error)

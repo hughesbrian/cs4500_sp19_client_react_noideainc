@@ -1,7 +1,7 @@
 import React from 'react'
 import Services from '../../components/Services'
 import TestRenderer from 'react-test-renderer'
-import services from '../mockdata/Services.mock'
+import services from '../MockData/Services.mock'
 import ServiceService from '../../services/ServiceService'
 import '../mockservice/ServiceService.mock'
 import ServicesContainer from "../../components/ServicesContainer";
