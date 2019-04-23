@@ -1,0 +1,224 @@
+[
+  {
+    "id" : 2,
+    "userType" : "Provider",
+    "username" : "a",
+    "password" : "e",
+    "firstName" : "a",
+    "lastName" : "g",
+    "rating" : 0,
+    "email" : "h",
+    "reviewsOfMe" : [
+      {
+        "id": 1,
+        "title": "2",
+        "review": "i",
+        "rating": 1
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 2,
+        "title": "j",
+        "review": "j",
+        "rating": 8
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 9,
+        "answer" : "33",
+        "frequentlyAskedQuestion" : {
+          "id" : 10,
+          "title" : "k",
+          "question" : "l"
+        },
+        "question" : "m"
+      }
+    ],
+    "businessName" : "ooooo",
+    "yearFounded" : 11,
+    "numOfEmployees" : 12,
+    "businessAddress" : {
+      "id" : 13,
+      "street" : "ppppp",
+      "city" : "qqqq",
+      "state" : "MA",
+      "zip" : "02115"
+    },
+    "businessEmail" : "qqq",
+    "paymentMethods" : [
+      {
+        "id" : 14,
+        "paymentMethod" : "credit"
+      }
+    ],
+    "facebook" : "r",
+    "instagram" : "s",
+    "twitter" : "ttttt",
+    "serviceAnswers" : [
+      {
+        "id" : 15,
+        "trueFalseAnswer" : true,
+        "maxRangeAnswer" : 16,
+        "minRangeAnswer" : 17,
+        "choiceAnswer" : 19
+      }
+    ]
+
+  },
+
+  {
+    "id" : 20,
+    "userType" : "Provider",
+    "username" : "b",
+    "password" : "u",
+    "firstName" : "b",
+    "lastName" : "v",
+    "rating" : 3,
+    "email" : "f@gmail.com",
+    "reviewsOfMe" : [
+      {
+        "id": 21,
+        "title": "g",
+        "review": "errr",
+        "rating": 22,
+        "reply":"Thanks",
+        "reviewerName":"m"
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 23,
+        "title": "n",
+        "review": "s",
+        "rating": 1,
+        "reply":"f",
+        "reviewerName":null
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 24,
+        "answer" : "no",
+        "frequentlyAskedQuestion" : {
+          "id" : 25,
+          "title" : "t",
+          "question" : "u?"
+        },
+        "question" : "V"
+      }
+    ],
+    "businessName" : "w",
+    "yearFounded" : 26,
+    "numOfEmployees" : 27,
+    "businessAddress" : {
+      "id" : 28,
+      "street" : "x",
+      "city" : "y",
+      "state" : "MA",
+      "zip" : "02115"
+    },
+    "businessEmail" : "g@hotmail.com",
+    "paymentMethods" : [
+      {
+        "id" : 29,
+        "paymentMethod" : "Cash"
+      }
+    ],
+    "services": [
+      {
+        "id": 30,
+        "title": "Cleaners",
+        "description": null,
+        "score": null,
+        "serviceCategories": []
+      }
+    ],
+    "facebook" : null,
+    "instagram" : null,
+    "twitter" : null,
+    "serviceAnswers" : [
+      {
+        "id" : 32,
+        "trueFalseAnswer" : false,
+        "maxRangeAnswer" : 10,
+        "minRangeAnswer" : 0,
+        "choiceAnswer" : 5
+
+      }
+    ]
+
+  },
+
+  {
+    "id" : 33,
+    "userType" : "Provider",
+    "username" : "c",
+    "password" : "aa",
+    "firstName" : "c",
+    "lastName" : "bb",
+    "rating" : 5,
+    "email" : "cc@gmail.com",
+    "reviewsOfMe" : [
+      {
+        "id": 33,
+        "title": "good",
+        "review": null,
+        "rating": 8
+      }
+    ],
+    "myReviewsOfOthers" : [
+      {
+        "id": 34,
+        "title": null,
+        "review": null,
+        "rating": 35
+
+      }
+    ],
+    "frequentlyAskedAnswers" : [
+      {
+        "id" : 36,
+        "answer" : "40",
+        "frequentlyAskedQuestion" : {
+          "id" : 37,
+          "title" : "cc",
+          "question" : "dd dd dd dd"
+        },
+        "question" : "ee ee ee eee e eeeee"
+      }
+    ],
+    "businessName" : "happy",
+    "yearFounded" : 38,
+    "numOfEmployees" : 10000,
+    "businessAddress" : {
+      "id" : 40,
+      "street" : "ff ff fff",
+      "city" : "Cambridge",
+      "state" : "MA",
+      "zip" : "02110"
+    },
+    "businessEmail" : "ggggghhh@gmail.com",
+    "paymentMethods" : [
+      {
+        "id" : 41,
+        "paymentMethod" : "debit"
+      }
+    ],
+    "facebook" : null,
+    "instagram" : null,
+    "twitter" : null,
+    "serviceAnswers" : [
+      {
+        "id" : 42,
+        "trueFalseAnswer" : true,
+        "maxRangeAnswer" : 20,
+        "minRangeAnswer" : 0,
+        "choiceAnswer" : 13
+      }
+    ]
+
+  }
+]

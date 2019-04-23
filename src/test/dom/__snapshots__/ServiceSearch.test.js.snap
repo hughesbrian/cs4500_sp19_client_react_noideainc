@@ -1,0 +1,180 @@
+<div id="root">
+    <div class="container-fluid home">
+    <h1>No Idea Inc</h1>
+    <div class="sum-nar-bar">
+    <a href="/home">Home</a> |
+    <a href="/services">
+     Services
+     </a> |
+     <a href="/providers">
+     Providers
+     </a> |
+     <a href="/admin">Admin
+     </a> |
+     <a href="/provider">
+     Provider
+     </a>
+     <br>
+     <div>
+     <div class="row">
+     <div class="col-8">
+     <div class="input-group input-group-lg">
+     <input placeholder="Search for providers" type="text" class="form-control">
+     <input placeholder="Zip code" type="text" class="form-control">
+     <div class="input-group-append">
+     <button class="btn btn-primary" type="button">
+     Search
+     </button>
+     </div>
+     </div>
+     </div>
+     <div class="col-3 text-right">
+     <a href="#">Sign up
+     </a>
+     </div>
+     <div class="col-1">
+     <a href="#">
+     Log in
+     </a>
+     </div>
+     </div>
+     <br>
+
+     <br>
+     <ul class="nav nav-pills">
+     <li class="nav-item">
+     <a class="nav-link" href="#about">
+     About
+     </a>
+     </li>
+     <li class="nav-item">
+     <a class="nav-link" href="#reviews">
+     Reviews
+     </a>
+     </li>
+     <li class="nav-item">
+     <a class="nav-link" href="#faqs">
+     FAQs
+     </a>
+     </li>
+     </ul>
+     <div class="row">
+     <div class="col-2">
+     <a name="about">
+     </a>
+     <img src="https://picsum.photos/150/150">
+     </div>
+     <div class="col-10">
+     <h3>
+     </h3>
+     Number of Reviews: (1)
+     </div>
+     </div>
+     <div>
+     <br>
+     <p>You want a good-looking yard? Let Nate fix it up for you!
+     </p>
+     </div>
+     <hr>
+     <div class="row">
+     <div class="col-8">
+     <a name="reviews">
+     </a>
+     <h3>
+     Reviews
+     </h3><
+     /div>
+     <hr>
+     </div>
+     <div class="row">
+     <div class="col-4">
+     1 reviews
+     </div>
+     </div>
+     <br>
+     <div>
+     <div>
+     <h4>
+     Sam Atkins
+     </h4>
+     <br>
+     <div>
+     This place is awesome
+     </div>
+     <br>
+     <hr>
+     </div>
+     <div class="center">
+     <nav aria-label="...">
+     <ul class="pagination">
+     <li class="page-item disabled">
+     <span class="page-link">
+     Previous
+     </span>
+     </li>
+     <li class="page-item">
+     <a class="page-link" href="#">
+     1
+     </a>
+     </li>
+     <li class="page-item active" aria-current="page">
+     <span class="page-link">
+     2
+     <span class="sr-only">
+     (current)
+     </span>
+     </span>
+     </li>
+     <li class="page-item">
+     <a class="page-link" href="#">
+     3
+     </a>
+     </li>
+     <li class="page-item">
+     <a class="page-link" href="#">
+     Next
+     </a>
+     </li>
+     </ul>
+     </nav>
+     </div>
+     </div>
+     <div>
+     <hr>
+     <a name="faqs">
+     </a>
+     <h3>
+     FAQs
+     </h3>
+     <div>
+     <h5>
+     Have you passed a background check?
+     </h5>
+     <p>
+     Yes
+     </p>
+     <hr>
+     </div>
+     <div>
+     <h5>
+     How many employees does your company have?
+     </h5>
+     <p>
+     500
+     </p>
+     <hr>
+     </div>
+     <div>
+     <h5>
+     Have you passed a background check?
+     </h5>
+     <p>
+     no
+     </p>
+     <hr>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
