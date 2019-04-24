@@ -6,17 +6,6 @@ import SearchList from "./SearchList";
 
 const BusinessService = ({history, serviceProviders, serviceCategories, serviceQuestions, Criteria, add_Criteria, send_request, findProviders, Services, BusinessServices, FilterServices, addService, UpdateQuestions, RemoveFromServiceList, UpdateProviderInfo}) =>
     <div>
-        <div className="row">
-            <div className="col-3 text-right">
-                <a href="#">Sign up</a>
-            </div>
-            <div className="col-1">
-                <a href="#">Log in</a>
-            </div>
-            {/* <button className="button" onClick={send_request}>
-                SEARCH HERE
-            </button> */}
-        </div>
         <br/>
         <br/>
 
