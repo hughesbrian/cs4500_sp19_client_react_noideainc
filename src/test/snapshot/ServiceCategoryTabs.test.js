@@ -11,14 +11,14 @@ const categoryService = ServiceCategoryService.getInstance();
 test('Service category tabs render correctly', () => {
     const testRenderer = TestRenderer.create(
         <ServiceCategoryTabsContainer
-    service={categoryService}/>)
-    let tree = testRenderer.toJSON()
-    expect(tree).toMatchSnapshot()
+            service={categoryService}/>)
+            let tree = testRenderer.toJSON();
+            expect(tree).toMatchSnapshot()
 });
 
 test('a category tab is being clicked', () => {
     const updateScore = jest.fn((item) => {
-        tabsMock[0] =  item.score + 1;
+        item.score = item.score + 1
         console.log("score updated")
     });
 
@@ -31,32 +31,34 @@ test('a category tab is being clicked', () => {
         />
     )
 
+    let tree = testRenderer.toJSON();
     const testInstance = testRenderer.root
     const updateScoreTabs =  testInstance.findByProps({
         id: 'nav-tab-tutoring'
-    })
+    });
 
-    updateScoreTabs.props.onClick()
+    updateScoreTabs.props.onClick();
     expect(updateScore).toHaveBeenCalled();
-})
+    expect(tree).toMatchSnapshot();
+});
 
 test('a service in a category tab is being clicked', () => {
     const updateScore = jest.fn((item) => {
-        tabsMock[0] =  item.score + 1;
+        tabsMock[0].score =  item.score + 1;
         console.log("score updated for category")
     });
 
     const updateServiceScore = jest.fn((item) => {
-        servicesMock[1] = item.score + 1;
+        servicesMock[0].score = item.score + 1;
         console.log("score updated for service")
     });
 
     const testRenderer = TestRenderer.create(
         <ServiceCategoryTabs
             serviceCategories={tabsMock}
+            updateServiceScore={updateServiceScore}
             handleTabClick={updateScore}
             services={servicesMock}
-            updateServiceScore={updateServiceScore}
             activeCategory={tabsMock[0]}
         />
     )
@@ -64,14 +66,16 @@ test('a service in a category tab is being clicked', () => {
     const testInstance = testRenderer.root
     const updateScoreTabs =  testInstance.findByProps({
         id: 'nav-tab-tutoring'
-    })
-
-    const services =  testInstance.findAllByProps({
+    });
+    
+    const tabsContent =  testInstance.findAllByProps({
         className: 'card-text'
-    })
+    });
 
+    let tree = testRenderer.toJSON();
     updateScoreTabs.props.onClick();
     expect(updateScore).toHaveBeenCalled();
-    services[0].props.onClick();
+    tabsContent[0].props.onClick();
     expect(updateServiceScore).toHaveBeenCalled();
-})
+    expect(tree).toMatchSnapshot();
+});

@@ -3,15 +3,16 @@
       "id": 111,
       "title": "Math tutoring",
       "description": "hire tutors",
+      "score": 20,
       "serviceCategories": [
           {"id": 1, "title": "Tutoring"}
       ]
-  
     },
     {
       "id": 222,
       "title": "English tutoring",
       "description": "pa55word",
+      "score": 3,
       "serviceCategories": [
         {"id": 1, "title": "Tutoring"}
       ]
