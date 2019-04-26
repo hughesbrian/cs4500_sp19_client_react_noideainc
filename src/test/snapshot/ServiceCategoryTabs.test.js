@@ -51,8 +51,6 @@ test('a service in a category tab is being clicked', () => {
         console.log("score updated for service")
     });
 
-    console.log(tabsMock)
-
     const testRenderer = TestRenderer.create(
         <ServiceCategoryTabs
             serviceCategories={tabsMock}
@@ -71,8 +69,6 @@ test('a service in a category tab is being clicked', () => {
     const services =  testInstance.findAllByProps({
         className: 'card-text'
     })
-
-    console.log(services[1])
 
     updateScoreTabs.props.onClick();
     expect(updateScore).toHaveBeenCalled();
