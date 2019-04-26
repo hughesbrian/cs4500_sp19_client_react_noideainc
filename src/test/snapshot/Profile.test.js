@@ -60,7 +60,6 @@ test('User profile updates correctly', () => {
     expect(tree).toMatchSnapshot();
     expect(inputFields.length).toBe(8)
 
-    // check input values
     expect(firstNameField.props.value).toBe("Bob")
     expect(lastNameField.props.value).toBe("Wonder")
     expect(birthdayField.props.value).toBe("1/01/1994")
