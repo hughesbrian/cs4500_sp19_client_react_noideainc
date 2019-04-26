@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Service category tabs render correctly 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav nav-tabs"
+      id="nav-tab"
+      role="tablist"
+    />
+  </nav>
+  <div
+    className="tab-content"
+    id="nav-tabContent"
+  >
+    <div
+      className="tab-pane fade show"
+    />
+  </div>
+</div>
+`;
+
+exports[`a category tab is being clicked 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav nav-tabs"
+      id="nav-tab"
+      role="tablist"
+    >
+      <a
+        aria-controls="nav-tutoring"
+        aria-selected="true"
+        className="nav-item nav-link active"
+        data-toggle="tab"
+        id="nav-tab-tutoring"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tutoring
+      </a>
+      <a
+        aria-controls="nav-weddings"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Weddings"
+        id="nav-tab-weddings"
+        onClick={[Function]}
+        role="tab"
+      >
+        Weddings
+      </a>
+      <a
+        aria-controls="nav-events"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Events"
+        id="nav-tab-events"
+        onClick={[Function]}
+        role="tab"
+      >
+        Events
+      </a>
+      <a
+        aria-controls="nav-business"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Business"
+        id="nav-tab-business"
+        onClick={[Function]}
+        role="tab"
+      >
+        Business
+      </a>
+      <a
+        aria-controls="nav-wellness"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Wellness"
+        id="nav-tab-wellness"
+        onClick={[Function]}
+        role="tab"
+      >
+        Wellness
+      </a>
+      <a
+        aria-controls="nav-pets"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Pets"
+        id="nav-tab-pets"
+        onClick={[Function]}
+        role="tab"
+      >
+        Pets
+      </a>
+    </div>
+  </nav>
+  <div
+    className="tab-content"
+    id="nav-tabContent"
+  >
+    <div
+      aria-labelledby="nav-tab-tutoring"
+      className="tab-pane fade show active"
+      id="nav-tutoring"
+      role="tabpanel"
+    >
+      <div
+        className="card col-4 no-border service-card"
+      >
+        <img
+          alt="Card image cap"
+          className="card-img-top"
+          src="https://picsum.photos/300/200"
+        />
+        <div
+          className="card-body"
+        >
+          <a
+            className="card-text"
+            href="/providers"
+            onClick={[Function]}
+          >
+            Math tutoring
+          </a>
+        </div>
+      </div>
+      <div
+        className="card col-4 no-border service-card"
+      >
+        <img
+          alt="Card image cap"
+          className="card-img-top"
+          src="https://picsum.photos/300/200"
+        />
+        <div
+          className="card-body"
+        >
+          <a
+            className="card-text"
+            href="/providers"
+            onClick={[Function]}
+          >
+            English tutoring
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`a service in a category tab is being clicked 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav nav-tabs"
+      id="nav-tab"
+      role="tablist"
+    >
+      <a
+        aria-controls="nav-tutoring"
+        aria-selected="true"
+        className="nav-item nav-link active"
+        data-toggle="tab"
+        id="nav-tab-tutoring"
+        onClick={[Function]}
+        role="tab"
+      >
+        Tutoring
+      </a>
+      <a
+        aria-controls="nav-weddings"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Weddings"
+        id="nav-tab-weddings"
+        onClick={[Function]}
+        role="tab"
+      >
+        Weddings
+      </a>
+      <a
+        aria-controls="nav-events"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Events"
+        id="nav-tab-events"
+        onClick={[Function]}
+        role="tab"
+      >
+        Events
+      </a>
+      <a
+        aria-controls="nav-business"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Business"
+        id="nav-tab-business"
+        onClick={[Function]}
+        role="tab"
+      >
+        Business
+      </a>
+      <a
+        aria-controls="nav-wellness"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Wellness"
+        id="nav-tab-wellness"
+        onClick={[Function]}
+        role="tab"
+      >
+        Wellness
+      </a>
+      <a
+        aria-controls="nav-pets"
+        aria-selected="false"
+        className="nav-item nav-link"
+        data-toggle="tab"
+        href="/Pets"
+        id="nav-tab-pets"
+        onClick={[Function]}
+        role="tab"
+      >
+        Pets
+      </a>
+    </div>
+  </nav>
+  <div
+    className="tab-content"
+    id="nav-tabContent"
+  >
+    <div
+      aria-labelledby="nav-tab-tutoring"
+      className="tab-pane fade show active"
+      id="nav-tutoring"
+      role="tabpanel"
+    >
+      <div
+        className="card col-4 no-border service-card"
+      >
+        <img
+          alt="Card image cap"
+          className="card-img-top"
+          src="https://picsum.photos/300/200"
+        />
+        <div
+          className="card-body"
+        >
+          <a
+            className="card-text"
+            href="/providers"
+            onClick={[Function]}
+          >
+            Math tutoring
+          </a>
+        </div>
+      </div>
+      <div
+        className="card col-4 no-border service-card"
+      >
+        <img
+          alt="Card image cap"
+          className="card-img-top"
+          src="https://picsum.photos/300/200"
+        />
+        <div
+          className="card-body"
+        >
+          <a
+            className="card-text"
+            href="/providers"
+            onClick={[Function]}
+          >
+            English tutoring
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
