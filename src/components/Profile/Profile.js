@@ -8,7 +8,7 @@ const Profile = ({userId, firstName, lastName, birthday, address, email, handleC
         <a className="btn btn-light" href="/services" role="button">My Services</a>
         <br/>
         <br/>
-        <form onSubmit={updateProfile}>
+        <form id="prifle-form" onSubmit={updateProfile}>
             <h4>Legal name</h4>
             <div className="row">
                 <div className="col-6">
@@ -33,6 +33,7 @@ const Profile = ({userId, firstName, lastName, birthday, address, email, handleC
             <div className="row">
                 <div className="col-4">
                     <input className="form-control"
+                            id="user-birthday"
                             type="date"
                             name="birthday"
                             value={birthday}
@@ -64,7 +65,7 @@ const Profile = ({userId, firstName, lastName, birthday, address, email, handleC
             <div className="row">
                 <div className="col-6">
                     <label htmlFor="state">State</label>
-                    <select name="state" className="form-control" value={address.state} onChange={handleChangeInput}>
+                    <select name="state" id="user-state" className="form-control" value={address.state} onChange={handleChangeInput}>
                         <option value="AL">AL</option>
                         <option value="AK">AK</option>
                         <option value="AZ">AZ</option>
@@ -138,7 +139,7 @@ const Profile = ({userId, firstName, lastName, birthday, address, email, handleC
             <br/>
             <div className="row">
                 <div className="col-12">
-                    <input className="btn btn-success btn-block" type="submit" value="Update Account"></input>
+                    <input id="submit-profile" className="btn btn-success btn-block" type="submit" value="Update Account"></input>
                 </div>
             </div>
             <br/>
