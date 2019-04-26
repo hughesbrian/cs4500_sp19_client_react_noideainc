@@ -1,0 +1,32 @@
+{
+    "id": 555,
+    "username": "bob",
+    "password": "1234*",
+    "firstName": "Bob",
+    "lastName": "Wonder",
+    "birthday": "1/01/1994",
+    "email": "bob@gmail.com",
+    "address": {
+        "street": "123 Washington St.",
+        "city": "Boston",
+        "state": "MA",
+        "zip": "02117",
+        "addressType": 0,
+        "residentId": 555
+    },
+    "services": [
+      {
+        "id": 15,
+        "title": "Bob's academy",
+        "description": "any subjects I can tutor"
+      }
+    ],
+    "reviewsOfMe": [
+      {
+        "id": 55,
+        "title": "Calculus",
+        "review": "outstanding tutor!",
+        "rating": 5
+      }
+    ]
+  }
