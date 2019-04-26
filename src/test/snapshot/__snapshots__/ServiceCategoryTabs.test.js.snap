@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Service category tabs render correctly 1`] = `
+<div>
+  <nav>
+    <div
+      className="nav nav-tabs"
+      id="nav-tab"
+      role="tablist"
+    />
+  </nav>
+  <div
+    className="tab-content"
+    id="nav-tabContent"
+  >
+    <div
+      className="tab-pane fade show"
+    />
+  </div>
+</div>
+`;
